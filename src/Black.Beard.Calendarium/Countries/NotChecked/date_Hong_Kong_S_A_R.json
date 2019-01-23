@@ -1,0 +1,216 @@
+// calendar : Gregorian
+
+// Date : Buddha's Birthday, 4-28, 2012
+// Date : Buddha's Birthday, 5-17, 2013
+// Date : Buddha's Birthday, 5-6, 2014
+// Date : Buddha's Birthday, 5-25, 2015
+// Date : Buddha's Birthday, 5-14, 2016
+// Date : Buddha's Birthday, 5-3, 2017
+// Date : Buddha's Birthday, 5-22, 2018
+// Date : Buddha's Birthday, 5-12, 2019
+// Date : Buddha's Birthday, 4-30, 2020
+// Date : Buddha's Birthday, 5-19, 2021
+// Date : Buddha's Birthday, 5-8, 2022
+// Date : Buddha's Birthday, 5-26, 2023
+// Date : Buddha's Birthday, 5-15, 2024
+// Date : Buddha's Birthday, 5-5, 2025
+// Date : Buddha's Birthday, 5-24, 2026
+// Date : Chinese New Year, 1-23, 2012
+// Date : Chinese New Year, 2-10, 2013,2024
+// Date : Chinese New Year, 1-31, 2014
+// Date : Chinese New Year, 2-19, 2015
+// Date : Chinese New Year, 2-8, 2016
+// Date : Chinese New Year, 1-28, 2017
+// Date : Chinese New Year, 2-16, 2018
+// Date : Chinese New Year, 2-5, 2019
+// Date : Chinese New Year, 1-25, 2020
+// Date : Chinese New Year, 2-12, 2021
+// Date : Chinese New Year, 2-1, 2022
+// Date : Chinese New Year, 1-22, 2023
+// Date : Chinese New Year, 1-29, 2025
+// Date : Chinese New Year, 2-17, 2026
+// Date : Chinese New Year 2nd Day, 1-24, 2012
+// Date : Chinese New Year 2nd Day, 2-11, 2013,2024
+// Date : Chinese New Year 2nd Day, 2-1, 2014
+// Date : Chinese New Year 2nd Day, 2-20, 2015
+// Date : Chinese New Year 2nd Day, 2-9, 2016
+// Date : Chinese New Year 2nd Day, 1-29, 2017
+// Date : Chinese New Year 2nd Day, 2-17, 2018
+// Date : Chinese New Year 2nd Day, 2-6, 2019
+// Date : Chinese New Year 2nd Day, 1-26, 2020
+// Date : Chinese New Year 2nd Day, 2-13, 2021
+// Date : Chinese New Year 2nd Day, 2-2, 2022
+// Date : Chinese New Year 2nd Day, 1-23, 2023
+// Date : Chinese New Year 2nd Day, 1-30, 2025
+// Date : Chinese New Year 2nd Day, 2-18, 2026
+// Date : Chung Yeung Festival, 10-23, 2012,2023
+// Date : Chung Yeung Festival, 10-14, 2013,2021
+// Date : Chung Yeung Festival, 10-2, 2014
+// Date : Chung Yeung Festival, 10-21, 2015
+// Date : Chung Yeung Festival, 10-9, 2016
+// Date : Chung Yeung Festival, 10-28, 2017
+// Date : Chung Yeung Festival, 10-17, 2018
+// Date : Chung Yeung Festival, 10-7, 2019
+// Date : Chung Yeung Festival, 10-25, 2020
+// Date : Chung Yeung Festival, 10-4, 2022
+// Date : Chung Yeung Festival, 10-11, 2024
+// Date : Chung Yeung Festival, 10-29, 2025
+// Date : Chung Yeung Festival, 10-18, 2026
+// Date : The Day following the Chinese Mid-Autumn Festival, 10-1, 2012
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-20, 2013
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-9, 2014
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-28, 2015
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-16, 2016
+// Date : The Day following the Chinese Mid-Autumn Festival, 10-5, 2017
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-25, 2018
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-14, 2019
+// Date : The Day following the Chinese Mid-Autumn Festival, 10-2, 2020
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-22, 2021
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-11, 2022
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-30, 2023
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-18, 2024
+// Date : The Day following the Chinese Mid-Autumn Festival, 10-7, 2025
+// Date : The Day following the Chinese Mid-Autumn Festival, 9-26, 2026
+// Date : First week-day after Christmas Day, 12-28, 2015,2020,2026
+// Date : First week-day after Christmas Day, 12-27, 2021
+// Date : Tuen Ng Festival, 6-23, 2012
+// Date : Tuen Ng Festival, 6-12, 2013
+// Date : Tuen Ng Festival, 6-2, 2014
+// Date : Tuen Ng Festival, 6-20, 2015
+// Date : Tuen Ng Festival, 6-9, 2016
+// Date : Tuen Ng Festival, 5-30, 2017
+// Date : Tuen Ng Festival, 6-18, 2018
+// Date : Tuen Ng Festival, 6-7, 2019
+// Date : Tuen Ng Festival, 6-25, 2020
+// Date : Tuen Ng Festival, 6-14, 2021
+// Date : Tuen Ng Festival, 6-3, 2022
+// Date : Tuen Ng Festival, 6-22, 2023
+// Date : Tuen Ng Festival, 6-10, 2024
+// Date : Tuen Ng Festival, 5-31, 2025
+// Date : Tuen Ng Festival, 6-19, 2026
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : Chinese New Year 3rd Day, 1-25, 2012
+// Date : Chinese New Year 3rd Day, 2-12, 2013,2024
+// Date : Chinese New Year 3rd Day, 2-2, 2014
+// Date : Chinese New Year 3rd Day, 2-21, 2015
+// Date : Chinese New Year 3rd Day, 2-10, 2016
+// Date : Chinese New Year 3rd Day, 1-30, 2017
+// Date : Chinese New Year 3rd Day, 2-18, 2018
+// Date : Chinese New Year 3rd Day, 2-7, 2019
+// Date : Chinese New Year 3rd Day, 1-27, 2020
+// Date : Chinese New Year 3rd Day, 2-14, 2021
+// Date : Chinese New Year 3rd Day, 2-3, 2022
+// Date : Chinese New Year 3rd Day, 1-24, 2023
+// Date : Chinese New Year 3rd Day, 1-31, 2025
+// Date : Chinese New Year 3rd Day, 2-19, 2026
+// Date : Labor Day Observed, 5-2, 2016,2022
+// Date : Hong Kong SAR Establishment Day Observed, 7-2, 2012,2018
+// Date : Second week-day after Christmas Day, 12-27, 2016,2022
+// Date : National Day Observed, 10-2, 2012,2017,2023
+// Date : Chinese New Year 4th Day, 2-13, 2013,2024
+// Date : Chinese New Year 4th Day, 2-3, 2014
+// Date : Chinese New Year 4th Day, 1-31, 2017
+// Date : Chinese New Year 4th Day, 2-19, 2018
+// Date : Chinese New Year 4th Day, 1-28, 2020
+// Date : Chinese New Year 4th Day, 2-15, 2021
+// Date : Chinese New Year 4th Day, 1-25, 2023
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Hong_Kong_S_A_R",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Ching Ming Festival",
+      "RuleDate": "4-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Ching Ming Festival",
+      "RuleDate": "4-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Hong Kong SAR Establishment Day",
+      "RuleDate": "7-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Saturday",
+      "RuleDate": "([EASTER]) - 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "First week-day after Christmas Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "en-HK",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,86 @@
+// calendar : UmAlQura
+// calendar : Hijri
+// calendar : Gregorian
+
+// Date : National Day Observed, 9-24, 2016,2022
+// Date : National Day Observed, 9-25, 2021
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Saudi_Arabia",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Eid al Adha",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 2nd Day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 3rd Day",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 3rd Day",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "9-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid al Adha 4th Day",
+      "RuleDate": "12-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 5th Day",
+      "RuleDate": "12-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "ar-SA",
+  "Calendar": "UmAlQura"
+}

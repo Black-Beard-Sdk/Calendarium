@@ -1,0 +1,129 @@
+// calendar : Gregorian
+
+// Date : Liberation Day bridge, 3-2, 2015
+// Date : Liberation Day bridge, 3-4, 2016
+// Date : Labor Day bridge, 4-30, 2012
+// Date : Labor Day bridge, 5-2, 2014
+// Date : Bridge Bulgarian Army Day St. George's Day, 5-5, 2014
+// Date : Bridge St. Cyril and St. Methodius Day Education & Culture Day, 5-25, 2012
+// Date : Bridge St. Cyril and St. Methodius Day Education & Culture Day, 5-23, 2016
+// Date : Day of the Union of Bulgaria bridge, 9-7, 2012
+// Date : Day of the Union of Bulgaria bridge, 9-5, 2016
+// Date : Independence Day bridge, 9-21, 2015
+// Date : Independence Day bridge, 9-23, 2016
+// Date : Day of the Leaders of the Bulgarian National Revival bridge, 11-2, 2012
+// Date : Day of the Leaders of the Bulgarian National Revival bridge, 10-31, 2016
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Bulgaria",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Liberation Day",
+      "RuleDate": "3-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Bulgarian Army Day St. George's Day",
+      "RuleDate": "5-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Cyril and St. Methodius Day Education & Culture Day",
+      "RuleDate": "5-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the Union of Bulgaria",
+      "RuleDate": "9-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "9-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the Leaders of the Bulgarian National Revival",
+      "RuleDate": "11-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas 2nd Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "bg",
+  "Calendar": "Gregorian"
+}

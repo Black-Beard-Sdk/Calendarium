@@ -1,0 +1,145 @@
+// calendar : Gregorian
+
+// Date : Chinese New Year, 1-23, 2012
+// Date : Chinese New Year, 2-10, 2013,2024
+// Date : Chinese New Year, 1-31, 2014
+// Date : Chinese New Year, 2-19, 2015
+// Date : Chinese New Year, 2-9, 2016
+// Date : Chinese New Year, 1-28, 2017
+// Date : Chinese New Year, 2-16, 2018
+// Date : Chinese New Year, 2-5, 2019
+// Date : Chinese New Year, 1-25, 2020
+// Date : Chinese New Year, 2-12, 2021
+// Date : Chinese New Year, 2-1, 2022
+// Date : Chinese New Year, 1-22, 2023
+// Date : Chinese New Year, 1-29, 2025
+// Date : Chinese New Year, 2-17, 2026
+// Date : Chinese New Year 2nd Day, 1-24, 2012
+// Date : Chinese New Year 2nd Day, 2-11, 2013,2024
+// Date : Chinese New Year 2nd Day, 2-1, 2014
+// Date : Chinese New Year 2nd Day, 2-20, 2015
+// Date : Chinese New Year 2nd Day, 2-10, 2016
+// Date : Chinese New Year 2nd Day, 1-29, 2017
+// Date : Chinese New Year 2nd Day, 2-17, 2018
+// Date : Chinese New Year 2nd Day, 2-6, 2019
+// Date : Chinese New Year 2nd Day, 1-26, 2020
+// Date : Chinese New Year 2nd Day, 2-13, 2021
+// Date : Chinese New Year 2nd Day, 2-2, 2022
+// Date : Chinese New Year 2nd Day, 1-23, 2023
+// Date : Chinese New Year 2nd Day, 1-30, 2025
+// Date : Chinese New Year 2nd Day, 2-18, 2026
+// Date : Vesak Day, 5-5, 2012
+// Date : Vesak Day, 5-24, 2013
+// Date : Vesak Day, 5-13, 2014
+// Date : Vesak Day, 6-1, 2015
+// Date : Vesak Day, 5-21, 2016
+// Date : Vesak Day, 5-10, 2017
+// Date : Vesak Day, 5-29, 2018
+// Date : Vesak Day, 5-19, 2019
+// Date : Vesak Day, 5-7, 2020
+// Date : Vesak Day, 5-26, 2021
+// Date : Vesak Day, 5-15, 2022
+// Date : Vesak Day, 6-2, 2023
+// Date : Vesak Day, 5-22, 2024
+// Date : Vesak Day, 5-12, 2025
+// Date : Vesak Day, 5-31, 2026
+// Date : Labor Day Observed, 5-2, 2016,2022
+// Date : Youth Day, 7-1, 2012,2018
+// Date : Youth Day, 7-7, 2013,2019,2024
+// Date : Youth Day, 7-6, 2014,2025
+// Date : Youth Day, 7-5, 2015,2020,2026
+// Date : Youth Day, 7-3, 2016,2022
+// Date : Youth Day, 7-2, 2017,2023
+// Date : Youth Day, 7-4, 2021
+// Date : Teacher's Day, 9-7, 2012
+// Date : Teacher's Day, 9-6, 2013,2019,2024
+// Date : Teacher's Day, 9-5, 2014,2025
+// Date : Teacher's Day, 9-4, 2015,2020,2026
+// Date : Teacher's Day, 9-2, 2016,2022
+// Date : Teacher's Day, 8-31, 2017,2018
+// Date : Teacher's Day, 9-3, 2021
+// Date : Teacher's Day, 9-1, 2023
+// Date : Children's Day, 10-5, 2012,2018
+// Date : Children's Day, 10-4, 2013,2019,2024
+// Date : Children's Day, 10-3, 2014,2025
+// Date : Children's Day, 10-2, 2015,2020,2026
+// Date : Children's Day, 10-7, 2016,2022
+// Date : Children's Day, 10-6, 2017,2023
+// Date : Children's Day, 10-1, 2021
+// Date : Deepavali, 11-13, 2012
+// Date : Deepavali, 11-2, 2013
+// Date : Deepavali, 10-22, 2014
+// Date : Deepavali, 11-10, 2015
+// Date : Deepavali, 10-29, 2016
+// Date : Deepavali, 10-18, 2017
+// Date : Deepavali, 11-6, 2018
+// Date : Deepavali, 10-27, 2019
+// Date : Deepavali, 11-14, 2020
+// Date : Deepavali, 11-4, 2021
+// Date : Deepavali, 10-24, 2022
+// Date : Deepavali, 11-12, 2023
+// Date : Deepavali, 10-31, 2024
+// Date : Deepavali, 10-20, 2025
+// Date : Deepavali, 11-7, 2026
+// Date : Christmas Holiday, 12-26, 2016,2022
+// Date : Hari Raya Haji Holiday, 12-11, 1440
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Singapore",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "8-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Hari Raya Puasa",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Hari Raya Haji",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "en-SG",
+  "Calendar": "Gregorian"
+}

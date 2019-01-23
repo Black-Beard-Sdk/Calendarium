@@ -1,0 +1,166 @@
+// calendar : Gregorian
+// calendar : Hijri
+
+// Date : Chinese New Year, 1-23, 2012
+// Date : Chinese New Year, 2-10, 2013,2024
+// Date : Chinese New Year, 1-31, 2014
+// Date : Chinese New Year, 2-19, 2015
+// Date : Chinese New Year, 2-8, 2016
+// Date : Chinese New Year, 1-28, 2017
+// Date : Chinese New Year, 2-16, 2018
+// Date : Chinese New Year, 2-5, 2019
+// Date : Chinese New Year, 1-25, 2020
+// Date : Chinese New Year, 2-12, 2021
+// Date : Chinese New Year, 2-1, 2022
+// Date : Chinese New Year, 1-22, 2023
+// Date : Chinese New Year, 1-29, 2025
+// Date : Chinese New Year, 2-17, 2026
+// Date : Chinese New Year 2nd Day, 1-24, 2012
+// Date : Chinese New Year 2nd Day, 2-11, 2013,2024
+// Date : Chinese New Year 2nd Day, 2-1, 2014
+// Date : Chinese New Year 2nd Day, 2-20, 2015
+// Date : Chinese New Year 2nd Day, 2-9, 2016
+// Date : Chinese New Year 2nd Day, 1-29, 2017
+// Date : Chinese New Year 2nd Day, 2-17, 2018
+// Date : Chinese New Year 2nd Day, 2-6, 2019
+// Date : Chinese New Year 2nd Day, 1-26, 2020
+// Date : Chinese New Year 2nd Day, 2-13, 2021
+// Date : Chinese New Year 2nd Day, 2-2, 2022
+// Date : Chinese New Year 2nd Day, 1-23, 2023
+// Date : Chinese New Year 2nd Day, 1-30, 2025
+// Date : Chinese New Year 2nd Day, 2-18, 2026
+// Date : Wesak Day, 5-5, 2012
+// Date : Wesak Day, 5-24, 2013
+// Date : Wesak Day, 5-13, 2014
+// Date : Wesak Day, 5-3, 2015
+// Date : Wesak Day, 5-21, 2016
+// Date : Wesak Day, 5-10, 2017
+// Date : Wesak Day, 5-29, 2018
+// Date : Wesak Day, 5-19, 2019
+// Date : Wesak Day, 5-7, 2020
+// Date : Wesak Day, 5-26, 2021
+// Date : Wesak Day, 5-15, 2022
+// Date : Wesak Day, 5-4, 2023
+// Date : Wesak Day, 5-22, 2024
+// Date : Wesak Day, 5-12, 2025
+// Date : Wesak Day, 5-31, 2026
+// Date : The Yang di-Pertuan Agong's Birthday, 6-2, 2012
+// Date : The Yang di-Pertuan Agong's Birthday, 6-1, 2013
+// Date : The Yang di-Pertuan Agong's Birthday, 6-7, 2014
+// Date : The Yang di-Pertuan Agong's Birthday, 6-6, 2015
+// Date : The Yang di-Pertuan Agong's Birthday, 6-4, 2016
+// Date : The Yang di-Pertuan Agong's Birthday, 7-29, 2017
+// Date : Deepavali, 11-13, 2012
+// Date : Deepavali, 11-2, 2013
+// Date : Deepavali, 10-22, 2014
+// Date : Deepavali, 11-10, 2015
+// Date : Deepavali, 10-29, 2016
+// Date : Deepavali, 10-18, 2017
+// Date : Deepavali, 11-6, 2018
+// Date : Deepavali, 10-27, 2019
+// Date : Deepavali, 11-14, 2020
+// Date : Deepavali, 11-4, 2021
+// Date : Deepavali, 10-24, 2022
+// Date : Deepavali, 11-12, 2023
+// Date : Deepavali, 10-31, 2024
+// Date : Deepavali, 10-20, 2025
+// Date : Deepavali, 11-7, 2026
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Malaysia",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "8-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "The Yang di-Pertuan Agong's Birthday",
+      "RuleDate": "9-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Malaysia Day",
+      "RuleDate": "9-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Awal Muharam",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday",
+      "RuleDate": "3-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Hari Raya Aidilfitri",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Hari Raya Aidilfitri 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Hari Raya Haji",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Hari Raya Haji 2nd Day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "en-MY",
+  "Calendar": "Gregorian"
+}

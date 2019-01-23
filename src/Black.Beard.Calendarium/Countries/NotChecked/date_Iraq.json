@@ -1,0 +1,199 @@
+// calendar : Gregorian
+// calendar : UmAlQura
+// calendar : Hijri
+
+// Date : Pesach, 8-15, 5774,5776,5779,5782,5784
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Iraq",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Ashoora",
+      "RuleDate": "1-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 2nd Day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 3rd Day",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 3rd Day",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday Sunni",
+      "RuleDate": "3-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Hijri New Year",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday Shia",
+      "RuleDate": "3-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Army Day",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Republic Day",
+      "RuleDate": "7-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid Norooz",
+      "RuleDate": "3-21",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Anniversary of the Shiite Uprising",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Yom Kippur",
+      "RuleDate": "1-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Pesach",
+      "RuleDate": "7-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Sukkot",
+      "RuleDate": "1-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Alponja",
+      "RuleDate": "4-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Alponja",
+      "RuleDate": "4-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ar-IQ",
+  "Calendar": "Gregorian"
+}

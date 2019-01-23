@@ -1,0 +1,151 @@
+// calendar : Gregorian
+// calendar : UmAlQura
+// calendar : Hijri
+
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Yemen",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Eid al Adha",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 2nd Day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 3rd Day",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 3rd Day",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "11-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "October Revolution",
+      "RuleDate": "10-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "September Revolution",
+      "RuleDate": "9-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Hijri New Year",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday Sunni",
+      "RuleDate": "3-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday Shia",
+      "RuleDate": "3-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid al Fitr 4th day",
+      "RuleDate": "10-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 4th day",
+      "RuleDate": "12-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 5th day",
+      "RuleDate": "12-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "National Unity Day",
+      "RuleDate": "5-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ar-YE",
+  "Calendar": "Gregorian"
+}

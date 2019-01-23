@@ -1,0 +1,175 @@
+// calendar : Gregorian
+
+// Date : Epiphany, 1-9, 2012,2017,2023
+// Date : Epiphany, 1-7, 2013,2019
+// Date : Epiphany, 1-6, 2014,2020,2025
+// Date : Epiphany, 1-12, 2015,2026
+// Date : Epiphany, 1-11, 2016,2021
+// Date : Epiphany, 1-8, 2018,2024
+// Date : Epiphany, 1-10, 2022
+// Date : Columbus Day, 10-15, 2012,2018
+// Date : Columbus Day, 10-14, 2013,2019,2024
+// Date : Columbus Day, 10-13, 2014,2025
+// Date : Columbus Day, 10-12, 2015,2020,2026
+// Date : Columbus Day, 10-17, 2016,2022
+// Date : Columbus Day, 10-16, 2017,2023
+// Date : Columbus Day, 10-18, 2021
+// Date : Sacred Heart of Jesus, 6-18, 2012
+// Date : Sacred Heart of Jesus, 6-10, 2013,2024
+// Date : Sacred Heart of Jesus, 6-30, 2014,2025
+// Date : Sacred Heart of Jesus, 6-15, 2015,2026
+// Date : Sacred Heart of Jesus, 6-6, 2016
+// Date : Sacred Heart of Jesus, 6-26, 2017
+// Date : Sacred Heart of Jesus, 6-11, 2018
+// Date : Sacred Heart of Jesus, 7-1, 2019
+// Date : Sacred Heart of Jesus, 6-22, 2020
+// Date : Sacred Heart of Jesus, 6-14, 2021
+// Date : Sacred Heart of Jesus, 6-27, 2022
+// Date : Sacred Heart of Jesus, 6-19, 2023
+// Date : St. Peter and St. Paul, 7-2, 2012,2018
+// Date : St. Peter and St. Paul, 7-1, 2013,2019,2024
+// Date : St. Peter and St. Paul, 6-30, 2014,2025
+// Date : St. Peter and St. Paul, 6-29, 2015,2020,2026
+// Date : St. Peter and St. Paul, 7-4, 2016,2022
+// Date : St. Peter and St. Paul, 7-3, 2017,2023
+// Date : St. Peter and St. Paul, 7-5, 2021
+// Date : St. Joseph, 3-19, 2012,2018
+// Date : St. Joseph, 3-25, 2013,2019,2024
+// Date : St. Joseph, 3-24, 2014,2025
+// Date : St. Joseph, 3-23, 2015,2020,2026
+// Date : St. Joseph, 3-21, 2016,2022
+// Date : St. Joseph, 3-20, 2017,2023
+// Date : St. Joseph, 3-22, 2021
+// Date : Palm Sunday, 4-1, 2012
+// Date : Palm Sunday, 3-24, 2013,2024
+// Date : Palm Sunday, 4-13, 2014,2025
+// Date : Palm Sunday, 3-29, 2015,2026
+// Date : Palm Sunday, 3-20, 2016
+// Date : Palm Sunday, 4-9, 2017
+// Date : Palm Sunday, 3-25, 2018
+// Date : Palm Sunday, 4-14, 2019
+// Date : Palm Sunday, 4-5, 2020
+// Date : Palm Sunday, 3-28, 2021
+// Date : Palm Sunday, 4-10, 2022
+// Date : Palm Sunday, 4-2, 2023
+// Date : Independence of Cartagena, 11-12, 2012,2018
+// Date : Independence of Cartagena, 11-11, 2013,2019,2024
+// Date : Independence of Cartagena, 11-17, 2014,2025
+// Date : Independence of Cartagena, 11-16, 2015,2020,2026
+// Date : Independence of Cartagena, 11-14, 2016,2022
+// Date : Independence of Cartagena, 11-13, 2017,2023
+// Date : Independence of Cartagena, 11-15, 2021
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Colombia",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Battle of Boyacá",
+      "RuleDate": "8-7",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Thursday",
+      "RuleDate": "([EASTER]) - 3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Immaculate Conception",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "7-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Saints' Day",
+      "RuleDate": "11-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Assumption",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Corpus Christi",
+      "RuleDate": "([EASTER]) + 60",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Ascension",
+      "RuleDate": "([EASTER]) + 39",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "CO",
+  "Calendar": "Gregorian"
+}

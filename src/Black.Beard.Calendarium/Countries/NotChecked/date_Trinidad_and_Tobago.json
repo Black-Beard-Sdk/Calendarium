@@ -1,0 +1,165 @@
+// calendar : Gregorian
+// calendar : Gregorian
+
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : Ash Wednesday, 2-22, 2012,2023
+// Date : Ash Wednesday, 2-13, 2013
+// Date : Ash Wednesday, 3-5, 2014,2025
+// Date : Ash Wednesday, 2-18, 2015,2026
+// Date : Ash Wednesday, 2-10, 2016
+// Date : Ash Wednesday, 3-1, 2017
+// Date : Ash Wednesday, 2-14, 2018,2024
+// Date : Ash Wednesday, 3-6, 2019
+// Date : Ash Wednesday, 2-26, 2020
+// Date : Ash Wednesday, 2-17, 2021
+// Date : Ash Wednesday, 3-2, 2022
+// Date : Spritual Baptist Day Observed, 3-31, 2014,2025
+// Date : Indian Arrival Day Observed, 5-31, 2013,2021
+// Date : Labor Day Observed, 6-20, 2014,2016,2022
+// Date : Emancipation Day, 8-2, 2015
+// Date : Emancipation Day Observed, 8-3, 2015
+// Date : Emancipation Day Observed, 8-2, 2021
+// Date : Independence Day Observed, 9-1, 2014,2025
+// Date : Republic Day Observed, 9-25, 2017,2023
+// Date : Diwali, 11-13, 2012
+// Date : Diwali, 11-3, 2013
+// Date : Diwali, 10-23, 2014
+// Date : Diwali, 11-11, 2015
+// Date : Diwali, 10-29, 2016
+// Date : Diwali, 10-18, 2017
+// Date : Diwali, 11-6, 2018
+// Date : Diwali, 10-27, 2019
+// Date : Diwali, 11-14, 2020
+// Date : Diwali, 11-4, 2021
+// Date : Diwali, 10-24, 2022
+// Date : Diwali, 11-12, 2023
+// Date : Diwali, 10-31, 2024
+// Date : Diwali, 10-20, 2025
+// Date : Diwali, 11-8, 2026
+// Date : Diwali Observed, 11-4, 2013
+// Date : Diwali Observed, 10-31, 2016
+// Date : Diwali Observed, 10-28, 2019
+// Date : Christmas Holiday, 12-27, 2016,2021,2022
+// Date : Eid al Fitr Observed, 10-2, 1438
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Trinidad_and_Tobago",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival",
+      "RuleDate": "([EASTER]) - 48",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival 2nd Day",
+      "RuleDate": "([EASTER]) - 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Spritual Baptist Day",
+      "RuleDate": "3-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Indian Arrival Day",
+      "RuleDate": "5-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "6-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Corpus Christi",
+      "RuleDate": "([EASTER]) + 60",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Emancipation Day",
+      "RuleDate": "8-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "8-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Republic Day",
+      "RuleDate": "9-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Boxing Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "en-TT",
+  "Calendar": "Gregorian"
+}

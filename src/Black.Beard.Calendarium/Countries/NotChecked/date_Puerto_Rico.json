@@ -1,0 +1,283 @@
+// calendar : Gregorian
+
+// Date : Birthday of Eugenio María de Hostos, 1-9, 2012,2017,2023
+// Date : Birthday of Eugenio María de Hostos, 1-14, 2013,2019
+// Date : Birthday of Eugenio María de Hostos, 1-13, 2014,2020,2025
+// Date : Birthday of Eugenio María de Hostos, 1-12, 2015,2026
+// Date : Birthday of Eugenio María de Hostos, 1-11, 2016,2021
+// Date : Birthday of Eugenio María de Hostos, 1-8, 2018,2024
+// Date : Birthday of Eugenio María de Hostos, 1-10, 2022
+// Date : Birthday of José de Diego, 4-16, 2012,2018
+// Date : Birthday of José de Diego, 4-15, 2013,2019,2024
+// Date : Birthday of José de Diego, 4-21, 2014,2025
+// Date : Birthday of José de Diego, 4-20, 2015,2020,2026
+// Date : Birthday of José de Diego, 4-18, 2016,2022
+// Date : Birthday of José de Diego, 4-17, 2017,2023
+// Date : Birthday of José de Diego, 4-19, 2021
+// Date : Birthday of Don Luis Muñoz Rivera, 7-16, 2012,2018
+// Date : Birthday of Don Luis Muñoz Rivera, 7-15, 2013,2019,2024
+// Date : Birthday of Don Luis Muñoz Rivera, 7-21, 2014,2025
+// Date : Birthday of Don Luis Muñoz Rivera, 7-20, 2015,2020,2026
+// Date : Birthday of Don Luis Muñoz Rivera, 7-18, 2016,2022
+// Date : Birthday of Don Luis Muñoz Rivera, 7-17, 2017,2023
+// Date : Birthday of Don Luis Muñoz Rivera, 7-19, 2021
+// Date : Columbus Day, 10-8, 2012,2018
+// Date : Columbus Day, 10-14, 2013,2019,2024
+// Date : Columbus Day, 10-13, 2014,2025
+// Date : Columbus Day, 10-12, 2015,2020,2026
+// Date : Columbus Day, 10-10, 2016,2022
+// Date : Columbus Day, 10-9, 2017,2023
+// Date : Columbus Day, 10-11, 2021
+// Date : Martin Luther King Day, 1-16, 2012,2017,2023
+// Date : Martin Luther King Day, 1-21, 2013,2019
+// Date : Martin Luther King Day, 1-20, 2014,2020,2025
+// Date : Martin Luther King Day, 1-19, 2015,2026
+// Date : Martin Luther King Day, 1-18, 2016,2021
+// Date : Martin Luther King Day, 1-15, 2018,2024
+// Date : Martin Luther King Day, 1-17, 2022
+// Date : Memorial Day, 5-28, 2012,2018
+// Date : Memorial Day, 5-27, 2013,2019,2024
+// Date : Memorial Day, 5-26, 2014,2025
+// Date : Memorial Day, 5-25, 2015,2020,2026
+// Date : Memorial Day, 5-30, 2016,2022
+// Date : Memorial Day, 5-29, 2017,2023
+// Date : Memorial Day, 5-31, 2021
+// Date : Thanksgiving Day, 11-22, 2012,2018
+// Date : Thanksgiving Day, 11-28, 2013,2019,2024
+// Date : Thanksgiving Day, 11-27, 2014,2025
+// Date : Thanksgiving Day, 11-26, 2015,2020,2026
+// Date : Thanksgiving Day, 11-24, 2016,2022
+// Date : Thanksgiving Day, 11-23, 2017,2023
+// Date : Thanksgiving Day, 11-25, 2021
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : New Year's Day Observed, 1-3, 2022
+// Date : Presidents' Day, 2-20, 2012,2017,2023
+// Date : Presidents' Day, 2-18, 2013,2019
+// Date : Presidents' Day, 2-17, 2014,2020,2025
+// Date : Presidents' Day, 2-16, 2015,2026
+// Date : Presidents' Day, 2-15, 2016,2021
+// Date : Presidents' Day, 2-19, 2018,2024
+// Date : Presidents' Day, 2-21, 2022
+// Date : Ash Wednesday, 2-13, 2013
+// Date : Ash Wednesday, 3-5, 2014,2025
+// Date : Ash Wednesday, 2-18, 2015,2026
+// Date : Ash Wednesday, 2-10, 2016
+// Date : Ash Wednesday, 3-1, 2017
+// Date : Ash Wednesday, 2-14, 2018,2024
+// Date : Ash Wednesday, 3-6, 2019
+// Date : Ash Wednesday, 2-26, 2020
+// Date : Ash Wednesday, 2-17, 2021
+// Date : Ash Wednesday, 3-2, 2022
+// Date : Ash Wednesday, 2-22, 2023
+// Date : Palm Sunday, 4-1, 2012
+// Date : Palm Sunday, 3-24, 2013,2024
+// Date : Palm Sunday, 4-13, 2014,2025
+// Date : Palm Sunday, 3-29, 2015,2026
+// Date : Palm Sunday, 3-20, 2016
+// Date : Palm Sunday, 4-9, 2017
+// Date : Palm Sunday, 3-25, 2018
+// Date : Palm Sunday, 4-14, 2019
+// Date : Palm Sunday, 4-5, 2020
+// Date : Palm Sunday, 3-28, 2021
+// Date : Palm Sunday, 4-10, 2022
+// Date : Palm Sunday, 4-2, 2023
+// Date : Tax Day, 4-16, 2012,2018
+// Date : Tax Day, 4-17, 2017,2023
+// Date : Administrative Professionals Day, 4-25, 2012,2018
+// Date : Administrative Professionals Day, 4-24, 2013,2019,2024
+// Date : Administrative Professionals Day, 4-23, 2014,2025
+// Date : Administrative Professionals Day, 4-22, 2015,2020,2026
+// Date : Administrative Professionals Day, 4-27, 2016,2022
+// Date : Administrative Professionals Day, 4-26, 2017,2023
+// Date : Administrative Professionals Day, 4-21, 2021
+// Date : Mother's Day, 5-13, 2012,2018
+// Date : Mother's Day, 5-12, 2013,2019,2024
+// Date : Mother's Day, 5-11, 2014,2025
+// Date : Mother's Day, 5-10, 2015,2020,2026
+// Date : Mother's Day, 5-8, 2016,2022
+// Date : Mother's Day, 5-14, 2017,2023
+// Date : Mother's Day, 5-9, 2021
+// Date : Father's Day, 6-17, 2012,2018
+// Date : Father's Day, 6-16, 2013,2019,2024
+// Date : Father's Day, 6-15, 2014,2025
+// Date : Father's Day, 6-21, 2015,2020,2026
+// Date : Father's Day, 6-19, 2016,2022
+// Date : Father's Day, 6-18, 2017,2023
+// Date : Father's Day, 6-20, 2021
+// Date : Independence Day Observed, 7-3, 2015,2020
+// Date : Independence Day Observed, 7-5, 2021
+// Date : Veteran's Day Observed, 11-12, 2012,2018
+// Date : Veteran's Day Observed, 11-10, 2017
+// Date : Day After Thanksgiving Day, 11-23, 2012,2018
+// Date : Day After Thanksgiving Day, 11-29, 2013,2019,2024
+// Date : Day After Thanksgiving Day, 11-28, 2014,2025
+// Date : Day After Thanksgiving Day, 11-27, 2015,2020,2026
+// Date : Day After Thanksgiving Day, 11-25, 2016,2022
+// Date : Day After Thanksgiving Day, 11-24, 2017,2023
+// Date : Day After Thanksgiving Day, 11-26, 2021
+// Date : Christmas Holiday, 12-26, 2016,2022
+// Date : Christmas Holiday, 12-24, 2021
+// Date : Vote Election's Day, 11-6, 2012
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Puerto_Rico",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Constitution Day",
+      "RuleDate": "7-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Discovery of Puerto Rico",
+      "RuleDate": "11-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Three Kings Day",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "7-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Birthday of Dr. José Celso Barbosa",
+      "RuleDate": "7-27",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Veteran's Day",
+      "RuleDate": "11-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Emancipation Day",
+      "RuleDate": "3-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Three Kings Eve",
+      "RuleDate": "1-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Valentine's Day",
+      "RuleDate": "2-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Birthday of Luis Muñoz Marín",
+      "RuleDate": "2-18",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival",
+      "RuleDate": "([EASTER]) - 48",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival 2nd Day",
+      "RuleDate": "([EASTER]) - 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Sunday",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Tax Day",
+      "RuleDate": "4-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. John the Baptist",
+      "RuleDate": "6-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the Innocents",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "en-PR",
+  "Calendar": "Gregorian"
+}

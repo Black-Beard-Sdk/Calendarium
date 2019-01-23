@@ -1,0 +1,123 @@
+// calendar : Gregorian
+
+// Date : First Day of Summer, 4-19, 2012,2018
+// Date : First Day of Summer, 4-25, 2013,2019,2024
+// Date : First Day of Summer, 4-24, 2014,2025
+// Date : First Day of Summer, 4-23, 2015,2020,2026
+// Date : First Day of Summer, 4-21, 2016,2022
+// Date : First Day of Summer, 4-20, 2017,2023
+// Date : First Day of Summer, 4-22, 2021
+// Date : Commerce Day, 8-6, 2012,2018
+// Date : Commerce Day, 8-5, 2013,2019,2024
+// Date : Commerce Day, 8-4, 2014,2025
+// Date : Commerce Day, 8-3, 2015,2020,2026
+// Date : Commerce Day, 8-1, 2016,2022
+// Date : Commerce Day, 8-7, 2017,2023
+// Date : Commerce Day, 8-2, 2021
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Iceland",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Ascension",
+      "RuleDate": "([EASTER]) + 39",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas 2nd Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Thursday",
+      "RuleDate": "([EASTER]) - 3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Whit Monday",
+      "RuleDate": "([EASTER]) + 50",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Whit Sunday",
+      "RuleDate": "([EASTER]) + 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "6-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "is",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,312 @@
+// calendar : Gregorian
+
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : New Year's Day Observed, 1-3, 2022
+// Date : Liberation Day-Reunification Day Observed, 5-2, 2016,2017,2022,2023
+// Date : International Workers' Day Observed, 5-3, 2016,2021,2022
+// Date : National Day Observed, 9-3, 2012,2018
+// Date : National Day Observed, 9-4, 2017,2023
+// Date : Tết Eve Vietnamese New Year, 1-22, 2012
+// Date : Tết Eve Vietnamese New Year, 2-9, 2013,2024
+// Date : Tết Eve Vietnamese New Year, 1-30, 2014
+// Date : Tết Eve Vietnamese New Year, 2-18, 2015
+// Date : Tết Eve Vietnamese New Year, 2-7, 2016
+// Date : Tết Eve Vietnamese New Year, 1-27, 2017
+// Date : Tết Eve Vietnamese New Year, 2-15, 2018
+// Date : Tết Eve Vietnamese New Year, 2-4, 2019
+// Date : Tết Eve Vietnamese New Year, 1-24, 2020
+// Date : Tết Eve Vietnamese New Year, 2-11, 2021
+// Date : Tết Eve Vietnamese New Year, 1-31, 2022
+// Date : Tết Eve Vietnamese New Year, 1-21, 2023
+// Date : Tết Eve Vietnamese New Year, 1-28, 2025
+// Date : Tết Eve Vietnamese New Year, 2-16, 2026
+// Date : Tết Nguyen Dan Vietnamese New Year, 1-23, 2012
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-10, 2013,2024
+// Date : Tết Nguyen Dan Vietnamese New Year, 1-31, 2014
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-19, 2015
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-8, 2016
+// Date : Tết Nguyen Dan Vietnamese New Year, 1-28, 2017
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-16, 2018
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-5, 2019
+// Date : Tết Nguyen Dan Vietnamese New Year, 1-25, 2020
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-12, 2021
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-1, 2022
+// Date : Tết Nguyen Dan Vietnamese New Year, 1-22, 2023
+// Date : Tết Nguyen Dan Vietnamese New Year, 1-29, 2025
+// Date : Tết Nguyen Dan Vietnamese New Year, 2-17, 2026
+// Date : Tết 2nd Day, 1-24, 2012
+// Date : Tết 2nd Day, 2-11, 2013,2024
+// Date : Tết 2nd Day, 2-1, 2014
+// Date : Tết 2nd Day, 2-20, 2015
+// Date : Tết 2nd Day, 2-9, 2016
+// Date : Tết 2nd Day, 1-29, 2017
+// Date : Tết 2nd Day, 2-17, 2018
+// Date : Tết 2nd Day, 2-6, 2019
+// Date : Tết 2nd Day, 1-26, 2020
+// Date : Tết 2nd Day, 2-13, 2021
+// Date : Tết 2nd Day, 2-2, 2022
+// Date : Tết 2nd Day, 1-23, 2023
+// Date : Tết 2nd Day, 1-30, 2025
+// Date : Tết 2nd Day, 2-18, 2026
+// Date : Tết 3rd Day, 1-25, 2012
+// Date : Tết 3rd Day, 2-12, 2013,2024
+// Date : Tết 3rd Day, 2-2, 2014
+// Date : Tết 3rd Day, 2-21, 2015
+// Date : Tết 3rd Day, 2-10, 2016
+// Date : Tết 3rd Day, 1-30, 2017
+// Date : Tết 3rd Day, 2-18, 2018
+// Date : Tết 3rd Day, 2-7, 2019
+// Date : Tết 3rd Day, 1-27, 2020
+// Date : Tết 3rd Day, 2-14, 2021
+// Date : Tết 3rd Day, 2-3, 2022
+// Date : Tết 3rd Day, 1-24, 2023
+// Date : Tết 3rd Day, 1-31, 2025
+// Date : Tết 3rd Day, 2-19, 2026
+// Date : Tết 4th Day, 1-26, 2012
+// Date : Tết 4th Day, 2-13, 2013,2024
+// Date : Tết 4th Day, 2-3, 2014
+// Date : Tết 4th Day, 2-22, 2015
+// Date : Tết 4th Day, 2-11, 2016
+// Date : Tết 4th Day, 1-31, 2017
+// Date : Tết 4th Day, 2-19, 2018
+// Date : Tết 4th Day, 2-8, 2019
+// Date : Tết 4th Day, 1-28, 2020
+// Date : Tết 4th Day, 2-15, 2021
+// Date : Tết 4th Day, 2-4, 2022
+// Date : Tết 4th Day, 1-25, 2023
+// Date : Tết 4th Day, 2-1, 2025
+// Date : Tết 4th Day, 2-20, 2026
+// Date : Tết Observed, 2-1, 2017
+// Date : Tết Observed, 1-29, 2020
+// Date : Hung Kings Commemoriations, 3-31, 2012
+// Date : Hung Kings Commemoriations, 4-19, 2013
+// Date : Hung Kings Commemoriations, 4-9, 2014
+// Date : Hung Kings Commemoriations, 4-28, 2015
+// Date : Hung Kings Commemoriations, 4-16, 2016
+// Date : Hung Kings Commemoriations, 4-6, 2017
+// Date : Hung Kings Commemoriations, 4-25, 2018
+// Date : Hung Kings Commemoriations, 4-14, 2019
+// Date : Hung Kings Commemoriations, 4-2, 2020
+// Date : Hung Kings Commemoriations, 4-21, 2021
+// Date : Hung Kings Commemoriations, 4-10, 2022
+// Date : Hung Kings Commemoriations, 4-29, 2023
+// Date : Hung Kings Commemoriations, 4-18, 2024
+// Date : Hung Kings Commemoriations, 4-7, 2025
+// Date : Hung Kings Commemoriations, 4-26, 2026
+// Date : Buddha's Birthday, 6-4, 2012
+// Date : Buddha's Birthday, 5-24, 2013
+// Date : Buddha's Birthday, 5-13, 2014
+// Date : Buddha's Birthday, 6-1, 2015
+// Date : Buddha's Birthday, 5-21, 2016
+// Date : Buddha's Birthday, 5-10, 2017
+// Date : Buddha's Birthday, 5-29, 2018
+// Date : Buddha's Birthday, 5-19, 2019
+// Date : Buddha's Birthday, 5-7, 2020
+// Date : Buddha's Birthday, 5-26, 2021
+// Date : Buddha's Birthday, 5-15, 2022
+// Date : Buddha's Birthday, 6-2, 2023
+// Date : Buddha's Birthday, 5-22, 2024
+// Date : Buddha's Birthday, 5-12, 2025
+// Date : Buddha's Birthday, 5-31, 2026
+// Date : Hungry Ghost Festival, 8-31, 2012
+// Date : Hungry Ghost Festival, 8-21, 2013
+// Date : Hungry Ghost Festival, 8-10, 2014
+// Date : Hungry Ghost Festival, 8-28, 2015
+// Date : Hungry Ghost Festival, 8-17, 2016
+// Date : Hungry Ghost Festival, 9-5, 2017
+// Date : Hungry Ghost Festival, 8-25, 2018
+// Date : Hungry Ghost Festival, 8-15, 2019
+// Date : Hungry Ghost Festival, 9-2, 2020
+// Date : Hungry Ghost Festival, 8-22, 2021
+// Date : Hungry Ghost Festival, 8-12, 2022
+// Date : Hungry Ghost Festival, 8-30, 2023
+// Date : Hungry Ghost Festival, 8-18, 2024
+// Date : Hungry Ghost Festival, 9-6, 2025
+// Date : Hungry Ghost Festival, 8-27, 2026
+// Date : Mid-Autumn Festival, 9-30, 2012
+// Date : Mid-Autumn Festival, 9-19, 2013
+// Date : Mid-Autumn Festival, 9-8, 2014
+// Date : Mid-Autumn Festival, 9-27, 2015
+// Date : Mid-Autumn Festival, 9-15, 2016
+// Date : Mid-Autumn Festival, 10-4, 2017
+// Date : Mid-Autumn Festival, 9-24, 2018
+// Date : Mid-Autumn Festival, 9-13, 2019
+// Date : Mid-Autumn Festival, 10-1, 2020
+// Date : Mid-Autumn Festival, 9-21, 2021
+// Date : Mid-Autumn Festival, 9-10, 2022
+// Date : Mid-Autumn Festival, 9-29, 2023
+// Date : Mid-Autumn Festival, 9-17, 2024
+// Date : Mid-Autumn Festival, 10-6, 2025
+// Date : Mid-Autumn Festival, 9-25, 2026
+// Date : Kitchen Guardians Festival, 1-16, 2012
+// Date : Kitchen Guardians Festival, 2-3, 2013
+// Date : Kitchen Guardians Festival, 1-23, 2014
+// Date : Kitchen Guardians Festival, 1-13, 2015
+// Date : Kitchen Guardians Festival, 1-2, 2016
+// Date : Kitchen Guardians Festival, 1-20, 2017
+// Date : Kitchen Guardians Festival, 2-8, 2018
+// Date : Kitchen Guardians Festival, 1-28, 2019
+// Date : Kitchen Guardians Festival, 1-17, 2020
+// Date : Kitchen Guardians Festival, 2-4, 2021
+// Date : Kitchen Guardians Festival, 1-25, 2022
+// Date : Kitchen Guardians Festival, 1-14, 2023
+// Date : Kitchen Guardians Festival, 2-2, 2024
+// Date : Kitchen Guardians Festival, 1-22, 2025
+// Date : Kitchen Guardians Festival, 2-10, 2026
+// Date : Mid-Year Festival, 6-23, 2012
+// Date : Mid-Year Festival, 6-12, 2013
+// Date : Mid-Year Festival, 6-2, 2014
+// Date : Mid-Year Festival, 6-20, 2015
+// Date : Mid-Year Festival, 6-9, 2016
+// Date : Mid-Year Festival, 5-30, 2017
+// Date : Mid-Year Festival, 6-18, 2018
+// Date : Mid-Year Festival, 6-7, 2019
+// Date : Mid-Year Festival, 6-25, 2020
+// Date : Mid-Year Festival, 6-14, 2021
+// Date : Mid-Year Festival, 6-3, 2022
+// Date : Mid-Year Festival, 6-22, 2023
+// Date : Mid-Year Festival, 6-10, 2024
+// Date : Mid-Year Festival, 5-31, 2025
+// Date : Mid-Year Festival, 6-19, 2026
+// Date : Lantern Festival, 2-6, 2012
+// Date : Lantern Festival, 2-24, 2013,2024
+// Date : Lantern Festival, 2-14, 2014
+// Date : Lantern Festival, 3-5, 2015
+// Date : Lantern Festival, 2-22, 2016
+// Date : Lantern Festival, 2-11, 2017
+// Date : Lantern Festival, 3-2, 2018
+// Date : Lantern Festival, 2-19, 2019
+// Date : Lantern Festival, 2-8, 2020
+// Date : Lantern Festival, 2-26, 2021
+// Date : Lantern Festival, 2-15, 2022
+// Date : Lantern Festival, 2-5, 2023
+// Date : Lantern Festival, 2-12, 2025
+// Date : Lantern Festival, 3-3, 2026
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Vietnam",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Liberation Day-Reunification Day",
+      "RuleDate": "4-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "International Workers' Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "9-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Foundation of the Communist Party of Vietnam",
+      "RuleDate": "2-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Women's Day",
+      "RuleDate": "3-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "President Ho Chi Minh's Birthday",
+      "RuleDate": "5-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Children's Day",
+      "RuleDate": "6-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Vietnamese Family Day",
+      "RuleDate": "6-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Remembrance Day",
+      "RuleDate": "7-27",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "August Revolution Commemoration Day",
+      "RuleDate": "8-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Capital Liberation Day",
+      "RuleDate": "10-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Vietnamese Women's Day",
+      "RuleDate": "10-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Teacher's Day",
+      "RuleDate": "11-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Defense Day",
+      "RuleDate": "12-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "vi",
+  "Calendar": "Gregorian"
+}

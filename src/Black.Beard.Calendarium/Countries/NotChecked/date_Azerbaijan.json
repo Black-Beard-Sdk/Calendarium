@@ -1,0 +1,181 @@
+// calendar : Gregorian
+// calendar : Hijri
+
+// Date : New Year's Day Observed, 1-3, 2012,2017,2022,2023
+// Date : New Year's Day Observed, 1-4, 2016,2017,2021,2022
+// Date : New Year's Day Observed, 1-5, 2016,2022
+// Date : National Day of Mourning Observed, 1-21, 2013,2019
+// Date : National Day of Mourning Observed, 1-22, 2018
+// Date : Women's Day Observed, 3-10, 2014,2025
+// Date : Women's Day Observed, 3-9, 2015,2020,2026
+// Date : Novruz Bayram, 3-27, 2014,2015,2019
+// Date : Victory Day Observed, 5-11, 2015,2020,2026
+// Date : Victory Day Observed, 5-10, 2021
+// Date : Republic Day Observed, 5-30, 2016,2022
+// Date : Republic Day Observed, 5-29, 2017,2023
+// Date : National Salvation Day Observed, 6-17, 2013,2019,2024
+// Date : National Salvation Day Observed, 6-16, 2014,2025
+// Date : Armed Forces Day Observed, 6-27, 2016,2022
+// Date : Armed Forces Day Observed, 6-28, 2021
+// Date : National Flag Day Observed, 11-11, 2013,2019,2024
+// Date : National Flag Day Observed, 11-10, 2014,2025
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Azerbaijan",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day 2nd Day",
+      "RuleDate": "1-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day of Mourning",
+      "RuleDate": "1-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Women's Day",
+      "RuleDate": "3-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Novruz Bayram",
+      "RuleDate": "3-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Novruz Bayram",
+      "RuleDate": "3-21",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Novruz Bayram",
+      "RuleDate": "3-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Novruz Bayram",
+      "RuleDate": "3-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Novruz Bayram",
+      "RuleDate": "3-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Novruz Bayram",
+      "RuleDate": "3-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Novruz Bayram",
+      "RuleDate": "3-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Victory Day",
+      "RuleDate": "5-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Republic Day",
+      "RuleDate": "5-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Salvation Day",
+      "RuleDate": "6-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Armed Forces Day",
+      "RuleDate": "6-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Flag Day",
+      "RuleDate": "11-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Solidarity of Azerbaijanis",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Ramazan",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Ramazan 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Gurban Bayram",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Gurban Bayram 2nd Day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "az",
+  "Calendar": "Gregorian"
+}

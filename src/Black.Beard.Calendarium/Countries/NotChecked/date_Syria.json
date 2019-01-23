@@ -1,0 +1,151 @@
+// calendar : Gregorian
+// calendar : UmAlQura
+// calendar : Hijri
+
+// Date : Easter Orthodox, 4-15, 2012
+// Date : Easter Orthodox, 5-5, 2013,2024
+// Date : Easter Orthodox, 4-20, 2014,2025
+// Date : Easter Orthodox, 4-12, 2015,2026
+// Date : Easter Orthodox, 5-1, 2016
+// Date : Easter Orthodox, 4-16, 2017,2023
+// Date : Easter Orthodox, 4-8, 2018
+// Date : Easter Orthodox, 4-28, 2019
+// Date : Easter Orthodox, 4-19, 2020
+// Date : Easter Orthodox, 5-2, 2021
+// Date : Easter Orthodox, 4-24, 2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Syria",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid al Adha",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 2nd Day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 3rd Day",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 3rd Day",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "4-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Martyrs' Day",
+      "RuleDate": "5-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday",
+      "RuleDate": "3-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Revolution Day",
+      "RuleDate": "3-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Mothers' Day",
+      "RuleDate": "3-21",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Gregorian",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Liberation War Day",
+      "RuleDate": "10-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Hijri New Year",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "ar-SY",
+  "Calendar": "Gregorian"
+}

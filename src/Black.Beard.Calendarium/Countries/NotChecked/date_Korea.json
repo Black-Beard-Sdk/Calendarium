@@ -1,0 +1,189 @@
+// calendar : Gregorian
+// calendar : Korean
+// calendar : Gregorian
+
+// Date : Buddha's Birthday - Seokgatansin-il, 5-28, 2012
+// Date : Buddha's Birthday - Seokgatansin-il, 5-17, 2013
+// Date : Buddha's Birthday - Seokgatansin-il, 5-6, 2014
+// Date : Buddha's Birthday - Seokgatansin-il, 5-25, 2015
+// Date : Buddha's Birthday - Seokgatansin-il, 5-14, 2016
+// Date : Buddha's Birthday - Seokgatansin-il, 5-3, 2017
+// Date : Buddha's Birthday - Seokgatansin-il, 5-22, 2018
+// Date : Buddha's Birthday - Seokgatansin-il, 5-12, 2019
+// Date : Buddha's Birthday - Seokgatansin-il, 4-30, 2020
+// Date : Buddha's Birthday - Seokgatansin-il, 5-19, 2021
+// Date : Buddha's Birthday - Seokgatansin-il, 5-8, 2022
+// Date : Buddha's Birthday - Seokgatansin-il, 5-26, 2023
+// Date : Buddha's Birthday - Seokgatansin-il, 5-15, 2024
+// Date : Buddha's Birthday - Seokgatansin-il, 5-5, 2025
+// Date : Buddha's Birthday - Seokgatansin-il, 5-24, 2026
+// Date : Harvest Moon Festival - Chuseok, 9-29, 2012
+// Date : Harvest Moon Festival - Chuseok, 9-18, 2013
+// Date : Harvest Moon Festival - Chuseok, 9-7, 2014
+// Date : Harvest Moon Festival - Chuseok, 9-26, 2015
+// Date : Harvest Moon Festival - Chuseok, 9-14, 2016
+// Date : Harvest Moon Festival - Chuseok, 10-3, 2017
+// Date : Harvest Moon Festival - Chuseok, 9-23, 2018
+// Date : Harvest Moon Festival - Chuseok, 9-12, 2019
+// Date : Harvest Moon Festival - Chuseok, 9-30, 2020
+// Date : Harvest Moon Festival - Chuseok, 9-20, 2021
+// Date : Harvest Moon Festival - Chuseok, 9-9, 2022
+// Date : Harvest Moon Festival - Chuseok, 9-28, 2023
+// Date : Harvest Moon Festival - Chuseok, 9-16, 2024
+// Date : Harvest Moon Festival - Chuseok, 10-5, 2025
+// Date : Harvest Moon Festival - Chuseok, 9-24, 2026
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 10-1, 2012
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-20, 2013
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-9, 2014
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-28, 2015
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-16, 2016
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 10-5, 2017
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-25, 2018
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-14, 2019
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 10-2, 2020
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-22, 2021
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-11, 2022
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-30, 2023
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-18, 2024
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 10-7, 2025
+// Date : Harvest Moon Festival - Chuseok 3rd Day, 9-26, 2026
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-30, 2012
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-19, 2013
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-8, 2014
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-27, 2015
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-15, 2016
+// Date : Harvest Moon Festival - Chuseok actual holiday, 10-4, 2017
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-24, 2018
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-13, 2019
+// Date : Harvest Moon Festival - Chuseok actual holiday, 10-1, 2020
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-21, 2021
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-10, 2022
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-29, 2023
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-17, 2024
+// Date : Harvest Moon Festival - Chuseok actual holiday, 10-6, 2025
+// Date : Harvest Moon Festival - Chuseok actual holiday, 9-25, 2026
+// Date : Lunar New Year's Day - Seol, 1-22, 2012
+// Date : Lunar New Year's Day - Seol, 2-9, 2013,2024
+// Date : Lunar New Year's Day - Seol, 1-30, 2014
+// Date : Lunar New Year's Day - Seol, 2-18, 2015
+// Date : Lunar New Year's Day - Seol, 2-7, 2016
+// Date : Lunar New Year's Day - Seol, 1-27, 2017
+// Date : Lunar New Year's Day - Seol, 2-15, 2018
+// Date : Lunar New Year's Day - Seol, 2-4, 2019
+// Date : Lunar New Year's Day - Seol, 1-24, 2020
+// Date : Lunar New Year's Day - Seol, 2-11, 2021
+// Date : Lunar New Year's Day - Seol, 1-31, 2022
+// Date : Lunar New Year's Day - Seol, 1-21, 2023
+// Date : Lunar New Year's Day - Seol, 1-28, 2025
+// Date : Lunar New Year's Day - Seol, 2-16, 2026
+// Date : Lunar New Year's Day - Seol 3rd Day, 1-24, 2012
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-11, 2013,2024
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-1, 2014
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-20, 2015
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-9, 2016
+// Date : Lunar New Year's Day - Seol 3rd Day, 1-30, 2017,2025
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-17, 2018
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-6, 2019
+// Date : Lunar New Year's Day - Seol 3rd Day, 1-27, 2020
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-13, 2021
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-2, 2022
+// Date : Lunar New Year's Day - Seol 3rd Day, 1-23, 2023
+// Date : Lunar New Year's Day - Seol 3rd Day, 2-18, 2026
+// Date : Lunar New Year's Day - Seol actual holiday, 1-23, 2012
+// Date : Lunar New Year's Day - Seol actual holiday, 2-10, 2013,2024
+// Date : Lunar New Year's Day - Seol actual holiday, 1-31, 2014
+// Date : Lunar New Year's Day - Seol actual holiday, 2-19, 2015
+// Date : Lunar New Year's Day - Seol actual holiday, 2-8, 2016
+// Date : Lunar New Year's Day - Seol actual holiday, 1-28, 2017
+// Date : Lunar New Year's Day - Seol actual holiday, 2-16, 2018
+// Date : Lunar New Year's Day - Seol actual holiday, 2-5, 2019
+// Date : Lunar New Year's Day - Seol actual holiday, 1-25, 2020
+// Date : Lunar New Year's Day - Seol actual holiday, 2-12, 2021
+// Date : Lunar New Year's Day - Seol actual holiday, 2-1, 2022
+// Date : Lunar New Year's Day - Seol actual holiday, 1-22, 2023
+// Date : Lunar New Year's Day - Seol actual holiday, 1-29, 2025
+// Date : Lunar New Year's Day - Seol actual holiday, 2-17, 2026
+// Date : National Assembly Election Day, 4-11, 2012
+// Date : National Assembly Election Day, 4-13, 2016
+// Date : National Assembly Election Day, 4-15, 2020
+// Date : Presidential Election Day, 12-19, 2012
+// Date : Presidential Election Day, 5-9, 2017
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Korea",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Children's Day - Eorininal",
+      "RuleDate": "5-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Constitution Day - Jeheonjeol",
+      "RuleDate": "7-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Movement Day - Samiljeol",
+      "RuleDate": "3-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Liberation Day - Gwangbokjeol",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Memorial Day - Hyeonchung-il",
+      "RuleDate": "6-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Founding Day - Gaecheonjeol",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day - Sinjeong",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day - Seongtanjeol",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Hangul Day - Hangeulnal",
+      "RuleDate": "10-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ko-KR",
+  "Calendar": "Gregorian"
+}

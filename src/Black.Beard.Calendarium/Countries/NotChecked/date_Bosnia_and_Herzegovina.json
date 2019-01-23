@@ -1,0 +1,298 @@
+// calendar : Gregorian
+
+// Date : Good Friday Orthodox, 4-13, 2012
+// Date : Good Friday Orthodox, 5-3, 2013,2024
+// Date : Good Friday Orthodox, 4-18, 2014,2025
+// Date : Good Friday Orthodox, 4-10, 2015,2026
+// Date : Good Friday Orthodox, 4-29, 2016
+// Date : Good Friday Orthodox, 4-14, 2017,2023
+// Date : Good Friday Orthodox, 4-6, 2018
+// Date : Good Friday Orthodox, 4-26, 2019
+// Date : Good Friday Orthodox, 4-17, 2020
+// Date : Good Friday Orthodox, 4-30, 2021
+// Date : Good Friday Orthodox, 4-22, 2022
+// Date : Easter Orthodox, 4-15, 2012
+// Date : Easter Orthodox, 5-5, 2013,2024
+// Date : Easter Orthodox, 4-20, 2014,2025
+// Date : Easter Orthodox, 4-12, 2015,2026
+// Date : Easter Orthodox, 5-1, 2016
+// Date : Easter Orthodox, 4-16, 2017,2023
+// Date : Easter Orthodox, 4-8, 2018
+// Date : Easter Orthodox, 4-28, 2019
+// Date : Easter Orthodox, 4-19, 2020
+// Date : Easter Orthodox, 5-2, 2021
+// Date : Easter Orthodox, 4-24, 2022
+// Date : Easter Monday Orthodox, 4-16, 2012
+// Date : Easter Monday Orthodox, 5-6, 2013,2024
+// Date : Easter Monday Orthodox, 4-21, 2014,2025
+// Date : Easter Monday Orthodox, 4-13, 2015,2026
+// Date : Easter Monday Orthodox, 5-2, 2016
+// Date : Easter Monday Orthodox, 4-17, 2017,2023
+// Date : Easter Monday Orthodox, 4-9, 2018
+// Date : Easter Monday Orthodox, 4-29, 2019
+// Date : Easter Monday Orthodox, 4-20, 2020
+// Date : Easter Monday Orthodox, 5-3, 2021
+// Date : Easter Monday Orthodox, 4-25, 2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Bosnia_and_Herzegovina",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's 2nd Day",
+      "RuleDate": "1-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve Orthodox",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Orthodox",
+      "RuleDate": "1-7",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Orthodox",
+      "RuleDate": "1-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day Bosnia and Herzegovina",
+      "RuleDate": "3-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday Catholic",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Catholic",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday Catholic",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day 2nd Day",
+      "RuleDate": "5-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. George's Day",
+      "RuleDate": "5-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Victory Day Republika Srpska",
+      "RuleDate": "5-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Vitus's Day",
+      "RuleDate": "6-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Peter's Day",
+      "RuleDate": "7-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Elijah's Day",
+      "RuleDate": "8-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Assumption",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Dormition",
+      "RuleDate": "8-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Nativity of Mary",
+      "RuleDate": "9-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Nativity of the Theotokos",
+      "RuleDate": "9-21",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Saints' Day",
+      "RuleDate": "11-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Souls' Day",
+      "RuleDate": "2-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Demetrius' Day",
+      "RuleDate": "11-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "General Framework Agreement Day Republika Srpska",
+      "RuleDate": "11-21",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Statehood Day Bosnia and Herzegovina",
+      "RuleDate": "11-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Catholic",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Hijri New Year",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday",
+      "RuleDate": "3-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 2nd day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 3rd day",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 2nd day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 3rd day",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 4th day",
+      "RuleDate": "12-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "ba",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,119 @@
+// calendar : Gregorian
+
+// Date : New Year's Day Observed, 2-1, 2012,2017
+// Date : Liberation Day Observed, 2-5, 2018
+// Date : Women's Day Observed, 3-9, 2015,2020
+// Date : Peace Day Observed, 5-4, 2021
+// Date : Labor Day Observed, 5-2, 2016,2022
+// Date : National Heroes' Day Observed, 9-18, 2017
+// Date : Independence Day Observed, 12-11, 2012
+// Date : Independence Day Observed, 11-12, 2018
+// Date : Christmas Holiday, 12-27, 2016,2021,2022
+// Date : All Souls' Day Observed, 11-3, 2014
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Angola",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Liberation Day",
+      "RuleDate": "2-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival",
+      "RuleDate": "([EASTER]) - 48",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Women's Day",
+      "RuleDate": "3-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Peace Day",
+      "RuleDate": "4-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Heroes' Day",
+      "RuleDate": "9-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Souls' Day",
+      "RuleDate": "11-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "11-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas and Family Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Holiday",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ln-AO",
+  "Calendar": "Gregorian"
+}

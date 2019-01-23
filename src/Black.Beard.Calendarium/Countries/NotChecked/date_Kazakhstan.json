@@ -1,0 +1,123 @@
+// calendar : Gregorian
+// calendar : Hijri
+
+// Date : New Year's Day 3rd Day, 1-3, 2012,2017,2022,2023
+// Date : New Year's Day 3rd Day, 1-4, 2016,2021
+// Date : New Year's Day 4th Day, 1-4, 2022
+// Date : International Women's Day Observed, 3-10, 2014,2025
+// Date : International Women's Day Observed, 3-9, 2015,2020,2026
+// Date : Kazakhstan People's Unity Day Observed, 5-2, 2016,2022
+// Date : Kazakhstan People's Unity Day Observed, 5-3, 2021
+// Date : Victory Day Observed, 5-11, 2015,2020,2026
+// Date : Victory Day Observed, 5-10, 2021
+// Date : Capital City Day Observed, 7-8, 2013,2019,2024
+// Date : Capital City Day Observed, 7-7, 2014,2025
+// Date : Constitution Day Observed, 9-1, 2014,2025
+// Date : Constitution Day Observed, 8-31, 2015,2020,2026
+// Date : Independence Day 3rd Day, 12-18, 2012,2017,2018,2023
+// Date : Independence Day 3rd Day, 12-19, 2016,2022
+// Date : Independence Day 4th Day, 12-20, 2016
+// Date : Independence Day 4th Day, 12-19, 2017,2023
+// Date : Defender of the Fatherland Day Observed, 5-9, 2016,2022
+// Date : Defender of the Fatherland Day Observed, 5-8, 2017,2023
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Kazakhstan",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "1-7",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "International Women's Day",
+      "RuleDate": "3-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day 2nd Day",
+      "RuleDate": "1-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Victory Day",
+      "RuleDate": "5-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Nauryz Meyrami",
+      "RuleDate": "3-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Kazakhstan People's Unity Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Constitution Day",
+      "RuleDate": "8-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "12-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day 2nd Day",
+      "RuleDate": "12-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Kurban ayt",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Capital City Day",
+      "RuleDate": "7-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Defender of the Fatherland Day",
+      "RuleDate": "5-7",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "kk-KZ",
+  "Calendar": "Gregorian"
+}

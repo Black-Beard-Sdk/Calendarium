@@ -1,0 +1,32 @@
+// calendar : Gregorian
+
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "India",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Independence Day",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Republic Day",
+      "RuleDate": "1-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Gandhi Jayanti",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "as-IN",
+  "Calendar": "Gregorian"
+}

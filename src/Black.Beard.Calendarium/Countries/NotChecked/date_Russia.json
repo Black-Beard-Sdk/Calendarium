@@ -1,0 +1,136 @@
+// calendar : Gregorian
+// calendar : Hijri
+
+// Date : Motherland Defender's Day Observed, 2-25, 2013,2019
+// Date : Motherland Defender's Day Observed, 2-24, 2014,2020,2025
+// Date : International Women's Day Observed, 3-10, 2014,2025
+// Date : International Women's Day Observed, 3-9, 2015,2020,2026
+// Date : Spring and Labor Day Observed, 5-2, 2016,2022
+// Date : Spring and Labor Day Observed, 5-3, 2021
+// Date : Victory Day Observed, 5-11, 2015,2020,2026
+// Date : Victory Day Observed, 5-10, 2021
+// Date : Russia Day Observed, 6-13, 2016,2022
+// Date : Russia Day Observed, 6-14, 2021
+// Date : Day of the National Unity Observed, 11-5, 2012,2018
+// Date : Day of the National Unity Observed, 11-6, 2017,2023
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Russia",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas",
+      "RuleDate": "1-7",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "International Women's Day",
+      "RuleDate": "3-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Holiday Week",
+      "RuleDate": "1-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Holiday Week",
+      "RuleDate": "1-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Holiday Week",
+      "RuleDate": "1-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Holiday Week",
+      "RuleDate": "1-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Holiday Week",
+      "RuleDate": "1-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Holiday Week",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Spring and Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Victory Day",
+      "RuleDate": "5-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Russia Day",
+      "RuleDate": "6-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Motherland Defender's Day",
+      "RuleDate": "2-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the National Unity",
+      "RuleDate": "11-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ru",
+  "Calendar": "Gregorian"
+}

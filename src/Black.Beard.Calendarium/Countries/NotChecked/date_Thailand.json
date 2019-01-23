@@ -1,0 +1,281 @@
+// calendar : ThaiBuddhist
+// calendar : Gregorian
+
+// Date : Asalaha Bucha Day, 8-2, 2012
+// Date : Asalaha Bucha Day, 7-22, 2013
+// Date : Asalaha Bucha Day, 7-11, 2014
+// Date : Asalaha Bucha Day, 7-30, 2015
+// Date : Asalaha Bucha Day, 7-19, 2016
+// Date : Asalaha Bucha Day, 8-7, 2017
+// Date : Asalaha Bucha Day, 7-27, 2018
+// Date : Asalaha Bucha Day, 7-16, 2019
+// Date : Asalaha Bucha Day, 7-4, 2020
+// Date : Asalaha Bucha Day, 7-23, 2021
+// Date : Asalaha Bucha Day, 7-12, 2022
+// Date : Asalaha Bucha Day, 7-31, 2023
+// Date : Asalaha Bucha Day, 7-20, 2024
+// Date : Asalaha Bucha Day, 7-10, 2025
+// Date : Asalaha Bucha Day, 7-29, 2026
+// Date : Bank Holiday, 7-2, 2012,2018
+// Date : Bank Holiday, 7-3, 2017,2023
+// Date : Chinese New Year, 1-23, 2012
+// Date : Chinese New Year, 2-10, 2013,2024
+// Date : Chinese New Year, 1-31, 2014
+// Date : Chinese New Year, 2-19, 2015
+// Date : Chinese New Year, 2-8, 2016
+// Date : Chinese New Year, 1-28, 2017
+// Date : Chinese New Year, 2-16, 2018
+// Date : Chinese New Year, 2-5, 2019
+// Date : Chinese New Year, 1-25, 2020
+// Date : Chinese New Year, 2-12, 2021
+// Date : Chinese New Year, 2-1, 2022
+// Date : Chinese New Year, 1-22, 2023
+// Date : Chinese New Year, 1-29, 2025
+// Date : Chinese New Year, 2-17, 2026
+// Date : Coronation Day, 5-5, 2012,2013,2014,2015,2016
+// Date : Khao Phansa Buddhist Lent Day, 8-3, 2012
+// Date : Khao Phansa Buddhist Lent Day, 7-23, 2013
+// Date : Khao Phansa Buddhist Lent Day, 7-12, 2014
+// Date : Khao Phansa Buddhist Lent Day, 7-31, 2015
+// Date : Khao Phansa Buddhist Lent Day, 7-20, 2016
+// Date : Khao Phansa Buddhist Lent Day, 7-9, 2017
+// Date : Khao Phansa Buddhist Lent Day, 7-28, 2018
+// Date : Khao Phansa Buddhist Lent Day, 7-17, 2019
+// Date : Khao Phansa Buddhist Lent Day, 7-5, 2020
+// Date : Khao Phansa Buddhist Lent Day, 7-24, 2021
+// Date : Khao Phansa Buddhist Lent Day, 7-13, 2022
+// Date : Khao Phansa Buddhist Lent Day, 8-1, 2023
+// Date : Khao Phansa Buddhist Lent Day, 7-21, 2024
+// Date : Khao Phansa Buddhist Lent Day, 7-11, 2025
+// Date : Khao Phansa Buddhist Lent Day, 7-30, 2026
+// Date : Makha Bucha Day, 3-7, 2012
+// Date : Makha Bucha Day, 2-26, 2013
+// Date : Makha Bucha Day, 2-14, 2014
+// Date : Makha Bucha Day, 3-4, 2015
+// Date : Makha Bucha Day, 2-22, 2016
+// Date : Makha Bucha Day, 2-11, 2017
+// Date : Makha Bucha Day, 3-1, 2018
+// Date : Makha Bucha Day, 2-19, 2019
+// Date : Makha Bucha Day, 2-8, 2020
+// Date : Makha Bucha Day, 2-25, 2021
+// Date : Makha Bucha Day, 2-15, 2022
+// Date : Makha Bucha Day, 3-5, 2023
+// Date : Makha Bucha Day, 2-23, 2024
+// Date : Makha Bucha Day, 2-12, 2025
+// Date : Makha Bucha Day, 3-3, 2026
+// Date : Visakha Bucha Day, 6-4, 2012
+// Date : Visakha Bucha Day, 5-24, 2013
+// Date : Visakha Bucha Day, 5-13, 2014
+// Date : Visakha Bucha Day, 6-1, 2015
+// Date : Visakha Bucha Day, 5-20, 2016
+// Date : Visakha Bucha Day, 5-10, 2017
+// Date : Visakha Bucha Day, 5-29, 2018
+// Date : Visakha Bucha Day, 5-18, 2019
+// Date : Visakha Bucha Day, 5-6, 2020
+// Date : Visakha Bucha Day, 5-25, 2021
+// Date : Visakha Bucha Day, 5-14, 2022
+// Date : Visakha Bucha Day, 6-2, 2023
+// Date : Visakha Bucha Day, 5-21, 2024
+// Date : Visakha Bucha Day, 5-11, 2025
+// Date : Visakha Bucha Day, 5-31, 2026
+// Date : Children's Day, 1-14, 2012,2017,2023
+// Date : Children's Day, 1-12, 2013,2019
+// Date : Children's Day, 1-11, 2014,2020,2025
+// Date : Children's Day, 1-10, 2015,2026
+// Date : Children's Day, 1-9, 2016,2021
+// Date : Children's Day, 1-13, 2018,2024
+// Date : Children's Day, 1-8, 2022
+// Date : Loy Kratong Day, 11-28, 2012
+// Date : Loy Kratong Day, 11-17, 2013
+// Date : Loy Kratong Day, 11-6, 2014
+// Date : Loy Kratong Day, 11-25, 2015
+// Date : Loy Kratong Day, 11-14, 2016
+// Date : Loy Kratong Day, 11-3, 2017
+// Date : Loy Kratong Day, 11-22, 2018
+// Date : Loy Kratong Day, 11-11, 2019
+// Date : Loy Kratong Day, 10-30, 2020
+// Date : Loy Kratong Day, 11-18, 2021
+// Date : Loy Kratong Day, 11-7, 2022
+// Date : Loy Kratong Day, 11-26, 2023
+// Date : Loy Kratong Day, 11-15, 2024
+// Date : Loy Kratong Day, 11-5, 2025
+// Date : Loy Kratong Day, 11-24, 2026
+// Date : New Year's Day Observed, 1-3, 2012,2017,2022
+// Date : New Year's Day Observed, 1-2, 2018,2023
+// Date : Makha Bucha Day Observed, 2-10, 2020
+// Date : Makha Bucha Day Observed, 3-6, 2023
+// Date : Chakri Day Observed, 4-5, 2013,2019
+// Date : Chakri Day Observed, 4-7, 2014,2025
+// Date : Chakri Day Observed, 4-8, 2024
+// Date : Labor Day Observed, 5-2, 2016,2022
+// Date : Labor Day Observed, 5-3, 2021
+// Date : Coronation Day Observed, 5-7, 2012
+// Date : Coronation Day Observed, 5-6, 2013
+// Date : Visakha Bucha Day Observed, 5-20, 2019
+// Date : Visakha Bucha Day Observed, 5-16, 2022
+// Date : Visakha Bucha Day Observed, 5-12, 2025
+// Date : Visakha Bucha Day Observed, 6-1, 2026
+// Date : Asalaha Bucha Day Observed, 7-10, 2017
+// Date : Asalaha Bucha Day Observed, 7-6, 2020
+// Date : Asalaha Bucha Day Observed, 7-22, 2024
+// Date : Chulalongkorn Day Observed, 10-24, 2016,2022
+// Date : Chulalongkorn Day Observed, 10-25, 2021
+// Date : National Father's Day Observed, 12-7, 2015,2020,2026
+// Date : National Father's Day Observed, 12-6, 2021
+// Date : Constitution Day Observed, 12-12, 2016,2022
+// Date : Constitution Day Observed, 12-11, 2017,2023
+// Date : Khao Phansa Buddhist Lent Day Observed, 7-14, 2014
+// Date : Khao Phansa Buddhist Lent Day Observed, 7-11, 2017
+// Date : H.M. the Queen's Birthday Observed, 8-13, 2012,2018
+// Date : H.M. the Queen's Birthday Observed, 8-11, 2017
+// Date : H.M. the Queen's Birthday Observed, 8-14, 2023
+// Date : Ok Phansa End of Buddhist Lent, 10-30, 2012
+// Date : Ok Phansa End of Buddhist Lent, 10-19, 2013
+// Date : Ok Phansa End of Buddhist Lent, 10-8, 2014
+// Date : Ok Phansa End of Buddhist Lent, 10-27, 2015
+// Date : Ok Phansa End of Buddhist Lent, 10-16, 2016
+// Date : Ok Phansa End of Buddhist Lent, 10-5, 2017
+// Date : Ok Phansa End of Buddhist Lent, 10-24, 2018
+// Date : Ok Phansa End of Buddhist Lent, 10-13, 2019
+// Date : Ok Phansa End of Buddhist Lent, 10-1, 2020
+// Date : Ok Phansa End of Buddhist Lent, 10-20, 2021
+// Date : Ok Phansa End of Buddhist Lent, 10-9, 2022
+// Date : Ok Phansa End of Buddhist Lent, 10-28, 2023
+// Date : Ok Phansa End of Buddhist Lent, 10-17, 2024
+// Date : Ok Phansa End of Buddhist Lent, 10-7, 2025
+// Date : Ok Phansa End of Buddhist Lent, 10-26, 2026
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Thailand",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Bank Holiday",
+      "RuleDate": "7-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Chakri Day",
+      "RuleDate": "4-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Chulalongkorn Day",
+      "RuleDate": "10-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Constitution Day",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Father's Day",
+      "RuleDate": "12-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "H.M. the Queen's Birthday",
+      "RuleDate": "8-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Songkran Festival",
+      "RuleDate": "4-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Songkran Festival",
+      "RuleDate": "4-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Songkran Festival",
+      "RuleDate": "4-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Teacher's Day",
+      "RuleDate": "1-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Songkran Festival Observed",
+      "RuleDate": "4-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Songkran Festival Observed",
+      "RuleDate": "4-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "H.M. The King Rama X's Birthday Anniversary",
+      "RuleDate": "7-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "H.M. The King Rama IX's Memorial Day",
+      "RuleDate": "10-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "th",
+  "Calendar": "ThaiBuddhist"
+}

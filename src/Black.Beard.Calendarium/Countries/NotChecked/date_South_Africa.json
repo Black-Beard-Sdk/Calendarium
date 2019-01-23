@@ -1,0 +1,152 @@
+// calendar : Gregorian
+
+// Date : Family Day, 4-9, 2012
+// Date : Family Day, 4-1, 2013,2024
+// Date : Family Day, 4-21, 2014,2025
+// Date : Family Day, 4-6, 2015,2026
+// Date : Family Day, 3-28, 2016
+// Date : Family Day, 4-17, 2017
+// Date : Family Day, 4-2, 2018
+// Date : Family Day, 4-22, 2019
+// Date : Family Day, 4-13, 2020
+// Date : Family Day, 4-5, 2021
+// Date : Family Day, 4-18, 2022
+// Date : Family Day, 4-10, 2023
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : Human Rights Day Observed, 3-22, 2021
+// Date : Freedom Day Observed, 4-28, 2014,2025
+// Date : Worker's Day Observed, 5-2, 2016,2022
+// Date : Youth Day Observed, 6-17, 2013,2019,2024
+// Date : Women's Day Observed, 8-10, 2015,2020,2026
+// Date : Heritage Day Observed, 9-25, 2017,2023
+// Date : Day of Reconciliation Observed, 12-17, 2012,2018
+// Date : Day of Goodwill Observed, 12-27, 2021
+// Date : Christmas Bank Holiday, 12-26, 2016,2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "South_Africa",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of Goodwill",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of Reconciliation",
+      "RuleDate": "12-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Heritage Day",
+      "RuleDate": "9-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Human Rights Day",
+      "RuleDate": "3-21",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Women's Day",
+      "RuleDate": "8-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Worker's Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Youth Day",
+      "RuleDate": "6-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Freedom Day",
+      "RuleDate": "4-27",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Valentine's Day",
+      "RuleDate": "2-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Mother's Day",
+      "RuleDate": "5-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Father's Day",
+      "RuleDate": "6-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "af-ZA",
+  "Calendar": "Gregorian"
+}

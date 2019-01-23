@@ -1,0 +1,118 @@
+// calendar : Gregorian
+// calendar : Hijri
+
+// Date : Nevruz, 3-20, 2012,2013,2016,2017
+// Date : Nevruz, 3-21, 2014,2015
+// Date : Easter Orthodox, 4-15, 2012
+// Date : Easter Orthodox, 5-5, 2013,2024
+// Date : Easter Orthodox, 4-20, 2014,2025
+// Date : Easter Orthodox, 4-12, 2015,2026
+// Date : Easter Orthodox, 5-1, 2016
+// Date : Easter Orthodox, 4-16, 2017,2023
+// Date : Easter Orthodox, 4-8, 2018
+// Date : Easter Orthodox, 4-28, 2019
+// Date : Easter Orthodox, 4-19, 2020
+// Date : Easter Orthodox, 5-2, 2021
+// Date : Easter Orthodox, 4-24, 2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Albania",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day 2nd Day",
+      "RuleDate": "1-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Summer Day",
+      "RuleDate": "3-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Nevruz",
+      "RuleDate": "3-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Catholic",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Mother Theresa Day",
+      "RuleDate": "10-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "11-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Liberation Day",
+      "RuleDate": "11-29",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Youth Day",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "sq-AL",
+  "Calendar": "Gregorian"
+}

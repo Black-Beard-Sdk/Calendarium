@@ -1,0 +1,58 @@
+// calendar : Gregorian
+// calendar : Hebrew
+// calendar : Hijri
+// calendar : UmAlQura
+
+// Date : Yom Haatzmaut, 8-4, 5772,5775,5778
+// Date : Yom Haatzmaut, 8-6, 5773,5777
+// Date : Yom Haatzmaut, 9-6, 5774,5784
+// Date : Yom Haatzmaut, 9-4, 5776,5779,5782
+// Date : Yom Haatzmaut, 8-5, 5780,5783,5786
+// Date : Yom Haatzmaut, 8-3, 5781,5785
+// Date : Yom Hashoah, 8-28, 5773,5774,5784
+// Date : Yom Hashoah, 8-27, 5776,5779,5782
+// Date : Yom Hashoah, 7-26, 5781,5785
+// Date : Yom Hazikaron, 8-3, 5772,5775,5778
+// Date : Yom Hazikaron, 8-5, 5773,5777
+// Date : Yom Hazikaron, 9-5, 5774,5784
+// Date : Yom Hazikaron, 9-3, 5776,5779,5782
+// Date : Yom Hazikaron, 8-4, 5780,5783,5786
+// Date : Yom Hazikaron, 8-2, 5781,5785
+// Date : Yom Yerushalaim, 9-28, 5774,5776,5779,5782,5784
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Israel",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Yom Hashoah",
+      "RuleDate": "7-27",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Yom Yerushalaim",
+      "RuleDate": "8-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "International Holocaust Remembrance Day",
+      "RuleDate": "1-27",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Yizhak Rabin Memorial Day",
+      "RuleDate": "2-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ar-IL",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,126 @@
+// calendar : Gregorian
+
+// Date : Labour Day, 10-1, 2012,2018
+// Date : Labour Day, 10-7, 2013,2019,2024
+// Date : Labour Day, 10-6, 2014,2025
+// Date : Labour Day, 10-5, 2015,2020,2026
+// Date : Labour Day, 10-3, 2016,2022
+// Date : Labour Day, 10-2, 2017,2023
+// Date : Labour Day, 10-4, 2021
+// Date : Mother's Day, 5-13, 2012,2018
+// Date : Mother's Day, 5-12, 2013,2019,2024
+// Date : Mother's Day, 5-11, 2014,2025
+// Date : Mother's Day, 5-10, 2015,2020,2026
+// Date : Mother's Day, 5-8, 2016,2022
+// Date : Mother's Day, 5-14, 2017,2023
+// Date : Mother's Day, 5-9, 2021
+// Date : Queen's Birthday except Queensland and Western Australia, 6-11, 2012,2018
+// Date : Queen's Birthday except Queensland and Western Australia, 6-10, 2013,2019,2024
+// Date : Queen's Birthday except Queensland and Western Australia, 6-9, 2014,2025
+// Date : Queen's Birthday except Queensland and Western Australia, 6-8, 2015,2020,2026
+// Date : Queen's Birthday except Queensland and Western Australia, 6-13, 2016,2022
+// Date : Queen's Birthday except Queensland and Western Australia, 6-12, 2017,2023
+// Date : Queen's Birthday except Queensland and Western Australia, 6-14, 2021
+// Date : Father's Day, 9-2, 2012,2018
+// Date : Father's Day, 9-1, 2013,2019,2024
+// Date : Father's Day, 9-7, 2014,2025
+// Date : Father's Day, 9-6, 2015,2020,2026
+// Date : Father's Day, 9-4, 2016,2022
+// Date : Father's Day, 9-3, 2017,2023
+// Date : Father's Day, 9-5, 2021
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : New Year's Day Observed, 1-3, 2022
+// Date : Australia Day Observed, 1-28, 2013,2019
+// Date : Australia Day Observed, 1-27, 2014,2020,2025
+// Date : Anzac Day Observed, 4-27, 2015,2020,2026
+// Date : Anzac Day Observed, 4-26, 2021
+// Date : Christmas Bank Holiday, 12-26, 2016,2022
+// Date : Christmas Bank Holiday, 12-24, 2021
+// Date : Boxing Day Bank Holiday, 12-28, 2015,2020,2021,2026
+// Date : Boxing Day Bank Holiday, 12-27, 2016
+// Date : Queen's Birthday Queensland, 10-2, 2017,2023
+// Date : Queen's Birthday Queensland, 10-1, 2018
+// Date : Queen's Birthday Queensland, 10-7, 2019,2024
+// Date : Queen's Birthday Queensland, 10-5, 2020,2026
+// Date : Queen's Birthday Queensland, 10-4, 2021
+// Date : Queen's Birthday Queensland, 10-3, 2022
+// Date : Queen's Birthday Queensland, 10-6, 2025
+// Date : Queen's Birthday Western Australia, 9-25, 2017,2023
+// Date : Queen's Birthday Western Australia, 9-24, 2018
+// Date : Queen's Birthday Western Australia, 9-30, 2019,2024
+// Date : Queen's Birthday Western Australia, 9-28, 2020,2026
+// Date : Queen's Birthday Western Australia, 9-27, 2021
+// Date : Queen's Birthday Western Australia, 9-26, 2022
+// Date : Queen's Birthday Western Australia, 9-29, 2025
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Australia",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Anzac Day",
+      "RuleDate": "4-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Australia Day",
+      "RuleDate": "1-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Boxing Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "en-AU",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,159 @@
+// calendar : Gregorian
+
+// Date : Palm Sunday, 4-1, 2012
+// Date : Palm Sunday, 4-13, 2014,2025
+// Date : Palm Sunday, 3-29, 2015,2026
+// Date : Palm Sunday, 3-20, 2016
+// Date : Palm Sunday, 4-9, 2017
+// Date : Palm Sunday, 3-25, 2018
+// Date : Palm Sunday, 4-14, 2019
+// Date : Palm Sunday, 4-5, 2020
+// Date : Palm Sunday, 3-28, 2021
+// Date : Palm Sunday, 4-10, 2022
+// Date : Palm Sunday, 4-2, 2023
+// Date : Palm Sunday, 3-24, 2024
+// Date : Mother's Day, 5-6, 2012,2018
+// Date : Mother's Day, 5-5, 2013,2019,2024
+// Date : Mother's Day, 5-4, 2014,2025
+// Date : Mother's Day, 5-3, 2015,2020,2026
+// Date : Mother's Day, 5-1, 2016,2022
+// Date : Mother's Day, 5-7, 2017,2023
+// Date : Mother's Day, 5-2, 2021
+// Date : Pancake Day, 2-21, 2012,2023
+// Date : Pancake Day, 2-13, 2013,2018,2024
+// Date : Pancake Day, 3-4, 2014,2025
+// Date : Pancake Day, 2-17, 2015,2026
+// Date : Pancake Day, 2-9, 2016
+// Date : Pancake Day, 2-28, 2017
+// Date : Pancake Day, 3-5, 2019
+// Date : Pancake Day, 2-25, 2020
+// Date : Pancake Day, 2-16, 2021
+// Date : Pancake Day, 3-1, 2022
+// Date : Father's Day, 6-3, 2012,2018
+// Date : Father's Day, 6-2, 2013,2019,2024
+// Date : Father's Day, 6-1, 2014,2025
+// Date : Father's Day, 6-7, 2015,2020,2026
+// Date : Father's Day, 6-5, 2016,2022
+// Date : Father's Day, 6-4, 2017,2023
+// Date : Father's Day, 6-6, 2021
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Lithuania",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "All Saints' Day",
+      "RuleDate": "11-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Assumption",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas 2nd Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Epiphany",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Midsummer Day",
+      "RuleDate": "6-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Restoration Day",
+      "RuleDate": "3-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "2-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "State Day",
+      "RuleDate": "7-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "International Labour Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Defenders of Freedom Day",
+      "RuleDate": "1-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "lt",
+  "Calendar": "Gregorian"
+}

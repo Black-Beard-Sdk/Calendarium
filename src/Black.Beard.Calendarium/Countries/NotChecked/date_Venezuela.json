@@ -1,0 +1,287 @@
+// calendar : Gregorian
+
+// Date : Epiphany Bank Holiday, 1-9, 2012,2017
+// Date : Epiphany Bank Holiday, 1-7, 2013,2019
+// Date : Epiphany Bank Holiday, 1-6, 2014,2020
+// Date : Epiphany Bank Holiday, 1-12, 2015
+// Date : Epiphany Bank Holiday, 1-11, 2016,2021
+// Date : Epiphany Bank Holiday, 1-8, 2018
+// Date : Epiphany Bank Holiday, 1-10, 2022
+// Date : Palm Sunday, 4-1, 2012
+// Date : Palm Sunday, 3-24, 2013,2024
+// Date : Palm Sunday, 4-13, 2014,2025
+// Date : Palm Sunday, 3-29, 2015,2026
+// Date : Palm Sunday, 3-20, 2016
+// Date : Palm Sunday, 4-9, 2017
+// Date : Palm Sunday, 3-25, 2018
+// Date : Palm Sunday, 4-14, 2019
+// Date : Palm Sunday, 4-5, 2020
+// Date : Palm Sunday, 3-28, 2021
+// Date : Palm Sunday, 4-10, 2022
+// Date : Palm Sunday, 4-2, 2023
+// Date : Ascension Bank Holiday, 5-21, 2012
+// Date : Ascension Bank Holiday, 5-13, 2013
+// Date : Ascension Bank Holiday, 6-2, 2014
+// Date : Ascension Bank Holiday, 5-18, 2015
+// Date : Ascension Bank Holiday, 5-9, 2016
+// Date : Ascension Bank Holiday, 5-29, 2017
+// Date : Ascension Bank Holiday, 5-14, 2018
+// Date : Ascension Bank Holiday, 6-3, 2019
+// Date : Ascension Bank Holiday, 5-25, 2020
+// Date : Ascension Bank Holiday, 5-17, 2021
+// Date : Ascension Bank Holiday, 5-30, 2022
+// Date : Corpus Christi Bank Holiday, 6-11, 2012
+// Date : Corpus Christi Bank Holiday, 6-3, 2013
+// Date : Corpus Christi Bank Holiday, 6-23, 2014
+// Date : Corpus Christi Bank Holiday, 6-8, 2015
+// Date : Corpus Christi Bank Holiday, 5-30, 2016
+// Date : Corpus Christi Bank Holiday, 6-19, 2017
+// Date : Corpus Christi Bank Holiday, 6-4, 2018
+// Date : Corpus Christi Bank Holiday, 6-24, 2019
+// Date : Corpus Christi Bank Holiday, 6-15, 2020
+// Date : Corpus Christi Bank Holiday, 6-7, 2021
+// Date : Corpus Christi Bank Holiday, 6-20, 2022
+// Date : St. Peter and St. Paul Bank Holiday, 7-2, 2012,2018
+// Date : St. Peter and St. Paul Bank Holiday, 7-1, 2013,2019
+// Date : St. Peter and St. Paul Bank Holiday, 6-30, 2014
+// Date : St. Peter and St. Paul Bank Holiday, 6-29, 2015,2020
+// Date : St. Peter and St. Paul Bank Holiday, 7-4, 2016,2022
+// Date : St. Peter and St. Paul Bank Holiday, 7-3, 2017
+// Date : St. Peter and St. Paul Bank Holiday, 7-5, 2021
+// Date : Assumption Bank Holiday, 8-20, 2012,2018
+// Date : Assumption Bank Holiday, 8-19, 2013,2019
+// Date : Assumption Bank Holiday, 8-18, 2014
+// Date : Assumption Bank Holiday, 8-17, 2015,2020
+// Date : Assumption Bank Holiday, 8-15, 2016,2022
+// Date : Assumption Bank Holiday, 8-21, 2017
+// Date : Assumption Bank Holiday, 8-16, 2021
+// Date : All Saints' Day Bank Holiday, 11-5, 2012,2018
+// Date : All Saints' Day Bank Holiday, 11-4, 2013,2019
+// Date : All Saints' Day Bank Holiday, 11-3, 2014
+// Date : All Saints' Day Bank Holiday, 11-2, 2015,2020
+// Date : All Saints' Day Bank Holiday, 11-7, 2016,2022
+// Date : All Saints' Day Bank Holiday, 11-6, 2017
+// Date : All Saints' Day Bank Holiday, 11-1, 2021
+// Date : Immaculate Conception Bank Holiday, 12-10, 2012,2018
+// Date : Immaculate Conception Bank Holiday, 12-9, 2013,2019
+// Date : Immaculate Conception Bank Holiday, 12-8, 2014
+// Date : Immaculate Conception Bank Holiday, 12-14, 2015,2020
+// Date : Immaculate Conception Bank Holiday, 12-12, 2016,2022
+// Date : Immaculate Conception Bank Holiday, 12-11, 2017
+// Date : Immaculate Conception Bank Holiday, 12-13, 2021
+// Date : Holy Week, 3-30, 2015,2021,2026
+// Date : Holy Week, 3-31, 2015,2021,2026
+// Date : Holy Week, 4-1, 2015,2026
+// Date : Holy Week, 3-21, 2016
+// Date : Holy Week, 3-22, 2016
+// Date : Holy Week, 3-23, 2016
+// Date : Holy Week, 4-10, 2017
+// Date : Holy Week, 4-11, 2017,2022
+// Date : Holy Week, 4-12, 2017,2022
+// Date : Holy Week, 3-26, 2018,2024
+// Date : Holy Week, 3-27, 2018,2024
+// Date : Holy Week, 3-28, 2018
+// Date : Holy Week, 4-15, 2019,2025
+// Date : Holy Week, 4-16, 2019,2025
+// Date : Holy Week, 4-17, 2019
+// Date : Holy Week, 4-6, 2020
+// Date : Holy Week, 4-7, 2020
+// Date : Holy Week, 4-8, 2020
+// Date : Holy Week, 3-29, 2021
+// Date : Holy Week, 4-13, 2022
+// Date : Holy Week, 4-3, 2023
+// Date : Holy Week, 4-4, 2023
+// Date : Holy Week, 4-5, 2023
+// Date : Holy Week, 3-25, 2024
+// Date : Holy Week, 4-14, 2025
+// Date : Mother's Day, 5-10, 2015,2020,2026
+// Date : Mother's Day, 5-8, 2016,2022
+// Date : Mother's Day, 5-14, 2017,2023
+// Date : Mother's Day, 5-13, 2018
+// Date : Mother's Day, 5-12, 2019,2024
+// Date : Mother's Day, 5-9, 2021
+// Date : Mother's Day, 5-11, 2025
+// Date : Father's Day, 6-21, 2015,2020,2026
+// Date : Father's Day, 6-19, 2016,2022
+// Date : Father's Day, 6-18, 2017,2023
+// Date : Father's Day, 6-17, 2018
+// Date : Father's Day, 6-16, 2019,2024
+// Date : Father's Day, 6-20, 2021
+// Date : Father's Day, 6-15, 2025
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Venezuela",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Battle of Carabobo",
+      "RuleDate": "6-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival",
+      "RuleDate": "([EASTER]) - 48",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival 2nd Day",
+      "RuleDate": "([EASTER]) - 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of Indigenous Resistance",
+      "RuleDate": "10-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Declaration of Independence Day",
+      "RuleDate": "4-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "7-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Símon Bolívar Day",
+      "RuleDate": "7-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Thursday",
+      "RuleDate": "([EASTER]) - 3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Epiphany",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Youth Day",
+      "RuleDate": "2-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Ascension",
+      "RuleDate": "([EASTER]) + 39",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Corpus Christi",
+      "RuleDate": "([EASTER]) + 60",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Feast of Saints Peter and Paul",
+      "RuleDate": "6-29",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Assumption",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Saints' Day",
+      "RuleDate": "11-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Souls' Day",
+      "RuleDate": "11-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Immaculate Conception",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "es-VE",
+  "Calendar": "Gregorian"
+}

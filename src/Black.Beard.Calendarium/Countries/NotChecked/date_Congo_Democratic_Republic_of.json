@@ -1,0 +1,110 @@
+// calendar : Gregorian
+
+// Date : New Year's Day Observed, 12-31, 2016,2022
+// Date : Day of the Martyrs Observed, 1-3, 2015
+// Date : Heroes' Day Observed, 1-15, 2022
+// Date : Labour Day Observed, 4-30, 2016,2022
+// Date : Liberation Day Observed, 5-16, 2015,2020
+// Date : Independence Day Observed, 6-29, 2019,2024
+// Date : Parents' Day Observed, 7-31, 2021
+// Date : Christmas Observed, 12-24, 2016,2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Congo_Democratic_Republic_of",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the Martyrs",
+      "RuleDate": "1-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Heroes' Day",
+      "RuleDate": "1-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Heroes' Day",
+      "RuleDate": "1-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labour Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Liberation Day",
+      "RuleDate": "5-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "6-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Parents' Day",
+      "RuleDate": "8-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Army Day",
+      "RuleDate": "11-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Saint Paul's Day",
+      "RuleDate": "12-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "fr-CD",
+  "Calendar": "Gregorian"
+}

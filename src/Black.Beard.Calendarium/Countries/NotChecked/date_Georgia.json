@@ -1,0 +1,141 @@
+// calendar : Gregorian
+
+// Date : Great Saturday, 4-14, 2012
+// Date : Great Saturday, 5-4, 2013,2024
+// Date : Great Saturday, 4-19, 2014,2025
+// Date : Great Saturday, 4-11, 2015,2026
+// Date : Great Saturday, 4-30, 2016
+// Date : Great Saturday, 4-15, 2017,2023
+// Date : Great Saturday, 4-7, 2018
+// Date : Great Saturday, 4-27, 2019
+// Date : Great Saturday, 4-18, 2020
+// Date : Great Saturday, 5-1, 2021
+// Date : Great Saturday, 4-23, 2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Georgia",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day 2nd Day",
+      "RuleDate": "1-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas",
+      "RuleDate": "1-7",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Epiphany",
+      "RuleDate": "1-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Mother's Day",
+      "RuleDate": "3-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Women's Day",
+      "RuleDate": "3-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Restoration Day",
+      "RuleDate": "4-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. George",
+      "RuleDate": "5-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. George",
+      "RuleDate": "11-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Victory Day",
+      "RuleDate": "5-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Andrew",
+      "RuleDate": "5-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "5-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Virgin Mary",
+      "RuleDate": "8-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Svetickhovloba",
+      "RuleDate": "10-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ka-GE",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,152 @@
+// calendar : Gregorian
+
+// Date : Labor Day Observed, 5-2, 2016,2022
+// Date : Day of the Macedonian Revolution Observed, 10-24, 2016,2022
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : Christmas Bank Holiday, 1-8, 2018,2024
+// Date : Epiphany Bank Holiday, 1-20, 2014,2020,2025
+// Date : St. Cyril and St. Methodius Observed, 5-25, 2015,2020,2026
+// Date : Republic Day Observed, 8-3, 2015,2020,2026
+// Date : Dormition Observed, 8-29, 2016,2022
+// Date : Independence Day Observed, 9-9, 2013,2019,2024
+// Date : Revolution Day Observed, 10-12, 2015,2020,2026
+// Date : Saint Clement of Ohrid Bank Holiday, 12-9, 2013,2019,2024
+// Date : Eid al Fitr Bank Holiday, 10-3, 1433
+// Date : Eid al Fitr Bank Holiday, 10-2, 1438
+// Date : Eid al Fitr, 10-2, 1433
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Macedonia_FYRO",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas",
+      "RuleDate": "1-7",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Republic Day",
+      "RuleDate": "8-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "9-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Revolution Day",
+      "RuleDate": "10-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Cyril and St. Methodius",
+      "RuleDate": "5-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Orthodox New Year",
+      "RuleDate": "1-14",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the Macedonian Revolution",
+      "RuleDate": "10-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Clement of Ohrid",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Epiphany",
+      "RuleDate": "1-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Pentecost",
+      "RuleDate": "([EASTER]) + 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Dormition",
+      "RuleDate": "8-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "mk",
+  "Calendar": "Gregorian"
+}

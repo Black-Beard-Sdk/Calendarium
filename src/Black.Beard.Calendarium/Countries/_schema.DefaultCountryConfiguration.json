@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "Bb.Calendarium.Configuration.DefaultCountryConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "definitions": {
+    "Bb.Calendarium.Configuration.NameConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+      "id": "Bb.Calendarium.Configuration.NameConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Name": {
+          "description": "Specify a translated name of the current day",
+          "type": "string"
+        },
+        "Language": {
+          "description": "Specify a language for the translation",
+          "type": "string",
+          "enum": [
+            "Undefined",
+            "French",
+            "German",
+            "English",
+            "Dutch",
+            "Italian",
+            "Estonian",
+            "Latvian",
+            "Lithuanian",
+            "Spanish",
+            "Romania",
+            "Slovak",
+            "Slovenian",
+            "Croatian",
+            "Czech",
+            "PL",
+            "Hungarian",
+            "Portuguese",
+            "Russian"
+          ]
+        }
+      },
+      "required": [
+        "Name",
+        "Language"
+      ]
+    },
+    "Bb.Calendarium.Configuration.PeriodConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+      "id": "Bb.Calendarium.Configuration.PeriodConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Name": {
+          "description": "Specify the name of the day",
+          "type": "string"
+        },
+        "RuleDate": {
+          "description": "Specify a rule for compute the date",
+          "type": "string"
+        },
+        "RuleObserved": {
+          "description": "Specify a rule for compute the observed day different of the ruleDate",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RuleDuration": {
+          "description": "Specify a rule if the event duration is more of one day",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Free": {
+          "description": "Specify a day not worked",
+          "type": "boolean"
+        },
+        "Translations": {
+          "id": "System.Collections.Generic.List`1[[Bb.Calendarium.Configuration.NameConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "Bb.Calendarium.Configuration.NameConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        },
+        "Tags": {
+          "id": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Calendar": {
+          "type": "string",
+          "enum": [
+            "Default",
+            "Gregorian",
+            "Hebrew",
+            "UmAlQura",
+            "Hijri",
+            "Japanese",
+            "JapaneseLunisolar",
+            "Julian",
+            "Korean",
+            "KoreanLunisolar",
+            "Persian",
+            "Taiwan",
+            "TaiwanLunisolar",
+            "ThaiBuddhist"
+          ]
+        }
+      },
+      "required": [
+        "Name",
+        "RuleDate"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "Name": {
+      "description": "Name of the country",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Periods": {
+      "id": "System.Collections.Generic.List`1[[Bb.Calendarium.Configuration.PeriodConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "Bb.Calendarium.Configuration.PeriodConfiguration, Black.Beard.Calendarium, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+      }
+    },
+    "Culture": {
+      "description": "Code culture info ex: fr-FR. Please see CultureInfo dot net documentation",
+      "type": "string"
+    },
+    "Calendar": {
+      "description": "Specify calendar dontains in the culture",
+      "type": "string",
+      "enum": [
+        "Default",
+        "Gregorian",
+        "Hebrew",
+        "UmAlQura",
+        "Hijri",
+        "Japanese",
+        "JapaneseLunisolar",
+        "Julian",
+        "Korean",
+        "KoreanLunisolar",
+        "Persian",
+        "Taiwan",
+        "TaiwanLunisolar",
+        "ThaiBuddhist"
+      ]
+    }
+  },
+  "required": [
+    "Culture"
+  ]
+}

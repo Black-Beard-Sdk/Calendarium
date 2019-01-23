@@ -1,0 +1,180 @@
+// calendar : UmAlQura
+// calendar : Hijri
+// calendar : Gregorian
+
+// Date : San Martín National Patriot Day, 8-20, 2012,2018
+// Date : San Martín National Patriot Day, 8-19, 2013,2019,2024
+// Date : San Martín National Patriot Day, 8-18, 2014,2025
+// Date : San Martín National Patriot Day, 8-17, 2015,2020,2026
+// Date : San Martín National Patriot Day, 8-15, 2016,2022
+// Date : San Martín National Patriot Day, 8-21, 2017,2023
+// Date : San Martín National Patriot Day, 8-16, 2021
+// Date : Day of Remembrance for Truth and Justice bridge, 3-23, 2015
+// Date : Day of Remembrance for Truth and Justice bridge, 3-25, 2016
+// Date : Day of the Veterans bridge, 4-1, 2013
+// Date : Day of the Veterans bridge, 4-3, 2015
+// Date : Labor Day bridge, 4-30, 2012
+// Date : Labor Day bridge, 5-2, 2014
+// Date : Flag Day bridge, 6-21, 2013
+// Date : Independence Day bridge, 7-8, 2013
+// Date : Independence Day bridge, 7-10, 2015
+// Date : Immaculate Conception bridge, 12-7, 2015
+// Date : Immaculate Conception bridge, 12-9, 2016
+// Date : Bicentenary of the Argentine Flag, 2-27, 2012
+// Date : Day of Respect to Cultural Diversity Public Holiday, 10-8, 2012
+// Date : Day of Respect to Cultural Diversity Public Holiday, 10-14, 2013,2019,2024
+// Date : Day of Respect to Cultural Diversity Public Holiday, 10-13, 2014,2025
+// Date : Day of Respect to Cultural Diversity Public Holiday, 10-10, 2016,2022
+// Date : Day of Respect to Cultural Diversity Public Holiday, 10-16, 2017,2023
+// Date : Day of Respect to Cultural Diversity Public Holiday, 10-15, 2018
+// Date : Day of Respect to Cultural Diversity Public Holiday, 10-11, 2021
+// Date : Day of National Sovereignty Public Holiday, 11-26, 2012
+// Date : Day of National Sovereignty Public Holiday, 11-25, 2013
+// Date : Day of National Sovereignty Public Holiday, 11-24, 2014,2025
+// Date : Day of National Sovereignty Public Holiday, 11-23, 2015,2020,2026
+// Date : Day of National Sovereignty Public Holiday, 11-28, 2016,2022
+// Date : Day of National Sovereignty Public Holiday, 11-19, 2018
+// Date : Day of National Sovereignty Public Holiday, 11-18, 2019,2024
+// Date : Day of National Sovereignty Public Holiday, 11-22, 2021
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Argentina",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of Respect to Cultural Diversity",
+      "RuleDate": "10-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Flag Day",
+      "RuleDate": "6-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Immaculate Conception",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "7-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the Veterans",
+      "RuleDate": "4-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Anniversary of the May Revolution",
+      "RuleDate": "5-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival",
+      "RuleDate": "([EASTER]) - 48",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival 2nd Day",
+      "RuleDate": "([EASTER]) - 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of Remembrance for Truth and Justice",
+      "RuleDate": "3-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Thursday",
+      "RuleDate": "([EASTER]) - 3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of National Sovereignty",
+      "RuleDate": "11-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of Action for Tolerance and Respect among People",
+      "RuleDate": "4-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Commemoration of General Don Martín Miguel de Güemes",
+      "RuleDate": "6-17",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ar",
+  "Calendar": "UmAlQura"
+}

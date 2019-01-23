@@ -1,0 +1,99 @@
+// calendar : Gregorian
+
+// Date : Labour Day, 10-22, 2012,2018
+// Date : Labour Day, 10-28, 2013,2019,2024
+// Date : Labour Day, 10-27, 2014,2025
+// Date : Labour Day, 10-26, 2015,2020,2026
+// Date : Labour Day, 10-24, 2016,2022
+// Date : Labour Day, 10-23, 2017,2023
+// Date : Labour Day, 10-25, 2021
+// Date : Queen's Birthday, 6-4, 2012,2018
+// Date : Queen's Birthday, 6-3, 2013,2019,2024
+// Date : Queen's Birthday, 6-2, 2014,2025
+// Date : Queen's Birthday, 6-1, 2015,2020,2026
+// Date : Queen's Birthday, 6-6, 2016,2022
+// Date : Queen's Birthday, 6-5, 2017,2023
+// Date : Queen's Birthday, 6-7, 2021
+// Date : New Year's Bank Holiday, 1-3, 2012,2017,2023
+// Date : New Year's Bank Holiday, 1-4, 2016,2021,2022
+// Date : Christmas Bank Holiday, 12-27, 2016,2021,2022
+// Date : Boxing Day Bank Holiday, 12-28, 2015,2020,2021,2026
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "New_Zealand",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Anzac Day",
+      "RuleDate": "4-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Boxing Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day after New Year's Day",
+      "RuleDate": "1-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Waitangi Day",
+      "RuleDate": "2-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "en-NZ",
+  "Calendar": "Gregorian"
+}

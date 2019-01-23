@@ -1,0 +1,167 @@
+// calendar : Gregorian
+
+// Date : Anniversary of the Mexican Revolution, 11-19, 2012,2018
+// Date : Anniversary of the Mexican Revolution, 11-18, 2013,2019,2024
+// Date : Anniversary of the Mexican Revolution, 11-17, 2014,2025
+// Date : Anniversary of the Mexican Revolution, 11-16, 2015,2020,2026
+// Date : Anniversary of the Mexican Revolution, 11-21, 2016,2022
+// Date : Anniversary of the Mexican Revolution, 11-20, 2017,2023
+// Date : Anniversary of the Mexican Revolution, 11-15, 2021
+// Date : Benito Juarez's Birthday, 3-19, 2012,2018
+// Date : Benito Juarez's Birthday, 3-18, 2013,2019,2024
+// Date : Benito Juarez's Birthday, 3-17, 2014,2025
+// Date : Benito Juarez's Birthday, 3-16, 2015,2020,2026
+// Date : Benito Juarez's Birthday, 3-21, 2016,2022
+// Date : Benito Juarez's Birthday, 3-20, 2017,2023
+// Date : Benito Juarez's Birthday, 3-15, 2021
+// Date : Anniversary of the Constitution, 2-6, 2012,2017,2023
+// Date : Anniversary of the Constitution, 2-4, 2013,2019
+// Date : Anniversary of the Constitution, 2-3, 2014,2020,2025
+// Date : Anniversary of the Constitution, 2-2, 2015,2026
+// Date : Anniversary of the Constitution, 2-1, 2016,2021
+// Date : Anniversary of the Constitution, 2-5, 2018,2024
+// Date : Anniversary of the Constitution, 2-7, 2022
+// Date : Transmission of the Federal Executive Power, 12-1, 2012,2018,2024
+// Date : General Election, 7-1, 2012,2018
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Mexico",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "All Saints' Day",
+      "RuleDate": "11-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Souls' Day",
+      "RuleDate": "11-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Anniversary of the Battle of Puebla",
+      "RuleDate": "5-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Columbus Day",
+      "RuleDate": "10-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the President's Report",
+      "RuleDate": "9-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Flag Day",
+      "RuleDate": "2-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Thursday",
+      "RuleDate": "([EASTER]) - 3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "9-16",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Our Lady of Guadalupe",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Mother's Day",
+      "RuleDate": "5-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Epiphany",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Day of the Holy Innocents",
+      "RuleDate": "12-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "es-MX",
+  "Calendar": "Gregorian"
+}

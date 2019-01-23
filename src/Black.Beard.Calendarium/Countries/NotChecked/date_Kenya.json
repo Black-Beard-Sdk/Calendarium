@@ -1,0 +1,96 @@
+// calendar : Gregorian
+
+// Date : New Year's Day Observed, 1-2, 2012,2017,2023
+// Date : Labour Day Observed, 5-2, 2016,2022
+// Date : Madaraka Day Observed, 6-2, 2014,2025
+// Date : Mashujaa Heroes' Day Observed, 10-21, 2013,2019,2024
+// Date : Jamhuri Day Observed, 12-13, 2021
+// Date : Christmas Holiday, 12-27, 2016,2022
+// Date : Boxing Day Holiday, 12-27, 2021
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Kenya",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labour Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Madaraka Day",
+      "RuleDate": "6-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Mashujaa Heroes' Day",
+      "RuleDate": "10-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Jamhuri Day",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Boxing Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    }
+  ],
+  "Culture": "KE",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,120 @@
+// calendar : Gregorian
+
+// Date : Mother's Day, 5-13, 2012,2018
+// Date : Mother's Day, 5-12, 2013,2019,2024
+// Date : Mother's Day, 5-11, 2014,2025
+// Date : Mother's Day, 5-10, 2015,2020,2026
+// Date : Mother's Day, 5-8, 2016,2022
+// Date : Mother's Day, 5-14, 2017,2023
+// Date : Mother's Day, 5-9, 2021
+// Date : Restoration of Independence of the Republic of Latvia Public Holiday, 5-6, 2013,2019
+// Date : Restoration of Independence of the Republic of Latvia Public Holiday, 5-5, 2014
+// Date : Independence Day Public Holiday, 11-19, 2012,2018
+// Date : Independence Day Public Holiday, 11-20, 2017
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Latvia",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Sunday",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas 2nd Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "11-18",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. John",
+      "RuleDate": "6-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Restoration of Independence of the Republic of Latvia Day",
+      "RuleDate": "5-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Midsummer Eve",
+      "RuleDate": "6-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Whit Sunday",
+      "RuleDate": "([EASTER]) + 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "lv",
+  "Calendar": "Gregorian"
+}

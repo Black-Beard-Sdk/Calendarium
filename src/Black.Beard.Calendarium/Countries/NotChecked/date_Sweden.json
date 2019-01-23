@@ -1,0 +1,177 @@
+// calendar : Gregorian
+
+// Date : Midsummer Day, 6-23, 2012,2018
+// Date : Midsummer Day, 6-22, 2013,2019,2024
+// Date : Midsummer Day, 6-21, 2014,2025
+// Date : Midsummer Day, 6-20, 2015,2020,2026
+// Date : Midsummer Day, 6-25, 2016,2022
+// Date : Midsummer Day, 6-24, 2017,2023
+// Date : Midsummer Day, 6-26, 2021
+// Date : Midsummer Eve, 6-22, 2012,2018
+// Date : Midsummer Eve, 6-21, 2013,2019,2024
+// Date : Midsummer Eve, 6-20, 2014,2025
+// Date : Midsummer Eve, 6-19, 2015,2020,2026
+// Date : Midsummer Eve, 6-24, 2016,2022
+// Date : Midsummer Eve, 6-23, 2017,2023
+// Date : Midsummer Eve, 6-25, 2021
+// Date : All Hallows' Eve, 11-2, 2012,2018
+// Date : All Hallows' Eve, 11-1, 2013,2019,2024
+// Date : All Hallows' Eve, 10-31, 2014,2025
+// Date : All Hallows' Eve, 10-30, 2015,2020,2026
+// Date : All Hallows' Eve, 11-4, 2016,2022
+// Date : All Hallows' Eve, 11-3, 2017,2023
+// Date : All Hallows' Eve, 11-5, 2021
+// Date : Whitsun Eve, 5-26, 2012
+// Date : Whitsun Eve, 5-18, 2013,2024
+// Date : Whitsun Eve, 6-7, 2014,2025
+// Date : Whitsun Eve, 5-23, 2015,2026
+// Date : Whitsun Eve, 5-14, 2016
+// Date : Whitsun Eve, 6-3, 2017
+// Date : Whitsun Eve, 5-19, 2018
+// Date : Whitsun Eve, 6-8, 2019
+// Date : Whitsun Eve, 5-30, 2020
+// Date : Whitsun Eve, 5-22, 2021
+// Date : Whitsun Eve, 6-4, 2022
+// Date : Whitsun Eve, 5-27, 2023
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Sweden",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "All Saints' Day",
+      "RuleDate": "11-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Ascension",
+      "RuleDate": "([EASTER]) + 39",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Boxing Day",
+      "RuleDate": "12-26",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Sunday",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Epiphany",
+      "RuleDate": "1-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Thursday",
+      "RuleDate": "([EASTER]) - 3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Pentecost",
+      "RuleDate": "([EASTER]) + 49",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "May Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "6-6",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Walpurgis Night",
+      "RuleDate": "4-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Twelfth Night",
+      "RuleDate": "1-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Saturday",
+      "RuleDate": "([EASTER]) - 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "St. Lucia",
+      "RuleDate": "12-13",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "en-SE",
+  "Calendar": "Gregorian"
+}

@@ -1,0 +1,272 @@
+// calendar : Gregorian
+
+// Date : Chinese New Year Eve, 1-22, 2012
+// Date : Chinese New Year Eve, 2-9, 2013,2024
+// Date : Chinese New Year Eve, 1-30, 2014
+// Date : Chinese New Year Eve, 2-18, 2015
+// Date : Chinese New Year Eve, 2-7, 2016
+// Date : Chinese New Year Eve, 1-27, 2017
+// Date : Chinese New Year Eve, 2-15, 2018
+// Date : Chinese New Year Eve, 2-4, 2019
+// Date : Chinese New Year Eve, 1-24, 2020
+// Date : Chinese New Year Eve, 2-11, 2021
+// Date : Chinese New Year Eve, 1-31, 2022
+// Date : Chinese New Year Eve, 1-21, 2023
+// Date : Chinese New Year Eve, 1-28, 2025
+// Date : Chinese New Year Eve, 2-16, 2026
+// Date : Chinese New Year, 1-23, 2012
+// Date : Chinese New Year, 2-10, 2013,2024
+// Date : Chinese New Year, 1-31, 2014
+// Date : Chinese New Year, 2-19, 2015
+// Date : Chinese New Year, 2-8, 2016
+// Date : Chinese New Year, 1-28, 2017
+// Date : Chinese New Year, 2-16, 2018
+// Date : Chinese New Year, 2-5, 2019
+// Date : Chinese New Year, 1-25, 2020
+// Date : Chinese New Year, 2-12, 2021
+// Date : Chinese New Year, 2-1, 2022
+// Date : Chinese New Year, 1-22, 2023
+// Date : Chinese New Year, 1-29, 2025
+// Date : Chinese New Year, 2-17, 2026
+// Date : Chinese New Year 2nd Day, 1-24, 2012
+// Date : Chinese New Year 2nd Day, 2-11, 2013,2024
+// Date : Chinese New Year 2nd Day, 2-1, 2014
+// Date : Chinese New Year 2nd Day, 2-20, 2015
+// Date : Chinese New Year 2nd Day, 2-9, 2016
+// Date : Chinese New Year 2nd Day, 1-29, 2017
+// Date : Chinese New Year 2nd Day, 2-17, 2018
+// Date : Chinese New Year 2nd Day, 2-6, 2019
+// Date : Chinese New Year 2nd Day, 1-26, 2020
+// Date : Chinese New Year 2nd Day, 2-13, 2021
+// Date : Chinese New Year 2nd Day, 2-2, 2022
+// Date : Chinese New Year 2nd Day, 1-23, 2023
+// Date : Chinese New Year 2nd Day, 1-30, 2025
+// Date : Chinese New Year 2nd Day, 2-18, 2026
+// Date : Chinese New Year 3rd Day, 1-25, 2012
+// Date : Chinese New Year 3rd Day, 2-12, 2013,2024
+// Date : Chinese New Year 3rd Day, 2-2, 2014
+// Date : Chinese New Year 3rd Day, 2-21, 2015
+// Date : Chinese New Year 3rd Day, 2-10, 2016
+// Date : Chinese New Year 3rd Day, 1-30, 2017
+// Date : Chinese New Year 3rd Day, 2-18, 2018
+// Date : Chinese New Year 3rd Day, 2-7, 2019
+// Date : Chinese New Year 3rd Day, 1-27, 2020
+// Date : Chinese New Year 3rd Day, 2-14, 2021
+// Date : Chinese New Year 3rd Day, 2-3, 2022
+// Date : Chinese New Year 3rd Day, 1-24, 2023
+// Date : Chinese New Year 3rd Day, 1-31, 2025
+// Date : Chinese New Year 3rd Day, 2-19, 2026
+// Date : Chinese New Year 4th Day, 2-13, 2013
+// Date : Chinese New Year 4th Day, 2-3, 2014
+// Date : Chinese New Year 4th Day, 1-31, 2017
+// Date : Chinese New Year 4th Day, 2-19, 2018
+// Date : Chinese New Year 4th Day, 1-28, 2020
+// Date : Chinese New Year 4th Day, 2-15, 2021
+// Date : Labour Day Observed, 5-2, 2016,2022
+// Date : Labour Day Observed, 5-3, 2021
+// Date : Buddha's Birthday, 4-28, 2012
+// Date : Buddha's Birthday, 5-17, 2013
+// Date : Buddha's Birthday, 5-6, 2014
+// Date : Buddha's Birthday, 5-25, 2015
+// Date : Buddha's Birthday, 5-14, 2016
+// Date : Buddha's Birthday, 5-3, 2017
+// Date : Buddha's Birthday, 5-22, 2018
+// Date : Buddha's Birthday, 5-12, 2019
+// Date : Buddha's Birthday, 4-30, 2020
+// Date : Buddha's Birthday, 5-19, 2021
+// Date : Buddha's Birthday, 5-8, 2022
+// Date : Buddha's Birthday, 5-26, 2023
+// Date : Buddha's Birthday, 5-15, 2024
+// Date : Buddha's Birthday, 5-5, 2025
+// Date : Buddha's Birthday, 5-24, 2026
+// Date : Tung Ng Festival, 6-23, 2012
+// Date : Tung Ng Festival, 6-12, 2013
+// Date : Tung Ng Festival, 6-2, 2014
+// Date : Tung Ng Festival, 6-20, 2015
+// Date : Tung Ng Festival, 6-9, 2016
+// Date : Tung Ng Festival, 5-30, 2017
+// Date : Tung Ng Festival, 6-18, 2018
+// Date : Tung Ng Festival, 6-7, 2019
+// Date : Tung Ng Festival, 6-25, 2020
+// Date : Tung Ng Festival, 6-14, 2021
+// Date : Tung Ng Festival, 6-3, 2022
+// Date : Tung Ng Festival, 6-22, 2023
+// Date : Tung Ng Festival, 6-10, 2024
+// Date : Tung Ng Festival, 5-31, 2025
+// Date : Tung Ng Festival, 6-19, 2026
+// Date : Chong Chao Festival, 9-30, 2012
+// Date : Chong Chao Festival, 9-19, 2013
+// Date : Chong Chao Festival, 9-8, 2014
+// Date : Chong Chao Festival, 9-27, 2015
+// Date : Chong Chao Festival, 9-15, 2016
+// Date : Chong Chao Festival, 10-4, 2017
+// Date : Chong Chao Festival, 9-24, 2018
+// Date : Chong Chao Festival, 9-13, 2019
+// Date : Chong Chao Festival, 10-1, 2020
+// Date : Chong Chao Festival, 9-21, 2021
+// Date : Chong Chao Festival, 9-10, 2022
+// Date : Chong Chao Festival, 9-29, 2023
+// Date : Chong Chao Festival, 9-17, 2024
+// Date : Chong Chao Festival, 10-6, 2025
+// Date : Chong Chao Festival, 9-25, 2026
+// Date : Chong Chao Festival 2nd Day, 10-1, 2012
+// Date : Chong Chao Festival 2nd Day, 9-20, 2013
+// Date : Chong Chao Festival 2nd Day, 9-9, 2014
+// Date : Chong Chao Festival 2nd Day, 9-28, 2015
+// Date : Chong Chao Festival 2nd Day, 9-16, 2016
+// Date : Chong Chao Festival 2nd Day, 10-5, 2017
+// Date : Chong Chao Festival 2nd Day, 9-25, 2018
+// Date : Chong Chao Festival 2nd Day, 9-14, 2019
+// Date : Chong Chao Festival 2nd Day, 10-2, 2020
+// Date : Chong Chao Festival 2nd Day, 9-22, 2021
+// Date : Chong Chao Festival 2nd Day, 9-11, 2022
+// Date : Chong Chao Festival 2nd Day, 9-30, 2023
+// Date : Chong Chao Festival 2nd Day, 9-18, 2024
+// Date : Chong Chao Festival 2nd Day, 10-7, 2025
+// Date : Chong Chao Festival 2nd Day, 9-26, 2026
+// Date : National Day of the People's Republic of China Observed, 10-3, 2016,2022,2023
+// Date : National Day of the People's Republic of China Observed, 10-2, 2017
+// Date : Chong Yeung Festival, 10-23, 2012,2023
+// Date : Chong Yeung Festival, 10-13, 2013
+// Date : Chong Yeung Festival, 10-2, 2014
+// Date : Chong Yeung Festival, 10-21, 2015
+// Date : Chong Yeung Festival, 10-9, 2016
+// Date : Chong Yeung Festival, 10-28, 2017
+// Date : Chong Yeung Festival, 10-17, 2018
+// Date : Chong Yeung Festival, 10-7, 2019
+// Date : Chong Yeung Festival, 10-25, 2020
+// Date : Chong Yeung Festival, 10-14, 2021
+// Date : Chong Yeung Festival, 10-4, 2022
+// Date : Chong Yeung Festival, 10-11, 2024
+// Date : Chong Yeung Festival, 10-29, 2025
+// Date : Chong Yeung Festival, 10-18, 2026
+// Date : Christmas Observed, 12-26, 2016,2022
+// Date : Christmas Observed, 12-27, 2021
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Macao_S_A_R",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Cheng Ming Festival",
+      "RuleDate": "4-4",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Cheng Ming Festival",
+      "RuleDate": "4-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Saturday",
+      "RuleDate": "([EASTER]) - 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labour Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day of the People's Republic of China",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day of the People's Republic of China 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "All Souls' Day",
+      "RuleDate": "11-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Feast of the Immaculate Conception",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Macao Special Administrative Region Establishment Day",
+      "RuleDate": "12-20",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Winter Solstice",
+      "RuleDate": "12-21",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Winter Solstice",
+      "RuleDate": "12-22",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "en-MO",
+  "Calendar": "Gregorian"
+}

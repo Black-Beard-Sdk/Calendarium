@@ -1,0 +1,117 @@
+// calendar : Gregorian
+// calendar : Hijri
+
+// Date : Kurban Bayramı, 9-12, 2016
+// Date : Kurban Bayramı, 9-1, 2017
+// Date : Kurban Bayramı, 8-21, 2018
+// Date : Kurban Bayramı, 8-11, 2019
+// Date : Kurban Bayramı, 7-31, 2020
+// Date : Kurban Bayramı, 7-20, 2021
+// Date : Kurban Bayramı, 7-9, 2022
+// Date : Kurban Bayramı 2nd Day, 9-13, 2016
+// Date : Kurban Bayramı 2nd Day, 9-2, 2017
+// Date : Kurban Bayramı 2nd Day, 8-22, 2018
+// Date : Kurban Bayramı 2nd Day, 8-12, 2019
+// Date : Kurban Bayramı 2nd Day, 8-1, 2020
+// Date : Kurban Bayramı 2nd Day, 7-21, 2021
+// Date : Kurban Bayramı 2nd Day, 7-10, 2022
+// Date : Kurban Bayramı 3rd Day, 9-14, 2016
+// Date : Kurban Bayramı 3rd Day, 9-3, 2017
+// Date : Kurban Bayramı 3rd Day, 8-23, 2018
+// Date : Kurban Bayramı 3rd Day, 8-13, 2019
+// Date : Kurban Bayramı 3rd Day, 8-2, 2020
+// Date : Kurban Bayramı 3rd Day, 7-22, 2021
+// Date : Kurban Bayramı 3rd Day, 7-11, 2022
+// Date : Kurban Bayramı 4th Day, 9-15, 2016
+// Date : Kurban Bayramı 4th Day, 9-4, 2017
+// Date : Kurban Bayramı 4th Day, 8-24, 2018
+// Date : Kurban Bayramı 4th Day, 8-14, 2019
+// Date : Kurban Bayramı 4th Day, 8-3, 2020
+// Date : Kurban Bayramı 4th Day, 7-23, 2021
+// Date : Kurban Bayramı 4th Day, 7-12, 2022
+// Date : Ramazan Bayramı, 7-5, 2016
+// Date : Ramazan Bayramı, 6-25, 2017
+// Date : Ramazan Bayramı, 6-15, 2018
+// Date : Ramazan Bayramı, 6-5, 2019
+// Date : Ramazan Bayramı, 5-24, 2020
+// Date : Ramazan Bayramı, 5-13, 2021
+// Date : Ramazan Bayramı, 5-2, 2022
+// Date : Ramazan Bayramı 2nd Day, 7-6, 2016
+// Date : Ramazan Bayramı 2nd Day, 6-26, 2017
+// Date : Ramazan Bayramı 2nd Day, 6-16, 2018
+// Date : Ramazan Bayramı 2nd Day, 6-6, 2019
+// Date : Ramazan Bayramı 2nd Day, 5-25, 2020
+// Date : Ramazan Bayramı 2nd Day, 5-14, 2021
+// Date : Ramazan Bayramı 2nd Day, 5-3, 2022
+// Date : Ramazan Bayramı 3rd Day, 7-7, 2016
+// Date : Ramazan Bayramı 3rd Day, 6-27, 2017
+// Date : Ramazan Bayramı 3rd Day, 6-17, 2018
+// Date : Ramazan Bayramı 3rd Day, 6-7, 2019
+// Date : Ramazan Bayramı 3rd Day, 5-26, 2020
+// Date : Ramazan Bayramı 3rd Day, 5-15, 2021
+// Date : Ramazan Bayramı 3rd Day, 5-4, 2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Turkey",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Atatürk Memorial & Youth and Sports Day",
+      "RuleDate": "5-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Sovereignty and Children's Day",
+      "RuleDate": "4-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Republic Day",
+      "RuleDate": "10-29",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Victory Day",
+      "RuleDate": "8-30",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor and Solidarity Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Republic Day Eve",
+      "RuleDate": "10-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Democracy and National Solidarity Day",
+      "RuleDate": "7-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "tr",
+  "Calendar": "Gregorian"
+}

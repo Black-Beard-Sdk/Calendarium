@@ -1,0 +1,155 @@
+// calendar : Gregorian
+
+// Date : Martyr's Day, 1-7, 2013,2019
+// Date : Martyr's Day, 1-6, 2014,2020
+// Date : Martyr's Day, 1-12, 2015
+// Date : Martyr's Day, 1-8, 2018
+// Date : Shrove Tuesday, 2-21, 2012,2023
+// Date : Shrove Tuesday, 2-12, 2013
+// Date : Shrove Tuesday, 3-4, 2014,2025
+// Date : Shrove Tuesday, 2-17, 2015,2026
+// Date : Shrove Tuesday, 2-9, 2016
+// Date : Shrove Tuesday, 2-28, 2017
+// Date : Shrove Tuesday, 2-13, 2018,2024
+// Date : Shrove Tuesday, 3-5, 2019
+// Date : Shrove Tuesday, 2-25, 2020
+// Date : Shrove Tuesday, 2-16, 2021
+// Date : Shrove Tuesday, 3-1, 2022
+// Date : Ash Wednesday, 2-22, 2012,2023
+// Date : Ash Wednesday, 2-13, 2013
+// Date : Ash Wednesday, 3-5, 2014,2025
+// Date : Ash Wednesday, 2-18, 2015,2026
+// Date : Ash Wednesday, 2-10, 2016
+// Date : Ash Wednesday, 3-1, 2017
+// Date : Ash Wednesday, 2-14, 2018,2024
+// Date : Ash Wednesday, 3-6, 2019
+// Date : Ash Wednesday, 2-26, 2020
+// Date : Ash Wednesday, 2-17, 2021
+// Date : Ash Wednesday, 3-2, 2022
+// Date : Labor Day Observed, 5-2, 2016,2022
+// Date : Labor Day Observed, 5-3, 2021
+// Date : Independence Day, 11-26, 2012,2018
+// Date : Independence Day, 11-25, 2013,2019
+// Date : Independence Day, 12-1, 2014
+// Date : Independence Day, 11-27, 2017
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Panama",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Martyr's Day",
+      "RuleDate": "1-9",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Carnival",
+      "RuleDate": "([EASTER]) - 48",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Thursday",
+      "RuleDate": "([EASTER]) - 3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Holy Saturday",
+      "RuleDate": "([EASTER]) - 1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Easter Day",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Separation Day",
+      "RuleDate": "11-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Los Santos Uprising Day",
+      "RuleDate": "11-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "11-28",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Mothers' Day",
+      "RuleDate": "12-8",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Eve",
+      "RuleDate": "12-24",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Christmas Day",
+      "RuleDate": "12-25",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Colón Day",
+      "RuleDate": "11-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "es-PA",
+  "Calendar": "Gregorian"
+}

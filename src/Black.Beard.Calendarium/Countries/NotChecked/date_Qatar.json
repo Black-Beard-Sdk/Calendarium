@@ -1,0 +1,89 @@
+// calendar : Gregorian
+// calendar : UmAlQura
+// calendar : Hijri
+
+// Date : Bank Holiday, 3-4, 2012,2018
+// Date : Bank Holiday, 3-3, 2013,2019,2024
+// Date : Bank Holiday, 3-2, 2014,2025
+// Date : Bank Holiday, 3-1, 2015,2020,2026
+// Date : Bank Holiday, 3-6, 2016,2017,2022
+// Date : Bank Holiday, 3-7, 2021
+// Date : Bank Holiday, 3-5, 2023
+// Date : National Sports Day, 2-14, 2012,2017,2023
+// Date : National Sports Day, 2-12, 2013,2019
+// Date : National Sports Day, 2-11, 2014,2020,2025
+// Date : National Sports Day, 2-10, 2015,2026
+// Date : National Sports Day, 2-9, 2016,2021
+// Date : National Sports Day, 2-13, 2018,2024
+// Date : National Sports Day, 2-8, 2022
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Qatar",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Eid al Adha",
+      "RuleDate": "12-10",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 2nd Day",
+      "RuleDate": "12-11",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Adha 3rd Day",
+      "RuleDate": "12-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr",
+      "RuleDate": "10-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 2nd Day",
+      "RuleDate": "10-2",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Eid al Fitr 3rd Day",
+      "RuleDate": "10-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "12-18",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    }
+  ],
+  "Culture": "ar-QA",
+  "Calendar": "Gregorian"
+}
