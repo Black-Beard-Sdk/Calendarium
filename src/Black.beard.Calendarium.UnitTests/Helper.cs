@@ -16,60 +16,599 @@ namespace Bb.Calendarium.UnitTests
         static Helper()
         {
             Helper.Referential = GetReferential();
-            Helper.Todo = GetToDo();
             Helper._h = new HashSet<string>();
         }
 
-        private static Dictionary<Country, List<(string, string)>> GetToDo()
+        public static string GetA(string key)
         {
-            var txt = Resource1.ToDo.Split('\r');
 
-            Dictionary<Country, List<(string, string)>> _dic = new Dictionary<Country, List<(string, string)>>();
-            List<(string, string)> _list = null;
-
-            foreach (var item in txt)
+            switch (key.Trim('"').Trim())
             {
-                var t = item.Trim();
-                if (!string.IsNullOrEmpty(t))
-                {
-                    if (t.StartsWith("["))
-                    {
-                        var label = t.Substring(1, t.IndexOf(']') - 1);
-                        label = label
-                            .Replace(" ", "_")
-                            .Replace(".", "_")
 
-                            .Replace("(", "")
-                            .Replace(")", "")
-                            .Trim('_')
-                            .Trim()
-                            ;
+                case "Easter Monday":
+                    return "more easter monday";
 
-                        _list = new List<(string, string)>();
+                case "Assumption":
+                    return "assumption";
 
-                        if (Enum.TryParse<Country>(label, out Country value))
-                            _dic.Add(value, _list);
+                case "Accession Day":
+                    return "ascension";
 
-                    }
-                    else
-                    {
-                        var u = t.Split(',');
+                case "Pentecost":
+                    return "pentecost";
 
-                        var value = u.Length >= 2
-                            ? u[1].Trim()
-                            : GetRule(u[0]);
+                case "Pentecost Monday":
+                case "Easter Monday Catholic":
+                    return "monday pentecost more";
 
-                        _list.Add((u[0].Trim(), value));
-                    }
-                }
-                else
-                    _list = null;
+                case "Easter Sunday":
+                case "Easter Catholic":
+                case "Easter Day":
+                case "Easter Day Catholic":
+                case "Easter Gregorian":
+                    return "easter";
 
+                case "All Saints' Day":
+                    return "all saints";
+
+                case "Easter Tuesday":
+                case "Whit Monday":
+                case "Whit Sunday":
+                case "Bastille Day":
+                case "23rd of July Revolution Day":
+                case "25th of January Revolution Day":
+                case "All Souls' Day":
+                case "Alponja":
+                case "Anexión de Guanacaste":
+                case "Anniversary of St. Agatha and Liberation of San Marino":
+                case "Anniversary of the Arengo":
+                case "Anniversary of the Battle of Pichincha":
+                case "Anniversary of the Battle of Puebla":
+                case "Anniversary of the Election of Pope Francis":
+                case "Anniversary of the Foundation of San Marino":
+                case "Anniversary of the May Revolution":
+                case "Anniversary of the Shiite Uprising":
+                case "Anzac Day":
+                case "Aquino Day":
+                case "Arafat":
+                case "Arafat Day":
+                case "Arbaeen":
+                case "Armed Forces Day":
+                case "Armenian Rememberance Day":
+                case "Armistice Day":
+                case "Armistice Day 1918":
+                case "Army Day":
+                case "Army's Day":
+                case "Ascension":
+                case "Ashoora":
+                case "Ashoora 2nd Day":
+                case "Ashoora Eve":
+                case "Ashura":
+                case "Atatürk Memorial & Youth and Sports Day":
+                case "August Revolution Commemoration Day":
+                case "Australia Day":
+                case "Autumn Begins":
+                case "Autumn Equinox":
+                case "Autumnal Equinox Day":
+                case "Awal Muharam":
+                case "Bank Holiday":
+                case "Battle of Angamos":
+                case "Battle of Boyacá":
+                case "Battle of Carabobo":
+                case "Battle of Las Piedras":
+                case "Battle of San Jacinto":
+                case "Battle of the Boyne N. Ireland":
+                case "Birth of Gral. José Gervasio Artigas":
+                case "Birth of Mary":
+                case "Birthday of Dr. José Celso Barbosa":
+                case "Birthday of Imam Ali":
+                case "Birthday of Imam Mahdi":
+                case "Birthday of Luis Muñoz Marín":
+                case "Bonifacio Day":
+                case "Boquerón Battle Day":
+                case "Boxing Day":
+                case "Bulgarian Army Day St. George's Day":
+                case "Canada Day":
+                case "Candlemas":
+                case "Capital City Day":
+                case "Capital Liberation Day":
+                case "Carnival":
+                case "Carnival 2nd Day":
+                case "Chaco Armistice Day":
+                case "Chakri Day":
+                case "Cheng Ming Festival":
+                case "Children's Day":
+                case "Children's Day - Eorininal":
+                case "Ching Ming Festival":
+                case "Christmas":
+                case "Christmas 2nd Day":
+                case "Christmas and Family Day":
+                case "Christmas Catholic":
+                case "Christmas Coptic":
+                case "Christmas Day":
+                case "Christmas Day - Armenian Orthodox":
+                case "Christmas Day - Seongtanjeol":
+                case "Christmas Day - Western":
+                case "Christmas Day Catholic":
+                case "Christmas Eve":
+                case "Christmas Eve Orthodox":
+                case "Christmas Holiday":
+                case "Christmas Orthodox":
+                case "Christmas Western":
+                case "Chulalongkorn Day":
+                case "Cold Dews":
+                case "Colón Day":
+                case "Columbus Day":
+                case "Commemoration Day":
+                case "Commemoration of General Don Martín Miguel de Güemes":
+                case "Commemoration of Green March":
+                case "Commemoration of Wadi Al-Dahab":
+                case "Constitution Day":
+                case "Constitution Day - Jeheonjeol":
+                case "Corpus Christi":
+                case "Croatian Uprising Day":
+                case "Culture Day":
+                case "Czech Statehood Day St. Wenceslas Day":
+                case "Czechoslovak Independence Day":
+                case "Day After Ascension":
+                case "Day after New Year's Day":
+                case "Day After New Year's Day Quebec":
+                case "Day of Action for Tolerance and Respect among People":
+                case "Day of Freedom and Democracy":
+                case "Day of German Unity":
+                case "Day of Goodwill":
+                case "Day of Heroes":
+                case "Day of Indigenous Resistance":
+                case "Day of National Sovereignty":
+                case "Day of Prayer and Repentance":
+                case "Day of Reconciliation":
+                case "Day of Remembrance":
+                case "Day of Remembrance for Truth and Justice":
+                case "Day of Respect to Cultural Diversity":
+                case "Day of the Cultures":
+                case "Day of the Establishment of the Slovak Republic":
+                case "Day of the Holy Innocents":
+                case "Day of the Innocents":
+                case "Day of the Leaders of the Bulgarian National Revival":
+                case "Day of the Macedonian Revolution":
+                case "Day of the Martyrs":
+                case "Day of the National Unity":
+                case "Day of the President's Report":
+                case "Day of the Race":
+                case "Day of the Revolution":
+                case "Day of the Union of Bulgaria":
+                case "Day of the Veterans":
+                case "Day of Valor":
+                case "Declaration of Independence Day":
+                case "Defender of the Fatherland Day":
+                case "Defenders of Freedom Day":
+                case "Defenders of Ukraine Day":
+                case "Demise of Prophet Mohammed":
+                case "Democracy and National Solidarity Day":
+                case "Democracy Day":
+                case "Discovery of Puerto Rico":
+                case "Dormition":
+                case "Eid al Adha":
+                case "Eid al Adha 2nd day":
+                case "Eid al Adha 2nd Day":
+                case "Eid al Adha 3rd day":
+                case "Eid al Adha 3rd Day":
+                case "Eid al Adha 4th day":
+                case "Eid al Adha 4th Day":
+                case "Eid al Adha 5th day":
+                case "Eid al Adha 5th Day":
+                case "Eid al Adha Observed":
+                case "Eid al Fitr":
+                case "Eid al Fitr 2nd day":
+                case "Eid al Fitr 2nd Day":
+                case "Eid al Fitr 3rd day":
+                case "Eid al Fitr 3rd Day":
+                case "Eid al Fitr 4th day":
+                case "Eid al Fitr 5th day":
+                case "Eid al Isra' Wal Mi'raj":
+                case "Eid Al Isra' Wal Mi'raj":
+                case "Eid Norooz":
+                case "Eid-e-Fitr":
+                case "Eid-e-Fitr 2nd Day":
+                case "Eid-e-Ghadir":
+                case "Eid-e-Ghorban":
+                case "Emancipation Day":
+                case "Emperor's Birthday":
+                case "Enthronement":
+                case "Ephiphany Coptic":
+                case "Epiphany":
+                case "Europe Day":
+                case "Evacuation Day":
+                case "Expedition of the 33":
+                case "Father's Day":
+                case "Feast of Our Lady of Victories":
+                case "Feast of Saint Joseph":
+                case "Feast of Saint Paul's Shipwreck":
+                case "Feast of Saints Peter and Paul":
+                case "Feast of the Annunciation":
+                case "Feast of the Immaculate Conception":
+                case "Feast of the Transfiguration":
+                case "Fiestas Patronales":
+                case "First Republic Day":
+                case "First week-day after Christmas Day":
+                case "Flag Day":
+                case "Foundation Day":
+                case "Foundation of Quito Day":
+                case "Foundation of the Communist Party of Vietnam":
+                case "Founding of Asunción":
+                case "Freedom and Democracy Day":
+                case "Freedom Day":
+                case "Gandhi Jayanti":
+                case "General Framework Agreement Day Republika Srpska":
+                case "General Francisco Moranzán's Birthday":
+                case "Glorifying Mother of God":
+                case "Good Friday":
+                case "Good Friday Catholic":
+                case "Grain Buds":
+                case "Grain in Ear":
+                case "Grain Rain":
+                case "Grand Duc's Birthday National Day":
+                case "Grandfather's Day":
+                case "Grandmother's Day":
+                case "Great Cold":
+                case "Great Heat":
+                case "Greek Cypriot National Day":
+                case "Greek Independence Day":
+                case "Greek National Day":
+                case "Greenery Day":
+                case "Groundhog Day":
+                case "Gurban Bayram":
+                case "Gurban Bayram 2nd Day":
+                case "H.M. The King Rama IX's Memorial Day":
+                case "H.M. The King Rama X's Birthday Anniversary":
+                case "H.M. the Queen's Birthday":
+                case "H.M. the Sultan's Birthday":
+                case "Halloween":
+                case "Hangul Day - Hangeulnal":
+                case "Hari Raya Aidil Adha":
+                case "Hari Raya Aidil Fitri":
+                case "Hari Raya Aidil Fitri 2nd Day":
+                case "Hari Raya Aidilfitri":
+                case "Hari Raya Aidilfitri 2nd Day":
+                case "Hari Raya Haji":
+                case "Hari Raya Haji 2nd Day":
+                case "Hari Raya Puasa":
+                case "Heavy Snow":
+                case "Heritage Day":
+                case "Heroes' Day":
+                case "Hijri New Year":
+                case "Hoar-Frost Falls":
+                case "Holy Saturday":
+                case "Holy Thursday":
+                case "Holy Wednesday":
+                case "Homeland Thanksgiving Day":
+                case "Hong Kong SAR Establishment Day":
+                case "Human Rights Day":
+                case "Immaculate Conception":
+                case "Independence Day":
+                case "Independence Day 2nd Day":
+                case "Independence Day Bosnia and Herzegovina":
+                case "Independence Movement Day - Samiljeol":
+                case "Independence of Cuenca":
+                case "Independence of Guayaquil":
+                case "Independence Restoration Day":
+                case "Indian Arrival Day":
+                case "Indigenous Resistance Day":
+                case "Insects Awaken":
+                case "International Holocaust Remembrance Day":
+                case "International Labour Day":
+                case "International Women's Day":
+                case "International Workers' Day":
+                case "Investiture of the Captains-Regent":
+                case "Iranian New Year":
+                case "Iranian New Year 2nd Day":
+                case "Iranian New Year 3rd Day":
+                case "Iranian New Year 4th Day":
+                case "Isra' Mi'raj":
+                case "Jamhuri Day":
+                case "John Huss Day":
+                case "Juan Pablo Duarte Day":
+                case "Juan Santamaría":
+                case "Kazakhstan People's Unity Day":
+                case "King's Day":
+                case "King's Feast":
+                case "Kupala Night":
+                case "Kurban ayt":
+                case "Labor and Solidarity Day":
+                case "Labor Day":
+                case "Labor Day 2nd Day":
+                case "Labor Thanksgiving Day":
+                case "Labour Day":
+                case "Lady of Altagracia":
+                case "Lady of Mercedes":
+                case "Lailat al-Ma'raj":
+                case "Lateran Treaty Day":
+                case "Liberation Day":
+                case "Liberation Day - Gwangbokjeol":
+                case "Liberation Day-Reunification Day":
+                case "Liberation of Monaco":
+                case "Liberation War Day":
+                case "Light Snow":
+                case "Los Santos Uprising Day":
+                case "Macao Special Administrative Region Establishment Day":
+                case "Madaraka Day":
+                case "Malaysia Day":
+                case "Manifesto of Independence":
+                case "Martisor":
+                case "Martyrdom of Fatima Zahra":
+                case "Martyrdom of Imam Ali":
+                case "Martyrdom of Imam Reza":
+                case "Martyrdom of Imam Sadeq":
+                case "Martyrs' Day":
+                case "Martyr's Day":
+                case "Mashujaa Heroes' Day":
+                case "Maundy Thursday":
+                case "May Day":
+                case "May Day Eve":
+                case "Memorial Day":
+                case "Memorial Day - Hyeonchung-il":
+                case "Memorial Day for the Martyrs of Arad":
+                case "Memorial Day Newfoundland and Labrador":
+                case "Midsummer Day":
+                case "Midsummer Eve":
+                case "Mission of Prophet Mohammed":
+                case "Mother Theresa Day":
+                case "Motherland Defender's Day":
+                case "Mothers' Day":
+                case "Mother's Day":
+                case "Mountain Day":
+                case "National Aboriginal Day Northwest Territories":
+                case "National Day":
+                case "National Day 2nd Day":
+                case "National Day 3rd Day":
+                case "National Day of Black Awareness":
+                case "National Day of Mourning":
+                case "National Day of the People's Republic of China":
+                case "National Day of the People's Republic of China 2nd Day":
+                case "National Defense Day":
+                case "National Father's Day":
+                case "National Flag Day":
+                case "National Foundation Day":
+                case "National Founding Day - Gaecheonjeol":
+                case "National Heroes' Day":
+                case "National Holiday":
+                case "National Language Day":
+                case "National Resistance Day":
+                case "National Salvation Day":
+                case "National Sovereignty and Children's Day":
+                case "National Unity Day":
+                case "National Youth Day":
+                case "Nativity of Mary":
+                case "Nativity of the Theotokos":
+                case "Nature Day":
+                case "Nauryz Meyrami":
+                case "Naval Glories Day":
+                case "Nevruz":
+                case "New Year's 2nd Day":
+                case "New Year's Day":
+                case "New Year's Day - Sinjeong":
+                case "New Year's Day 2nd Day":
+                case "New Year's Day 2nd Day Scotland":
+                case "New Year's Eve":
+                case "New Year's Holiday":
+                case "New Year's Holiday Week":
+                case "New Year's Orthodox":
+                case "Novruz Bayram":
+                case "Nunavut Day Nunavut":
+                case "Nuzul al-Quraan":
+                case "October Revolution":
+                case "October Revolution Day":
+                case "Orthodox New Year":
+                case "Our Lady of Aparecida":
+                case "Our Lady of Guadalupe":
+                case "Our Lady of Meritxell":
+                case "Our Lady of Mount Carmel":
+                case "Our Lady of the Angels":
+                case "Panamerican Day":
+                case "Parents' Day":
+                case "Party's Day":
+                case "Peace Day":
+                case "People Power Day":
+                case "Pesach":
+                case "President Ho Chi Minh's Birthday":
+                case "President's Day":
+                case "Prophet Mohammed's Birthday":
+                case "Prophet Mohammed's Birthday 2nd Day":
+                case "Prophet Mohammed's Birthday Shia":
+                case "Prophet Mohammed's Birthday Sunni":
+                case "Quebec National Day - St. John the Baptist Day Quebec":
+                case "Ramazan":
+                case "Ramazan 2nd Day":
+                case "Reformation Day":
+                case "Re-Independence Day":
+                case "Remembrance Day":
+                case "Renaissance Day":
+                case "Republic Day":
+                case "Republic Day Eve":
+                case "Resistance and Liberation Day":
+                case "Restoration Day":
+                case "Restoration of Independence of the Republic of Latvia Day":
+                case "Reunion Day":
+                case "Revolution and Youth Day":
+                case "Revolution Day":
+                case "Revolution of the King and the People":
+                case "Rizal Day":
+                case "Rose of Lima Day":
+                case "Russia Day":
+                case "Saint George":
+                case "Saint Joseph the Worker":
+                case "Saint Joseph's Day":
+                case "Saint Paul's Day":
+                case "Sainte-Dévote":
+                case "Sandinista Revolution Anniversary":
+                case "Separation Day":
+                case "September Revolution":
+                case "Serbian New Year":
+                case "Sette Giugno":
+                case "Shab-e-Miraj":
+                case "Shōwa Day":
+                case "Simón Bolivar Day":
+                case "Símon Bolívar Day":
+                case "Sinai Liberation Day":
+                case "Slight Cold":
+                case "Slight Heat":
+                case "Slovak National Uprising":
+                case "Solemnity of Mary Mother of God":
+                case "Solidarity of Azerbaijanis":
+                case "Songkran Festival":
+                case "Songkran Festival Observed":
+                case "Sovereignty Day of Montenegro":
+                case "Sovereignty Day of Montenegro 2nd Day":
+                case "Sovereignty Day of Serbia":
+                case "Spring and Labor Day":
+                case "Spring Begins":
+                case "Spritual Baptist Day":
+                case "St. Andrew":
+                case "St. Andrew's Day":
+                case "St. Andrew's Day Scotland":
+                case "St. Berchtold":
+                case "St. Carlos Borromeo":
+                case "St. Clement of Ohrid":
+                case "St. Cyril and St. Methodius":
+                case "St. Cyril and St. Methodius Day Education & Culture Day":
+                case "St. Demetrius' Day":
+                case "St. Elijah's Day":
+                case "St. George":
+                case "St. George's Day":
+                case "St. John":
+                case "St. John the Baptist":
+                case "St. Joseph":
+                case "St. Joseph's Day":
+                case "St. Lucia":
+                case "St. Maron":
+                case "St. Nicholas":
+                case "St. Nicholas' Eve":
+                case "St. Patrick's Day":
+                case "St. Patrick's Day N. Ireland":
+                case "St. Peter and St. Paul":
+                case "St. Peter's Day":
+                case "St. Sava":
+                case "St. Stephen's Day":
+                case "St. Vitus":
+                case "St. Vitus's Day":
+                case "Start of Ramadan":
+                case "State Day":
+                case "Statehood Day":
+                case "Statehood Day Bosnia and Herzegovina":
+                case "Stopping the Heat":
+                case "Sukkot":
+                case "Sultan's Birthday":
+                case "Summer Begins":
+                case "Summer Day":
+                case "Summer Solstice":
+                case "Svetickhovloba":
+                case "Sylvester":
+                case "Tasua":
+                case "Tax Day":
+                case "Teacher's Day":
+                case "The Rains":
+                case "The Yang di-Pertuan Agong's Birthday":
+                case "Three Kings Day":
+                case "Three Kings Eve":
+                case "Tiradentes Day":
+                case "Tomb Sweeping Day Ching Ming Festival":
+                case "Twelfth Night":
+                case "Union Day of Belarus and Russia":
+                case "Valentine's Day":
+                case "Vernal Equinox":
+                case "Vernal Equinox Day":
+                case "Veteran's Day":
+                case "Victory and Peace Day":
+                case "Victory Day":
+                case "Victory Day Republika Srpska":
+                case "Vietnamese Family Day":
+                case "Vietnamese Women's Day":
+                case "Vigil of Assumption":
+                case "Virgin Mary":
+                case "Virgin Mary of the Seven Sorrows":
+                case "Virgin of Caacupé":
+                case "Virgin of Suyapa":
+                case "Waitangi Day":
+                case "Walpurgis Night":
+                case "Western Christmas":
+                case "White Dews":
+                case "Winter Begins":
+                case "Winter Solstice":
+                case "Women's Day":
+                case "Worker's Day":
+                case "Year End Bank Holiday":
+                case "Yennayer":
+                case "Yizhak Rabin Memorial Day":
+                case "Yom Hashoah":
+                case "Yom Kippur":
+                case "Yom Yerushalaim":
+                case "Youth Day":
+
+                    return "orthodox christmas";
+                    return "orthodox easter";
+                    return "orthodox holy friday";
+                    return "orthodox pentecost";
+                    return "monday to orthodox whit";
+
+                    return "ashura";
+                    return "assumption";
+                    return "christmas";
+                    return "diwali";
+                    return "epiphany";
+                    return "fast tisha b'av";
+                    return "fasten 17. tammuz";
+                    return "fasten gedalia";
+                    return "fasten taanit esther";
+                    return "feast of the breaking ( eid ul-fitr)";
+                    return "feast of the candlemas";
+                    return "friday saint";
+                    return "hanukkah # 1";
+                    return "hanukkah # 2";
+                    return "hanukkah # 3";
+                    return "hanukkah # 4";
+                    return "hanukkah # 5";
+                    return "hanukkah # 6";
+                    return "hanukkah # 7";
+                    return "hanukkah # 8";
+                    return "jom kippur";
+                    return "lailat al miraj";
+                    return "laylat ul bara'ah";
+                    return "mawlid";
+                    return "monday fat orthodox";
+
+                    return "new year islamic";
+                    return "night of destiny ( laylat al-qadr)";
+
+                    return "pesach #1";
+                    return "pesach #2";
+                    return "pesach chol hamoed #1";
+                    return "pesach chol hamoed #2";
+                    return "pesach chol hamoed #3";
+                    return "pesach chol hamoed #4";
+                    return "purim";
+                    return "ramadan";
+                    return "rosh hashana #1";
+                    return "rosh hashana #2";
+                    return "schmin azeret";
+                    return "shavuot";
+                    return "simchat tora";
+                    return "standby of christmas";
+                    return "sukkot #1";
+                    return "sukkot #2";
+                    return "sukkot chol hamoed #1";
+                    return "sukkot chol hamoed #2";
+                    return "sukkot chol hamoed #3";
+                    return "sukkot chol hamoed #4";
+                    return "sukkot chol hamoed #5";
+
+                default:
+                    break;
             }
 
-            return _dic;
+            return string.Empty;
 
         }
+
 
         public static string GetRule(string label)
         {
@@ -120,7 +659,7 @@ namespace Bb.Calendarium.UnitTests
                     return "([EASTER]) - 48";
 
                 case "carnival 2nd day":
-                    return "([EASTER]) - 49"; 
+                    return "([EASTER]) - 49";
 
                 case "easter monday catholic":
                 case "easter monday":

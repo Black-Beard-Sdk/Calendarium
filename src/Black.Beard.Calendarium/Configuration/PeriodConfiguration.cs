@@ -28,6 +28,17 @@ namespace Bb.Calendarium.Configuration
 
         }
 
+        /// <summary>
+        /// specify a year where the rule start
+        /// </summary>
+                public int? YearStart { get; set; }
+
+        /// <summary>
+        /// specify a year where the rule end
+        /// </summary>
+        public int? YearEnd { get; set; }
+
+
         [Description("Specify the name of the day")]
         [JsonRequired]
         public string Name { get; set; }
@@ -71,7 +82,6 @@ namespace Bb.Calendarium.Configuration
         {
             return Name;
         }
-
 
         public PeriodConfiguration Clone()
         {

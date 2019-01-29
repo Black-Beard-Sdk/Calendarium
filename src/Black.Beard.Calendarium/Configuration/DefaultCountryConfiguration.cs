@@ -112,7 +112,6 @@ namespace Bb.Calendarium.Configuration
 
         public List<PeriodConfiguration> Periods { get; set; }
 
-
         [Description("Code culture info ex: fr-FR. Please see CultureInfo dot net documentation")]
         [JsonRequired]
         public string Culture { get; set; }

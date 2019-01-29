@@ -46,7 +46,7 @@ namespace Bb.Calendarium.Configuration
         }
 
         /// <summary>
-        /// Return the list keys
+        /// Return the list keys registered
         /// </summary>
         /// <param name="country">can restrict key form specified country</param>
         /// <returns></returns>
@@ -216,6 +216,14 @@ namespace Bb.Calendarium.Configuration
 
         }
 
+        /// <summary>
+        /// Build
+        /// </summary>
+        /// <param name="dates"></param>
+        /// <param name="key"></param>
+        /// <param name="date"></param>
+        /// <param name="country"></param>
+        /// <param name="region"></param>
         private void Build(Dictionary<DateTime, IdentifiedDate> dates, string key, DateTime date, Country country, string region)
         {
 
@@ -224,6 +232,12 @@ namespace Bb.Calendarium.Configuration
             if (_dicRules.TryGetValue(key, out List<PeriodConfiguration> periodConfigurations)) // Fetch rules
                 foreach (var periodConfiguration in periodConfigurations)
                 {
+
+                    if (periodConfiguration.YearStart.HasValue && periodConfiguration.YearStart.Value <= date.Year)
+                        continue;
+
+                    if (periodConfiguration.YearEnd.HasValue && periodConfiguration.YearEnd.Value >= date.Year)
+                        continue;
 
                     var cal = periodConfiguration.CalendarInstance;
                     var _dates = periodConfiguration.RuleFunction(cal.GetYear(date));
