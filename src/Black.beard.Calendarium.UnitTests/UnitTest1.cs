@@ -2,6 +2,7 @@ using Bb.Calendarium.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,8 @@ namespace Bb.Calendarium.UnitTests
 
             var dir = new System.IO.DirectoryInfo(Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "Black.Beard.Calendarium", "Countries"));
             var loader = new ConfigurationLoader(dir).Load();
-
+            
             var result = new System.IO.FileInfo(Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "..", "result.md"));
-
 
             //CountryDebugger.AutoStop.Country = Country.Ecuador ;
             //CountryDebugger.AutoStop.DayName = ;
@@ -77,9 +77,11 @@ namespace Bb.Calendarium.UnitTests
             if (!cal.GetKeys(country).Any())
                 return false;
 
+            var calendar = cal.GetConfigurationByCountry(country)[0].Calendar.GetCalendar();
+
             List<KeyValuePair<string, DateTime>> _items = new List<KeyValuePair<string, DateTime>>();
             foreach (var item in referential)
-                _items.Add(new KeyValuePair<string, DateTime>(item.Item1, GetExpectedDate(item)));
+                _items.Add(new KeyValuePair<string, DateTime>(item.Item1, GetExpectedDate(item, calendar)));
             _items = _items.OrderBy(c => c.Value).ToList();
 
             foreach (var item in _items)
@@ -117,16 +119,31 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static DateTime GetExpectedDate((string, string) item)
+        private static DateTime GetExpectedDate((string, string) item, Calendar calendar)
         {
+
             var u3 = item.Item2.Split('-');
-            DateTime expected = new DateTime(int.Parse(u3[0]), int.Parse(u3[1]), int.Parse(u3[2]));
+            var year = int.Parse(u3[0]);
+            var month = int.Parse(u3[1]);
+            var day = int.Parse(u3[2]);
+            
+            DateTime expected;
+            try
+            {
+                expected = new DateTime(year, month, day, calendar);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
             return expected;
+
         }
 
         private static List<EventDate> GetEvents(Country country, CalendariumConfiguration cal, int year, CalendarEnum calendar = CalendarEnum.Default)
         {
-            var dates = cal.GetDates(year, calendar, country);
+            var dates = cal.GetDates(year, country, calendar);
             List<EventDate> _events = new List<EventDate>();
             foreach (var _date in dates)
                 foreach (var _event in _date.Value.Events)

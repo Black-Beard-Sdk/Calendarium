@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Black.Beard.Calendarium", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Black.Beard.Calendarium.UnitTests", "Black.beard.Calendarium.UnitTests\Black.Beard.Calendarium.UnitTests.csproj", "{08E65DEC-BAD7-4312-AEF7-439325BDD73E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C1D050AB-1CD0-48E6-B4B1-CDAEDD8C923C}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+		..\result.md = ..\result.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

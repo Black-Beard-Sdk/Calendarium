@@ -209,7 +209,7 @@ namespace Bb.Calendarium.Configuration
         /// <param name="region"></param>
         /// <returns></returns>
 
-        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, CalendarEnum calendar, Country country)
+        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, Country country, CalendarEnum calendar = CalendarEnum.Default)
         {
 
             var keys = GetKeys(country);
