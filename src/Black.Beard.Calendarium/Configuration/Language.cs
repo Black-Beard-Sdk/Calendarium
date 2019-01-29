@@ -123,8 +123,11 @@ namespace Bb.Calendarium.Configuration
         /// Russian
         /// </summary>
         //[EnumMember(Value = "RU")]
-        Russian
-
+        Russian,
+        Finnish,
+        Norwgian,
+        Danish,
+        Swedish
     }
 
 }

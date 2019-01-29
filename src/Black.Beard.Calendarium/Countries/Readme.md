@@ -6,7 +6,7 @@
 ```
 mm-dd			// return a mask
 
-// sample
+// samples
 01-01			// return a mask for 1er january
 8-15			// return a mask for 15nd August
 ```

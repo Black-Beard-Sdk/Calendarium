@@ -10,7 +10,10 @@ namespace Bb.Calendarium.Helpers
 
         public static DateTime Translate(this DateTime self, Calendar calendar)
         {
-            var date = new DateTime(calendar.GetYear(self), calendar.GetMonth(self), calendar.GetDayOfMonth(self));
+            var day = calendar.GetDayOfMonth(self);
+            var month = calendar.GetMonth(self);
+            var year = calendar.GetYear(self);
+            var date = new DateTime(year, month, day, calendar);
             return date;
         }
 
@@ -54,10 +57,16 @@ namespace Bb.Calendarium.Helpers
             return result.ToArray();
         }
 
+        public static DateTime[] OrthodoxEaster(int year)
+        {
+            return new DateTime[] { EasterHelper.OrthodoxEasterDate(year) };
+        }
+
         public static DateTime[] Easter(int year)
         {
             return new DateTime[] { EasterHelper.EasterDate(year) };
         }
+
         public static DateTime[] AddDays(DateTime[] dates, int days)
         {
             List<DateTime> _result = new List<DateTime>();
@@ -68,9 +77,9 @@ namespace Bb.Calendarium.Helpers
             return _result.ToArray();
         }
 
-        public static DateTime[] Mask(int year, int month, int day)
+        public static DateTime[] Mask(int year, int month, int day, Calendar calendar)
         {
-            return new DateTime[] { new DateTime(year, month, day) };
+            return new DateTime[] { new DateTime(year, month, day, calendar) };
         }
 
         public static DateTime[] DayOfWeek(int year, DayOfWeek dayWeek)
@@ -95,68 +104,6 @@ namespace Bb.Calendarium.Helpers
             return _dates.ToArray();
 
         }
-
-        //public static bool IsPrayerandRepentance(DateTime date)
-        //{
-
-        //    var d = new DateTime(date.Year, 11, 23);
-
-        //    while (d.DayOfWeek == DayOfWeek.Wednesday)
-        //        d.AddDays(-1);
-
-        //    return date == d;
-        //}
-
-        //public static bool IsAscension(DateTime date)
-        //{
-        //    return date == Get(date).Ascension;
-        //}
-
-        //public static bool IsEaster(DateTime date)
-        //{
-        //    return date == Get(date).EasterDate;
-        //}
-
-        //public static bool IsEasterMonday(DateTime date)
-        //{
-        //    return date == Get(date).EasterMonday;
-        //}
-
-        //public static bool IsGoodFriday(DateTime date)
-        //{
-        //    return date == Get(date).GoodFriday;
-        //}
-
-        //public static bool IsPentecostSunday(DateTime date)
-        //{
-        //    return date == Get(date).PentecostSunday;
-        //}
-
-        //public static bool IsWhitMonday(DateTime date)
-        //{
-        //    return date == Get(date).WhitMonday;
-        //}
-
-        //private static EasterBlock Get(DateTime date)
-        //{
-        //    return new EasterBlock(date.Year);
-        //}
-
-        //public static bool MaskMatch(DateTime date, int month, int day)
-        //{
-
-        //    if (month != date.Month || day != date.Day)
-        //        return false;
-
-        //    return true;
-
-        //}
-
-
-        //public static bool IsDayOfWeek(DateTime date, DayOfWeek dayWeek)
-        //{
-        //    return date.DayOfWeek == dayWeek;
-        //}
 
     }
 

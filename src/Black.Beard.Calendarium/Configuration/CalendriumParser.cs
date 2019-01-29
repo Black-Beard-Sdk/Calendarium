@@ -3,13 +3,14 @@ using Bb.Calendarium.Configuration;
 using Bb.Calendaruim.Parser;
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq.Expressions;
 
 namespace Bb.Calendarium
 {
 
-    public class CalendriumParser
+    internal class CalendriumParser
     {
 
         public CalendriumParser(TextWriter output, TextWriter outputError)
@@ -19,7 +20,7 @@ namespace Bb.Calendarium
             this._delegateLogDebug = Bb.Calendarium.Configuration.CountryDebugger.Debug;
         }
 
-        public Func<int, DateTime[]> ParseRuleString(string source, string dayName, Country country)
+        public Func<int, DateTime[]> ParseRuleString(string source, string dayName, Country country, Calendar calendar)
         {
 
             ICharStream stream = CharStreams.fromstring(source);
@@ -34,7 +35,7 @@ namespace Bb.Calendarium
 
             CalendariumParser.ScriptContext _context = _parser.script();
 
-            var visitor = new ParserBaseVisitor();
+            var visitor = new ParserBaseVisitor(calendar);
 
             var call = (Expression<Func<int, DateTime[]>>)visitor.Visit(_context);
 

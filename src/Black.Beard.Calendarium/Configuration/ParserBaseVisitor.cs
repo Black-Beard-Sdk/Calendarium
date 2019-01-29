@@ -3,6 +3,7 @@ using Bb.Calendarium.Helpers;
 using Bb.Calendaruim.Parser;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -21,8 +22,9 @@ namespace Bb.Calendarium
 
         }
 
-        public ParserBaseVisitor()
+        public ParserBaseVisitor(Calendar calendar)
         {
+            Calendar = calendar;
             _stack = new Stack<Expression>();
             _year = Expression.Parameter(typeof(int), "_year_");
         }
@@ -202,8 +204,8 @@ namespace Bb.Calendarium
             var month = (ConstantExpression)VisitDateItem(context.month.Text);
             var day = (ConstantExpression)VisitDateItem(context.day.Text);
 
-            Func<int, int, int, DateTime[]> function = FunctionHelpers.Mask;
-            var method = Expression.Call(null, function.Method, _year, month, day);
+            Func<int, int, int, System.Globalization.Calendar, DateTime[]> function = FunctionHelpers.Mask;
+            var method = Expression.Call(null, function.Method, _year, month, day, Expression.Constant(Calendar));
 
             return method;
 
@@ -239,29 +241,9 @@ namespace Bb.Calendarium
                     function = FunctionHelpers.Easter;
                     break;
 
-                //case "EASTER":
-                //    function = FunctionHelpers.IsEaster;
-                //    break;
-
-                //case "GOODFRIDAY":
-                //    function = FunctionHelpers.IsGoodFriday;
-                //    break;
-
-                //case "ASCENSION":
-                //    function = FunctionHelpers.IsAscension;
-                //    break;
-
-                //case "WHIT_MONDAY":
-                //    function = FunctionHelpers.IsWhitMonday;
-                //    break;
-
-                //case "PENTECOST_SUNDAY":
-                //    function = FunctionHelpers.IsPentecostSunday;
-                //    break;
-
-                //case "EASTER_MONDAY":
-                //    function = FunctionHelpers.IsEasterMonday;
-                //    break;
+                case "ORTHODOX_EASTER":
+                    function = FunctionHelpers.OrthodoxEaster;
+                    break;               
 
                 default:
                     if (System.Diagnostics.Debugger.IsAttached)
@@ -310,6 +292,8 @@ namespace Bb.Calendarium
             return arg;
 
         }
+
+        public Calendar Calendar { get; }
 
         private readonly Stack<Expression> _stack;
         private readonly ParameterExpression _year;

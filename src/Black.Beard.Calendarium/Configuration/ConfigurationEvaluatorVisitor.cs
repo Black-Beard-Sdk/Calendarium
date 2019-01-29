@@ -29,7 +29,7 @@ namespace Bb.Calendarium.Configuration
         private void Parse(CountryConfiguration country)
         {
 
-            CultureInfo culture = CultureInfo.InvariantCulture;
+            CultureInfo culture = System.Threading.Thread.CurrentThread.CurrentCulture;
 
             if (!string.IsNullOrEmpty(country.Culture))
                 culture = country.GetCulture();
@@ -79,6 +79,7 @@ namespace Bb.Calendarium.Configuration
         {
 
             List<PeriodConfiguration> list;
+            var _calendar = calendar.GetCalendar(culture);
 
             if (string.IsNullOrEmpty(key))
                 list = GetList(country.ToString());
@@ -89,7 +90,7 @@ namespace Bb.Calendarium.Configuration
             {
 
                 if (periodReference.RuleDate != null && periodReference.RuleFunction == null)
-                    periodReference.RuleFunction = _parser.ParseRuleString(periodReference.RuleDate.ToUpper(), periodReference.Name, country);
+                    periodReference.RuleFunction = _parser.ParseRuleString(periodReference.RuleDate.ToUpper(), periodReference.Name, country, _calendar);
 
                 if (periodReference.RuleDuration != null && periodReference.RuleDurationFunction == null)
                 {

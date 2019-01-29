@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace Bb.Calendarium.Configuration
 {
@@ -43,6 +44,16 @@ namespace Bb.Calendarium.Configuration
             foreach (var item in keys)
                 GetDate(date, item.Item1, item.Item2);
 
+        }
+
+         /// <summary>
+        /// Return the list keys registered
+        /// </summary>
+        /// <param name="country">can restrict key form specified country</param>
+        /// <returns></returns>
+        public CountryConfiguration[] GetConfigurationByCountry(Country country )
+        {
+            return this.Where(c => c.Country == country).ToArray();
         }
 
         /// <summary>
@@ -102,7 +113,7 @@ namespace Bb.Calendarium.Configuration
                 {
                     if (_date.Year != year)
                     {
-                        var dic = GetDates(_date, country, region);
+                        var dic = GetDates(_date.Year, country, region);
                         foreach (var item in dic)
                             if (item.Key <= _max)
                                 if (!list.TryGetValue(item.Key, out IdentifiedDate dd))
@@ -130,9 +141,29 @@ namespace Bb.Calendarium.Configuration
         /// <returns></returns>
         public IdentifiedDate GetDate(DateTime date, Country country, string region)
         {
-            var dates = GetDates(date, country, region);
+            var dates = GetDates(date.Year, country, region);
             dates.TryGetValue(date, out IdentifiedDate _date);
             return _date;
+        }
+
+        /// <summary>
+        /// Return infos on the specified date without manage region
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="country"></param>
+        /// <returns></returns>
+        public IdentifiedDate GetDate(DateTime date, Country country)
+        {
+            var keys = GetKeys(country);
+            foreach (var item in keys)
+            {
+                var dates = GetDates(date.Year, country, item.Item2);
+                if (dates.TryGetValue(date, out IdentifiedDate _date))
+                    return _date;
+            }
+
+            return null;
+
         }
 
         /// <summary>
@@ -142,21 +173,21 @@ namespace Bb.Calendarium.Configuration
         /// <param name="country"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public IDictionary<DateTime, IdentifiedDate> GetDates(DateTime date, Country country, string region)
+        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, Country country, string region)
         {
 
             string key = country.ToString();
             if (!string.IsNullOrEmpty(region))
                 key += "-" + region;
 
-            (int, string) k = (date.Year, key);
+            (int, string) k = (year, key);
             if (!_dicDates.TryGetValue(k, out Dictionary<DateTime, IdentifiedDate> dates))
                 lock (_lock)
                     if (!_dicDates.TryGetValue(k, out dates))
                     {
 
                         dates = new Dictionary<DateTime, IdentifiedDate>();
-                        Build(dates, key, date, country, region);
+                        Build(dates, key, year, country, region);
                         _dicDates.Add(k, dates);
 
                     }
@@ -178,12 +209,13 @@ namespace Bb.Calendarium.Configuration
         /// <param name="region"></param>
         /// <returns></returns>
 
-        public IDictionary<DateTime, IdentifiedDate> GetDates(DateTime date, Country country)
+        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, CalendarEnum calendar, Country country)
         {
 
             var keys = GetKeys(country);
 
             Dictionary<DateTime, IdentifiedDate> result = new Dictionary<DateTime, IdentifiedDate>();
+            var date = new DateTime(year, 1, 1, calendar.GetCalendar());
 
             foreach (var item in keys)
             {
@@ -198,7 +230,7 @@ namespace Bb.Calendarium.Configuration
                         if (!_dicDates.TryGetValue(k, out dates))
                         {
                             dates = new Dictionary<DateTime, IdentifiedDate>();
-                            Build(dates, key, date, country, item.Item2);
+                            Build(dates, key, date.Year, country, item.Item2);
                             _dicDates.Add(k, dates);
                         }
 
@@ -224,7 +256,7 @@ namespace Bb.Calendarium.Configuration
         /// <param name="date"></param>
         /// <param name="country"></param>
         /// <param name="region"></param>
-        private void Build(Dictionary<DateTime, IdentifiedDate> dates, string key, DateTime date, Country country, string region)
+        private void Build(Dictionary<DateTime, IdentifiedDate> dates, string key, int year, Country country, string region)
         {
 
             var calReference = CultureInfo.CurrentCulture.Calendar;
@@ -233,19 +265,31 @@ namespace Bb.Calendarium.Configuration
                 foreach (var periodConfiguration in periodConfigurations)
                 {
 
-                    if (periodConfiguration.YearStart.HasValue && periodConfiguration.YearStart.Value <= date.Year)
+                    if (periodConfiguration.YearStart.HasValue && periodConfiguration.YearStart.Value <= year)
                         continue;
 
-                    if (periodConfiguration.YearEnd.HasValue && periodConfiguration.YearEnd.Value >= date.Year)
+                    if (periodConfiguration.YearEnd.HasValue && periodConfiguration.YearEnd.Value >= year)
                         continue;
 
                     var cal = periodConfiguration.CalendarInstance;
-                    var _dates = periodConfiguration.RuleFunction(cal.GetYear(date));
+
+                    int year2 = year;
+                    bool toTranslate = false;
+                    if (cal.GetType() != calReference.GetType())    // calendar from caller != from calendar's rule
+                    {
+                        var d1 = new DateTime(year, 2, 1, calReference);
+                        year2 = periodConfiguration.CalendarInstance.GetYear(d1);
+                        toTranslate = true;
+                    }
+
+                    var _dates = periodConfiguration.RuleFunction(year2);
 
                     foreach (var _date in _dates)
                     {
 
-                        var d = _date.Translate(calReference);
+                        var d = toTranslate 
+                            ? _date.Translate(calReference) 
+                            : _date;
 
                         if (!dates.TryGetValue(d, out IdentifiedDate idate))
                             dates.Add(d, (idate = new IdentifiedDate()
@@ -257,7 +301,7 @@ namespace Bb.Calendarium.Configuration
                         {
                             Name = periodConfiguration.Name,
                             Free = periodConfiguration.Free,
-                            Date = _date.Date.Translate(cal),
+                            Date = _date,
                             Culture = periodConfiguration.CultureInfo.IetfLanguageTag,
                             Country = country,
                             Region = region ?? string.Empty,
@@ -265,11 +309,11 @@ namespace Bb.Calendarium.Configuration
                         };
 
                         e.Observed = periodConfiguration.RuleObservedFunction != null
-                            ? periodConfiguration.RuleObservedFunction(date.Date)
+                            ? periodConfiguration.RuleObservedFunction(e.Date)
                             : e.Date;
 
                         e.DateEnd = periodConfiguration.RuleDurationFunction != null
-                            ? periodConfiguration.RuleDurationFunction(date.Date)
+                            ? periodConfiguration.RuleDurationFunction(e.Date)
                             : e.Date;
 
                         e.Translations.AddRange(periodConfiguration.Translations);

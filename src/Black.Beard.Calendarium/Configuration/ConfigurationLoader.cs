@@ -25,7 +25,7 @@ namespace Bb.Calendarium.Configuration
                 var file = countryName.EndsWith(".json") ? countryName : countryName + ".json";
                 var f = new FileInfo(Path.Combine(_dir.FullName, file));
                 if (!f.Exists)
-                        f = new FileInfo(Path.Combine(_dir.FullName, "date_" + file));
+                    f = new FileInfo(Path.Combine(_dir.FullName, "date_" + file));
 
                 if (!f.Exists)
                     throw new FileNotFoundException(f.FullName);
@@ -41,6 +41,14 @@ namespace Bb.Calendarium.Configuration
                 if (item.Name != "_schema.CountryConfiguration.json" && item.Name != "_schema.DefaultCountryConfiguration.json")
                     _list.Add(Load(item));
             return _list.ToArray(); ;
+        }
+
+        public DefaultCountryConfiguration[] Load(IEnumerable<FileInfo> files)
+        {
+            List<DefaultCountryConfiguration> _files = new List<DefaultCountryConfiguration>();
+            foreach (var file in files)
+                _files.Add(DefaultCountryConfiguration.Load(file));
+            return _files.ToArray();
         }
 
         public DefaultCountryConfiguration Load(FileInfo file)

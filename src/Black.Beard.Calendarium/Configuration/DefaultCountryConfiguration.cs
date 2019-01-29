@@ -73,7 +73,7 @@ namespace Bb.Calendarium.Configuration
         /// </summary>
         /// <param name="sb">The sb.</param>
         /// <returns></returns>
-        public static DefaultCountryConfiguration Load(StringBuilder sb, bool defaultConfiguration)
+        private static DefaultCountryConfiguration Load(StringBuilder sb, bool defaultConfiguration)
         {
 
             var instance = defaultConfiguration
@@ -96,7 +96,10 @@ namespace Bb.Calendarium.Configuration
             using (var f = file.OpenText())
             {
                 var sb = new StringBuilder(f.ReadToEnd());
-                return Load(sb, defaultConfiguration);
+                var result =  Load(sb, defaultConfiguration);
+                result.ConfigurationFile = file.FullName;
+                return result;
+
             }
 
         }
@@ -120,66 +123,12 @@ namespace Bb.Calendarium.Configuration
         [JsonConverter(typeof(StringEnumConverter))]
         public CalendarEnum Calendar { get; set; }
 
+        public string ConfigurationFile { get; private set; }
+
         public CultureInfo GetCulture()
         {
             return CultureInfo.GetCultureInfo(Culture);
         }
-
-        //public Calendar GetCalendar()
-        //{
-
-        //    if (calendar == null)
-        //        switch (Calendar)
-        //        {
-        //            case CalendarEnum.Gregorian:
-        //                calendar = new GregorianCalendar();
-        //                break;
-        //            case CalendarEnum.Hebrew:
-        //                calendar = new HebrewCalendar();
-        //                break;
-        //            case CalendarEnum.UmAlQura:
-        //                calendar = new UmAlQuraCalendar();
-        //                break;
-        //            case CalendarEnum.Hijri:
-        //                calendar = new HijriCalendar();
-        //                break;
-        //            case CalendarEnum.Japanese:
-        //                calendar = new JapaneseCalendar();
-        //                break;
-        //            case CalendarEnum.JapaneseLunisolar:
-        //                calendar = new JapaneseLunisolarCalendar();
-        //                break;
-        //            case CalendarEnum.Julian:
-        //                calendar = new JulianCalendar();
-        //                break;
-        //            case CalendarEnum.Korean:
-        //                calendar = new KoreanCalendar();
-        //                break;
-        //            case CalendarEnum.KoreanLunisolar:
-        //                calendar = new KoreanLunisolarCalendar();
-        //                break;
-        //            case CalendarEnum.Persian:
-        //                calendar = new PersianCalendar();
-        //                break;
-        //            case CalendarEnum.Taiwan:
-        //                calendar = new TaiwanCalendar();
-        //                break;
-        //            case CalendarEnum.TaiwanLunisolar:
-        //                calendar = new TaiwanLunisolarCalendar();
-        //                break;
-
-        //            case CalendarEnum.ThaiBuddhist:
-        //                calendar = new ThaiBuddhistCalendar();
-        //                break;
-
-        //            default:
-        //                calendar = GetCulture().Calendar;
-        //                break;
-        //        }
-
-        //    return calendar;
-
-        //}
 
         public override string ToString()
         {

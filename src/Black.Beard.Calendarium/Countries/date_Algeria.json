@@ -6,6 +6,8 @@
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Algeria",
   "Regions": [],
+  "Culture": "ar-DZ",
+  "Calendar": "Gregorian",
   "Periods": [
     {
       "Name": "Eid al Adha",
@@ -105,7 +107,5 @@
       "Translations": [],
       "Tags": []
     }
-  ],
-  "Culture": "ar-DZ",
-  "Calendar": "Gregorian"
+  ]
 }
