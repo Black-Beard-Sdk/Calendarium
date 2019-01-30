@@ -9,7 +9,7 @@ namespace Bb.Calendarium.UnitTests
     public static class Helper
     {
 
-        public static readonly Dictionary<Country, List<(string, string)>> Referential;
+        public static readonly Dictionary<Country, List<Referential>> Referential;
         public static readonly Dictionary<Country, List<(string, string)>> Todo;
         private static readonly HashSet<string> _h;
 
@@ -661,6 +661,9 @@ namespace Bb.Calendarium.UnitTests
                 case "carnival 2nd day":
                     return "([EASTER]) - 49";
 
+                case "easter monday orthodox":
+                    return "[ORTHODOX_EASTER] + 1";
+
                 case "easter monday catholic":
                 case "easter monday":
                     return "([EASTER]) + 1";
@@ -675,12 +678,23 @@ namespace Bb.Calendarium.UnitTests
                 case "holy thursday":
                     return "([EASTER]) - 3";
 
+                case "christmas holiday orthodox":
+                case "christmas day - armenian orthodox observed":
+                    return "";
+
+                case "good friday orthodox":
+                    return "[ORTHODOX_EASTER] - 2";
+
                 case "good friday":
                 case "good friday catholic":
                     return "([EASTER]) - 2";
 
                 case "holy saturday":
                     return "([EASTER]) - 1";
+
+                case "easter day orthodox":
+                case "easter orthodox":
+                    return "[ORTHODOX_EASTER]";
 
                 case "easter day catholic":
                 case "easter catholic":
@@ -727,11 +741,6 @@ namespace Bb.Calendarium.UnitTests
                     return "";
 
                 case "first week-day after christmas day":
-                    return "";
-
-                case "good friday orthodox":
-                case "easter orthodox":
-                case "easter monday orthodox":
                     return "";
 
                 case "carnival tuesday":
@@ -899,7 +908,6 @@ namespace Bb.Calendarium.UnitTests
                 case "ramazan bayramı 3rd day":
                 case "labor day 2nd day":
                 case "new year's day holiday":
-                case "christmas holiday orthodox":
                 case "late summer holiday":
                 case "may day bank holiday":
                 case "spring bank holiday":
@@ -944,10 +952,8 @@ namespace Bb.Calendarium.UnitTests
                 case "hungry ghost festival":
                 case "nevruz":
                 case "novruz bayram":
-                case "easter day orthodox":
                 case "day of the national emblem and flag of belarus":
                     return null;
-
 
                 case "new year's day observed":
                 case "australia day observed":
@@ -983,7 +989,6 @@ namespace Bb.Calendarium.UnitTests
                 case "capital city day observed":
                 case "defender of the fatherland day observed":
                 case "liberation day observed":
-                case "christmas day - armenian orthodox observed":
                 case "saint maron observed":
                 case "feast of the annunciation observed":
                 case "resistance and liberation day observed":
@@ -1048,15 +1053,18 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static Dictionary<Country, List<(string, string)>> GetReferential()
+        private static Dictionary<Country, List<Referential>> GetReferential()
         {
+
+
             var txt = Resource1.OUTLOOK.Split('\r');
 
-            Dictionary<Country, List<(string, string)>> _dic = new Dictionary<Country, List<(string, string)>>();
-            List<(string, string)> _list = null;
+            Dictionary<Country, List<Referential>> _dic = new Dictionary<Country, List<Referential>>();
+            List<Referential> _list = null;
 
             foreach (var item in txt)
             {
+
                 var t = item.Trim();
                 if (!string.IsNullOrEmpty(t))
                 {
@@ -1073,7 +1081,7 @@ namespace Bb.Calendarium.UnitTests
                             .Trim()
                             ;
 
-                        _list = new List<(string, string)>();
+                        _list = new List<Referential>();
 
                         if (Enum.TryParse<Country>(label, out Country value))
                             _dic.Add(value, _list);
@@ -1083,7 +1091,14 @@ namespace Bb.Calendarium.UnitTests
                     {
                         var u = t.Split(',');
 
-                        _list.Add((u[0].Trim(), u[1].Trim()));
+                        var day = u[0].Trim();
+                        if (day.ToLower().EndsWith(" observed"))
+                        {
+                            day = day.Substring(0, "observed".Length + 1).Trim();
+                            _list.Add(new Referential() { DayName = day, Date = u[1].Trim(), Observed = true, } );
+                        }
+                        else
+                            _list.Add(new Referential() { DayName = day, Date = u[1].Trim() } );
                     }
                 }
                 else
@@ -1096,5 +1111,21 @@ namespace Bb.Calendarium.UnitTests
         }
 
 
+
     }
+    public class Referential
+    {
+        public string DayName { get; internal set; }
+        public string Date { get; internal set; }
+        public bool Observed { get; internal set; }
+        public DateTime Date2 { get; internal set; }
+        public Referential ObservedDate { get; internal set; }
+
+        public override string ToString()
+        {
+            return $"{DayName} : {Date} : Observed = {Observed}";
+        }
+
+    }
+
 }

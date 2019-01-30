@@ -31,7 +31,7 @@ namespace Bb.Calendarium.Configuration
         /// <summary>
         /// specify a year where the rule start
         /// </summary>
-                public int? YearStart { get; set; }
+        public int? YearStart { get; set; }
 
         /// <summary>
         /// specify a year where the rule end

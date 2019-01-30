@@ -100,11 +100,7 @@ namespace Bb.Calendarium.Configuration
                 }
 
                 if (periodReference.RuleObserved != null && periodReference.RuleObservedFunction == null)
-                {
-                    if (System.Diagnostics.Debugger.IsAttached)
-                        System.Diagnostics.Debugger.Break();
-                    //periodReference.RuleObservedFunction = _parser.ParseRuleString(periodReference.RuleObserved.ToUpper());
-                }
+                    periodReference.RuleObservedFunction = _parser.ParseRuleObservedString(periodReference.RuleObserved.ToUpper(), periodReference.Name, country, _calendar);
 
                 var newPeriod = periodReference.Clone();
 

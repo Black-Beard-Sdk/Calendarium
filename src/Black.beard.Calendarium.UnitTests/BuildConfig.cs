@@ -83,10 +83,10 @@ namespace Bb.Calendarium.UnitTests
                 foreach (var date in countryItem.Value)
                 {
 
-                    if (!_doc.TryGetValue(date.Item1, out Dictionary<string, List<string>> _dic))
-                        _doc.Add(date.Item1, _dic = new Dictionary<string, List<string>>());
+                    if (!_doc.TryGetValue(date.DayName, out Dictionary<string, List<string>> _dic))
+                        _doc.Add(date.DayName, _dic = new Dictionary<string, List<string>>());
 
-                    var u3 = date.Item2.Split('-');
+                    var u3 = date.Date.Split('-');
 
                     string rule = $"{int.Parse(u3[u3.Length - 2])}-{int.Parse(u3[u3.Length - 1])}";
 

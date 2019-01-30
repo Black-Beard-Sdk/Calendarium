@@ -79,3 +79,6 @@ all tests are OK
 ## Yemen
 all tests are OK
 ---
+## Monaco
+all tests are OK
+---

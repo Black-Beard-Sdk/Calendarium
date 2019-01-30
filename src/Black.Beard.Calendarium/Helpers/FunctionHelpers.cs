@@ -8,6 +8,17 @@ namespace Bb.Calendarium.Helpers
     internal static class FunctionHelpers
     {
 
+        public static bool EvaluateDayweek(DateTime self, DayOfWeek[] dayOfweeks)
+        {
+
+            foreach (var dayOfweek in dayOfweeks)
+                if (self.DayOfWeek == dayOfweek)
+                    return true;
+
+            return false;
+
+        }
+
         public static DateTime Translate(this DateTime self, Calendar calendar)
         {
             var day = calendar.GetDayOfMonth(self);
@@ -17,44 +28,50 @@ namespace Bb.Calendarium.Helpers
             return date;
         }
 
-        public static DateTime[] Back(DateTime[] dates, DayOfWeek day)
+        public static DateTime Back(DateTime date, DayOfWeek day)
         {
 
-            List<DateTime> result = new List<DateTime>();
+            var d = new DateTime(date.Year, date.Month, date.Day);
 
-            foreach (var date in dates)
-            {
+            while (d.DayOfWeek != day)
+                d = d.AddDays(-1);
 
-                var d = new DateTime(date.Year, date.Month, date.Day);
-
-                while (d.DayOfWeek != day)
-                    d = d.AddDays(-1);
-
-                result.Add(d);
-
-            }
-
-            return result.ToArray();
-
+            return d;
 
         }
 
-        public static DateTime[] Next(DateTime[] dates, DayOfWeek day)
+        public static DateTime[] Backs(DateTime[] dates, DayOfWeek day)
         {
 
             List<DateTime> result = new List<DateTime>();
 
             foreach (var date in dates)
-            {
-                var d = new DateTime(date.Year, date.Month, date.Day);
+                result.Add(Back(date, day));
 
-                while (d.DayOfWeek != day)
-                    d = d.AddDays(1);
-
-                result.Add(d);
-
-            }
             return result.ToArray();
+
+        }
+
+        public static DateTime Next(DateTime date, DayOfWeek day)
+        {
+
+            while (date.DayOfWeek != day)
+                date = date.AddDays(1);
+
+            return date;
+
+        }
+
+        public static DateTime[] Nexts(DateTime[] dates, DayOfWeek day)
+        {
+
+            List<DateTime> result = new List<DateTime>();
+
+            foreach (var date in dates)
+                result.Add(Next(date, day));
+
+            return result.ToArray();
+
         }
 
         public static DateTime[] OrthodoxEaster(int year)
@@ -65,6 +82,11 @@ namespace Bb.Calendarium.Helpers
         public static DateTime[] Easter(int year)
         {
             return new DateTime[] { EasterHelper.EasterDate(year) };
+        }
+
+        public static DateTime AddDay(DateTime date, int days)
+        {
+            return date.AddDays(days);
         }
 
         public static DateTime[] AddDays(DateTime[] dates, int days)

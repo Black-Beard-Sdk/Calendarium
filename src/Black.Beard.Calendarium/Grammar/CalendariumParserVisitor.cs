@@ -39,6 +39,12 @@ public interface ICalendariumParserVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitScript([NotNull] CalendariumParser.ScriptContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="CalendariumParser.expression_bool"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExpression_bool([NotNull] CalendariumParser.Expression_boolContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="CalendariumParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

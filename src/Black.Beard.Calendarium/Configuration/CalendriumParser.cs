@@ -18,6 +18,7 @@ namespace Bb.Calendarium
             Output = output ?? Console.Out;
             OutputError = outputError ?? Console.Error;
             this._delegateLogDebug = Bb.Calendarium.Configuration.CountryDebugger.Debug;
+            this._delegateLogDebugObserved = Bb.Calendarium.Configuration.CountryDebugger.DebugObserved;
         }
 
         public Func<int, DateTime[]> ParseRuleString(string source, string dayName, Country country, Calendar calendar)
@@ -55,6 +56,40 @@ namespace Bb.Calendarium
 
         }
 
+        public Func<DateTime, DateTime> ParseRuleObservedString(string source, string dayName, Country country, Calendar calendar)
+        {
+
+            ICharStream stream = CharStreams.fromstring(source);
+
+            var lexer = new CalendariumLexer(stream, Output, OutputError);
+            var token = new CommonTokenStream(lexer);
+            var _parser = new CalendariumParser(token)
+            {
+                BuildParseTree = true,
+                //Trace = ScriptParser.Trace, // Ca plante sur un null, pourquoi ?
+            };
+
+            CalendariumParser.ScriptContext _context = _parser.script();
+
+            var visitor = new ParserBaseVisitor(calendar);
+
+            var call = (Expression<Func<DateTime, DateTime>>)visitor.Visit(_context);
+
+            var txt = "'" + source + "' -> '" + call.Body.ToString() + "'";
+            Trace.WriteLine($"{country.ToString()}:{dayName} : {txt}");
+
+            if (System.Diagnostics.Debugger.IsAttached) // Build an interceptor for log
+            {
+                var parameter = Expression.Parameter(typeof(DateTime), "date");
+                var ee = Expression.Call(null, _delegateLogDebugObserved.Method, call, parameter, Expression.Constant(country), Expression.Constant(dayName), Expression.Constant(txt));
+                call = Expression.Lambda<Func<DateTime, DateTime>>(ee, parameter);
+            }
+            Func<DateTime, DateTime> f = call.Compile();
+
+
+            return f;
+
+        }
 
         public TextWriter Output { get; private set; }
 
@@ -62,6 +97,7 @@ namespace Bb.Calendarium
 
 
         private Func<Func<int, DateTime[]>, int, Country, string, string, DateTime[]> _delegateLogDebug;
+        private Func<Func<DateTime, DateTime>, DateTime, Country, string, string, DateTime> _delegateLogDebugObserved;
 
     }
 

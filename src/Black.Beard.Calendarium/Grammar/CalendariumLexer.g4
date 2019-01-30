@@ -62,6 +62,7 @@ OR :                    '|';
 AND :                   '&';
 ANDALSO :               '&&';
 SLASH :                 '\\';
+INTEROGATION :          '?';
 
 SPACES: [ \t\r\n]+ -> skip;
     

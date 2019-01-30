@@ -16,8 +16,13 @@ namespace Bb.Calendarium
         {
 
             ParserBaseVisitor._methodAddDays = typeof(FunctionHelpers).GetMethod("AddDays", BindingFlags.Static | BindingFlags.Public);
-            ParserBaseVisitor._methodBackDays = typeof(FunctionHelpers).GetMethod("Back", BindingFlags.Static | BindingFlags.Public);
-            ParserBaseVisitor._methodNextDays = typeof(FunctionHelpers).GetMethod("Next", BindingFlags.Static | BindingFlags.Public);
+            ParserBaseVisitor._methodBackDays = typeof(FunctionHelpers).GetMethod("Backs", BindingFlags.Static | BindingFlags.Public);
+            ParserBaseVisitor._methodNextDays = typeof(FunctionHelpers).GetMethod("Nexts", BindingFlags.Static | BindingFlags.Public);
+
+            ParserBaseVisitor._methodAddDay = typeof(FunctionHelpers).GetMethod("AddDay", BindingFlags.Static | BindingFlags.Public);
+            ParserBaseVisitor._methodBackDay = typeof(FunctionHelpers).GetMethod("Back", BindingFlags.Static | BindingFlags.Public);
+            ParserBaseVisitor._methodNextDay = typeof(FunctionHelpers).GetMethod("Next", BindingFlags.Static | BindingFlags.Public);
+
             ParserBaseVisitor._methodDayOfWeek = typeof(FunctionHelpers).GetMethod("DayOfWeek", BindingFlags.Static | BindingFlags.Public);
 
         }
@@ -27,17 +32,72 @@ namespace Bb.Calendarium
             Calendar = calendar;
             _stack = new Stack<Expression>();
             _year = Expression.Parameter(typeof(int), "_year_");
+            _date = Expression.Parameter(typeof(DateTime), "_date_");
         }
 
         /// <summary>
-        /// expression
+        ///   expression
+        /// | INTEROGATION expression_bool COLON expression
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
         public override Expression VisitScript([NotNull] CalendariumParser.ScriptContext context)
         {
-            var call = (MethodCallExpression)base.VisitScript(context);
-            var result = Expression.Lambda<Func<int, DateTime[]>>(call, _year);
+            Expression result;
+
+            if (context.INTEROGATION() != null)
+            {
+                _stack.Push(_date);
+                var call = (MethodCallExpression)base.VisitScript(context);
+                var e = VisitExpression_bool(context.expression_bool());
+                var condition = Expression.Condition(e, call, _date);
+                result = Expression.Lambda<Func<DateTime, DateTime>>(condition, _date);
+            }
+            else
+            {
+                var call = (MethodCallExpression)base.VisitScript(context);
+                result = Expression.Lambda<Func<int, DateTime[]>>(call, _year);
+            }
+
+            return result;
+
+        }
+
+        /// <summary>
+        ///    dayweek (OR dayweek)?
+        /// |  LEFT_PAREN expression_bool RIGHT_PAREN
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override Expression VisitExpression_bool([NotNull] CalendariumParser.Expression_boolContext context)
+        {
+            Expression result = null;
+            var dayweeks = context.dayweek();
+            if (dayweeks != null && dayweeks.Length > 0)
+            {
+
+                List<DayOfWeek> _days = new List<DayOfWeek>();
+
+                foreach (var dayweek in dayweeks)
+                {
+                    var day = (ConstantExpression)VisitDayweek(dayweek);
+                    _days.Add((DayOfWeek)day.Value);
+                }
+                Func<DateTime, DayOfWeek[], bool> method = FunctionHelpers.EvaluateDayweek;
+                result = Expression.Call(null, method.Method, _date, Expression.Constant(_days.ToArray()));
+            }
+            else
+            {
+                var e = context.expression_bool();
+                if (e != null)
+                    result = VisitExpression_bool(e);
+                else
+                {
+                    if (System.Diagnostics.Debugger.IsAttached)
+                        System.Diagnostics.Debugger.Break();
+                }
+            }
+
             return result;
         }
 
@@ -110,30 +170,58 @@ namespace Bb.Calendarium
         private Expression Visit(Expression left, string operation, Expression right)
         {
 
-            switch (operation)
+            if (left.Type.IsArray)
             {
+                switch (operation)
+                {
 
-                case ">>":
-                    return Expression.Call(null, ParserBaseVisitor._methodNextDays, left, right);
+                    case ">>":
+                        return Expression.Call(null, ParserBaseVisitor._methodNextDays, left, right);
 
-                case "<<":
-                    return Expression.Call(null, ParserBaseVisitor._methodBackDays, left, right);
+                    case "<<":
+                        return Expression.Call(null, ParserBaseVisitor._methodBackDays, left, right);
 
-                case "+":
-                    return Expression.Call(null, ParserBaseVisitor._methodAddDays, left, right);
+                    case "+":
+                        return Expression.Call(null, ParserBaseVisitor._methodAddDays, left, right);
 
-                case "-":
-                    ConstantExpression value = (ConstantExpression)right;
-                    if (right is ConstantExpression c)
-                        value = Expression.Constant(0 - (int)c.Value);
-                    return Expression.Call(ParserBaseVisitor._methodAddDays, left, value);
+                    case "-":
+                        ConstantExpression value = (ConstantExpression)right;
+                        if (right is ConstantExpression c)
+                            value = Expression.Constant(0 - (int)c.Value);
+                        return Expression.Call(ParserBaseVisitor._methodAddDays, left, value);
 
-                default:
-                    if (System.Diagnostics.Debugger.IsAttached)
-                        System.Diagnostics.Debugger.Break();
-                    throw new NotImplementedException();
+                    default:
+                        if (System.Diagnostics.Debugger.IsAttached)
+                            System.Diagnostics.Debugger.Break();
+                        throw new NotImplementedException();
+                }
             }
+            else
+            {
+                switch (operation)
+                {
 
+                    case ">>":
+                        return Expression.Call(null, ParserBaseVisitor._methodNextDay, left, right);
+
+                    case "<<":
+                        return Expression.Call(null, ParserBaseVisitor._methodBackDay, left, right);
+
+                    case "+":
+                        return Expression.Call(null, ParserBaseVisitor._methodAddDay, left, right);
+
+                    case "-":
+                        ConstantExpression value = (ConstantExpression)right;
+                        if (right is ConstantExpression c)
+                            value = Expression.Constant(0 - (int)c.Value);
+                        return Expression.Call(ParserBaseVisitor._methodAddDay, left, value);
+
+                    default:
+                        if (System.Diagnostics.Debugger.IsAttached)
+                            System.Diagnostics.Debugger.Break();
+                        throw new NotImplementedException();
+                }
+            }
 
         }
 
@@ -243,7 +331,7 @@ namespace Bb.Calendarium
 
                 case "ORTHODOX_EASTER":
                     function = FunctionHelpers.OrthodoxEaster;
-                    break;               
+                    break;
 
                 default:
                     if (System.Diagnostics.Debugger.IsAttached)
@@ -297,7 +385,15 @@ namespace Bb.Calendarium
 
         private readonly Stack<Expression> _stack;
         private readonly ParameterExpression _year;
+
+        public ParameterExpression _date { get; }
+
+        private static readonly MethodInfo _methodAddDay;
         private static readonly MethodInfo _methodAddDays;
+
+        private static readonly MethodInfo _methodBackDay;
+        private static readonly MethodInfo _methodNextDay;
+
         private static readonly MethodInfo _methodBackDays;
         private static readonly MethodInfo _methodNextDays;
         private static readonly MethodInfo _methodDayOfWeek;

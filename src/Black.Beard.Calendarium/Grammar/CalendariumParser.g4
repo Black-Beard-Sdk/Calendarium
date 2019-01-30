@@ -25,6 +25,12 @@ options {
 
 script :
       expression
+    | INTEROGATION expression_bool COLON expression
+    ;
+
+expression_bool
+    :  dayweek (OR dayweek)?
+    |  LEFT_PAREN expression_bool RIGHT_PAREN
     ;
 
 expression :

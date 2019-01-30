@@ -39,8 +39,6 @@
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Argentina",
-  "Culture": "ar",
-  "Calendar": "Gregorian",
   "Regions": [],
   "Periods": [
     {
@@ -176,5 +174,7 @@
       "Translations": [],
       "Tags": []
     }
-  ]
+  ],
+  "Culture": "ar",
+  "Calendar": "UmAlQura"
 }

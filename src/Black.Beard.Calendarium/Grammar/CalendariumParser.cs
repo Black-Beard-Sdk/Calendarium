@@ -42,13 +42,14 @@ public partial class CalendariumParser : Parser {
 		RIGHT_PAREN=15, RIGHT_BRACKET=16, COLON=17, SEMICOLON=18, COMMA=19, PLUS=20, 
 		MINUS=21, TIME=22, DOT=23, DIVID=24, NOT=25, EQUAL=26, MODULO=27, POWER=28, 
 		NOT_EQUAL=29, GREATER=30, GREATER_OR_EQUAL=31, LESS=32, LESS_OR_EQUAL=33, 
-		XOR=34, OR=35, AND=36, ANDALSO=37, SLASH=38, SPACES=39, NUMBER=40, SINGLE_LINE_COMMENT=41, 
-		MULTI_LINE_COMMENT=42, REGULAR_ID=43;
+		XOR=34, OR=35, AND=36, ANDALSO=37, SLASH=38, INTEROGATION=39, SPACES=40, 
+		NUMBER=41, SINGLE_LINE_COMMENT=42, MULTI_LINE_COMMENT=43, REGULAR_ID=44;
 	public const int
-		RULE_script = 0, RULE_expression = 1, RULE_operation = 2, RULE_rule = 3, 
-		RULE_mask = 4, RULE_dayweek = 5, RULE_identifier = 6;
+		RULE_script = 0, RULE_expression_bool = 1, RULE_expression = 2, RULE_operation = 3, 
+		RULE_rule = 4, RULE_mask = 5, RULE_dayweek = 6, RULE_identifier = 7;
 	public static readonly string[] ruleNames = {
-		"script", "expression", "operation", "rule", "mask", "dayweek", "identifier"
+		"script", "expression_bool", "expression", "operation", "rule", "mask", 
+		"dayweek", "identifier"
 	};
 
 	private static readonly string[] _LiteralNames = {
@@ -56,7 +57,7 @@ public partial class CalendariumParser : Parser {
 		"'WEDNESDAY'", "'THURSDAY'", "'FRIDAY'", "'SATURDAY'", "'SUNDAY'", null, 
 		"'('", "'['", "')'", "']'", "':'", "';'", "','", "'+'", "'-'", "'*'", 
 		"'.'", null, "'!'", "'='", "'%'", "'^'", "'!='", "'>'", "'>='", "'<'", 
-		"'<='", "'||'", "'|'", "'&'", "'&&'"
+		"'<='", "'||'", "'|'", "'&'", "'&&'", null, "'?'"
 	};
 	private static readonly string[] _SymbolicNames = {
 		null, "YEAR", "MONTH", "DAY", "DAYWEEK", "MONDAY", "TUESDAY", "WEDNESDAY", 
@@ -64,8 +65,8 @@ public partial class CalendariumParser : Parser {
 		"LEFT_BRACKET", "RIGHT_PAREN", "RIGHT_BRACKET", "COLON", "SEMICOLON", 
 		"COMMA", "PLUS", "MINUS", "TIME", "DOT", "DIVID", "NOT", "EQUAL", "MODULO", 
 		"POWER", "NOT_EQUAL", "GREATER", "GREATER_OR_EQUAL", "LESS", "LESS_OR_EQUAL", 
-		"XOR", "OR", "AND", "ANDALSO", "SLASH", "SPACES", "NUMBER", "SINGLE_LINE_COMMENT", 
-		"MULTI_LINE_COMMENT", "REGULAR_ID"
+		"XOR", "OR", "AND", "ANDALSO", "SLASH", "INTEROGATION", "SPACES", "NUMBER", 
+		"SINGLE_LINE_COMMENT", "MULTI_LINE_COMMENT", "REGULAR_ID"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -102,6 +103,11 @@ public partial class CalendariumParser : Parser {
 		public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
+		public ITerminalNode INTEROGATION() { return GetToken(CalendariumParser.INTEROGATION, 0); }
+		public Expression_boolContext expression_bool() {
+			return GetRuleContext<Expression_boolContext>(0);
+		}
+		public ITerminalNode COLON() { return GetToken(CalendariumParser.COLON, 0); }
 		public ScriptContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -119,9 +125,119 @@ public partial class CalendariumParser : Parser {
 		ScriptContext _localctx = new ScriptContext(Context, State);
 		EnterRule(_localctx, 0, RULE_script);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 14; expression();
+			State = 22;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case MONDAY:
+			case TUESDAY:
+			case WEDNESDAY:
+			case THURSDAY:
+			case FRIDAY:
+			case SATURDAY:
+			case SUNDAY:
+			case LEFT_PAREN:
+			case LEFT_BRACKET:
+			case PLUS:
+			case MINUS:
+			case TIME:
+			case GREATER:
+			case LESS:
+			case NUMBER:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 16; expression();
+				}
+				break;
+			case INTEROGATION:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 17; Match(INTEROGATION);
+				State = 18; expression_bool();
+				State = 19; Match(COLON);
+				State = 20; expression();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Expression_boolContext : ParserRuleContext {
+		public DayweekContext[] dayweek() {
+			return GetRuleContexts<DayweekContext>();
+		}
+		public DayweekContext dayweek(int i) {
+			return GetRuleContext<DayweekContext>(i);
+		}
+		public ITerminalNode OR() { return GetToken(CalendariumParser.OR, 0); }
+		public ITerminalNode LEFT_PAREN() { return GetToken(CalendariumParser.LEFT_PAREN, 0); }
+		public Expression_boolContext expression_bool() {
+			return GetRuleContext<Expression_boolContext>(0);
+		}
+		public ITerminalNode RIGHT_PAREN() { return GetToken(CalendariumParser.RIGHT_PAREN, 0); }
+		public Expression_boolContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_expression_bool; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			ICalendariumParserVisitor<TResult> typedVisitor = visitor as ICalendariumParserVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitExpression_bool(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Expression_boolContext expression_bool() {
+		Expression_boolContext _localctx = new Expression_boolContext(Context, State);
+		EnterRule(_localctx, 2, RULE_expression_bool);
+		int _la;
+		try {
+			State = 33;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case MONDAY:
+			case TUESDAY:
+			case WEDNESDAY:
+			case THURSDAY:
+			case FRIDAY:
+			case SATURDAY:
+			case SUNDAY:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 24; dayweek();
+				State = 27;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==OR) {
+					{
+					State = 25; Match(OR);
+					State = 26; dayweek();
+					}
+				}
+
+				}
+				break;
+			case LEFT_PAREN:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 29; Match(LEFT_PAREN);
+				State = 30; expression_bool();
+				State = 31; Match(RIGHT_PAREN);
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -165,10 +281,10 @@ public partial class CalendariumParser : Parser {
 	[RuleVersion(0)]
 	public ExpressionContext expression() {
 		ExpressionContext _localctx = new ExpressionContext(Context, State);
-		EnterRule(_localctx, 2, RULE_expression);
+		EnterRule(_localctx, 4, RULE_expression);
 		int _la;
 		try {
-			State = 29;
+			State = 48;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case MONDAY:
@@ -183,13 +299,13 @@ public partial class CalendariumParser : Parser {
 			case NUMBER:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 16; rule();
-				State = 18;
+				State = 35; rule();
+				State = 37;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << MONDAY) | (1L << TUESDAY) | (1L << WEDNESDAY) | (1L << THURSDAY) | (1L << FRIDAY) | (1L << SATURDAY) | (1L << SUNDAY) | (1L << LEFT_PAREN) | (1L << LEFT_BRACKET) | (1L << PLUS) | (1L << MINUS) | (1L << TIME) | (1L << GREATER) | (1L << LESS) | (1L << NUMBER))) != 0)) {
 					{
-					State = 17; expression();
+					State = 36; expression();
 					}
 				}
 
@@ -198,15 +314,15 @@ public partial class CalendariumParser : Parser {
 			case LEFT_PAREN:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 20; Match(LEFT_PAREN);
-				State = 21; expression();
-				State = 22; Match(RIGHT_PAREN);
-				State = 24;
+				State = 39; Match(LEFT_PAREN);
+				State = 40; expression();
+				State = 41; Match(RIGHT_PAREN);
+				State = 43;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << MONDAY) | (1L << TUESDAY) | (1L << WEDNESDAY) | (1L << THURSDAY) | (1L << FRIDAY) | (1L << SATURDAY) | (1L << SUNDAY) | (1L << LEFT_PAREN) | (1L << LEFT_BRACKET) | (1L << PLUS) | (1L << MINUS) | (1L << TIME) | (1L << GREATER) | (1L << LESS) | (1L << NUMBER))) != 0)) {
 					{
-					State = 23; expression();
+					State = 42; expression();
 					}
 				}
 
@@ -218,8 +334,8 @@ public partial class CalendariumParser : Parser {
 			case LESS:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 26; operation();
-				State = 27; expression();
+				State = 45; operation();
+				State = 46; expression();
 				}
 				break;
 			default:
@@ -263,29 +379,29 @@ public partial class CalendariumParser : Parser {
 	[RuleVersion(0)]
 	public OperationContext operation() {
 		OperationContext _localctx = new OperationContext(Context, State);
-		EnterRule(_localctx, 4, RULE_operation);
+		EnterRule(_localctx, 6, RULE_operation);
 		try {
-			State = 37;
+			State = 56;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case PLUS:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 31; Match(PLUS);
+				State = 50; Match(PLUS);
 				}
 				break;
 			case MINUS:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 32; Match(MINUS);
+				State = 51; Match(MINUS);
 				}
 				break;
 			case GREATER:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 33; Match(GREATER);
-				State = 34; Match(GREATER);
+				State = 52; Match(GREATER);
+				State = 53; Match(GREATER);
 				}
 				}
 				break;
@@ -293,8 +409,8 @@ public partial class CalendariumParser : Parser {
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 35; Match(LESS);
-				State = 36; Match(LESS);
+				State = 54; Match(LESS);
+				State = 55; Match(LESS);
 				}
 				}
 				break;
@@ -342,45 +458,45 @@ public partial class CalendariumParser : Parser {
 	[RuleVersion(0)]
 	public RuleContext rule() {
 		RuleContext _localctx = new RuleContext(Context, State);
-		EnterRule(_localctx, 6, RULE_rule);
+		EnterRule(_localctx, 8, RULE_rule);
 		int _la;
 		try {
-			State = 49;
+			State = 68;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,5,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,8,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 39; mask();
+				State = 58; mask();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 40; Match(LEFT_BRACKET);
-				State = 41; identifier();
-				State = 42; Match(RIGHT_BRACKET);
+				State = 59; Match(LEFT_BRACKET);
+				State = 60; identifier();
+				State = 61; Match(RIGHT_BRACKET);
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 45;
+				State = 64;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if (_la==TIME) {
 					{
-					State = 44; Match(TIME);
+					State = 63; Match(TIME);
 					}
 				}
 
-				State = 47; dayweek();
+				State = 66; dayweek();
 				}
 				break;
 			case 4:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 48; Match(NUMBER);
+				State = 67; Match(NUMBER);
 				}
 				break;
 			}
@@ -419,13 +535,13 @@ public partial class CalendariumParser : Parser {
 	[RuleVersion(0)]
 	public MaskContext mask() {
 		MaskContext _localctx = new MaskContext(Context, State);
-		EnterRule(_localctx, 8, RULE_mask);
+		EnterRule(_localctx, 10, RULE_mask);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 51; _localctx.month = Match(NUMBER);
-			State = 52; Match(MINUS);
-			State = 53; _localctx.day = Match(NUMBER);
+			State = 70; _localctx.month = Match(NUMBER);
+			State = 71; Match(MINUS);
+			State = 72; _localctx.day = Match(NUMBER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -462,12 +578,12 @@ public partial class CalendariumParser : Parser {
 	[RuleVersion(0)]
 	public DayweekContext dayweek() {
 		DayweekContext _localctx = new DayweekContext(Context, State);
-		EnterRule(_localctx, 10, RULE_dayweek);
+		EnterRule(_localctx, 12, RULE_dayweek);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 55;
+			State = 74;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << MONDAY) | (1L << TUESDAY) | (1L << WEDNESDAY) | (1L << THURSDAY) | (1L << FRIDAY) | (1L << SATURDAY) | (1L << SUNDAY))) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -506,11 +622,11 @@ public partial class CalendariumParser : Parser {
 	[RuleVersion(0)]
 	public IdentifierContext identifier() {
 		IdentifierContext _localctx = new IdentifierContext(Context, State);
-		EnterRule(_localctx, 12, RULE_identifier);
+		EnterRule(_localctx, 14, RULE_identifier);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 57; Match(REGULAR_ID);
+			State = 76; Match(REGULAR_ID);
 			}
 		}
 		catch (RecognitionException re) {
@@ -526,57 +642,72 @@ public partial class CalendariumParser : Parser {
 
 	private static char[] _serializedATN = {
 		'\x3', '\x608B', '\xA72A', '\x8133', '\xB9ED', '\x417C', '\x3BE7', '\x7786', 
-		'\x5964', '\x3', '-', '>', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', '\t', 
+		'\x5964', '\x3', '.', 'Q', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', '\t', 
 		'\x3', '\x4', '\x4', '\t', '\x4', '\x4', '\x5', '\t', '\x5', '\x4', '\x6', 
-		'\t', '\x6', '\x4', '\a', '\t', '\a', '\x4', '\b', '\t', '\b', '\x3', 
-		'\x2', '\x3', '\x2', '\x3', '\x3', '\x3', '\x3', '\x5', '\x3', '\x15', 
-		'\n', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x5', 
-		'\x3', '\x1B', '\n', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', 
-		'\x5', '\x3', ' ', '\n', '\x3', '\x3', '\x4', '\x3', '\x4', '\x3', '\x4', 
-		'\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\x5', '\x4', '(', '\n', '\x4', 
-		'\x3', '\x5', '\x3', '\x5', '\x3', '\x5', '\x3', '\x5', '\x3', '\x5', 
-		'\x3', '\x5', '\x5', '\x5', '\x30', '\n', '\x5', '\x3', '\x5', '\x3', 
-		'\x5', '\x5', '\x5', '\x34', '\n', '\x5', '\x3', '\x6', '\x3', '\x6', 
-		'\x3', '\x6', '\x3', '\x6', '\x3', '\a', '\x3', '\a', '\x3', '\b', '\x3', 
-		'\b', '\x3', '\b', '\x2', '\x2', '\t', '\x2', '\x4', '\x6', '\b', '\n', 
-		'\f', '\xE', '\x2', '\x3', '\x3', '\x2', '\a', '\r', '\x2', '\x41', '\x2', 
-		'\x10', '\x3', '\x2', '\x2', '\x2', '\x4', '\x1F', '\x3', '\x2', '\x2', 
-		'\x2', '\x6', '\'', '\x3', '\x2', '\x2', '\x2', '\b', '\x33', '\x3', '\x2', 
-		'\x2', '\x2', '\n', '\x35', '\x3', '\x2', '\x2', '\x2', '\f', '\x39', 
-		'\x3', '\x2', '\x2', '\x2', '\xE', ';', '\x3', '\x2', '\x2', '\x2', '\x10', 
-		'\x11', '\x5', '\x4', '\x3', '\x2', '\x11', '\x3', '\x3', '\x2', '\x2', 
-		'\x2', '\x12', '\x14', '\x5', '\b', '\x5', '\x2', '\x13', '\x15', '\x5', 
-		'\x4', '\x3', '\x2', '\x14', '\x13', '\x3', '\x2', '\x2', '\x2', '\x14', 
-		'\x15', '\x3', '\x2', '\x2', '\x2', '\x15', ' ', '\x3', '\x2', '\x2', 
-		'\x2', '\x16', '\x17', '\a', '\xF', '\x2', '\x2', '\x17', '\x18', '\x5', 
-		'\x4', '\x3', '\x2', '\x18', '\x1A', '\a', '\x11', '\x2', '\x2', '\x19', 
-		'\x1B', '\x5', '\x4', '\x3', '\x2', '\x1A', '\x19', '\x3', '\x2', '\x2', 
-		'\x2', '\x1A', '\x1B', '\x3', '\x2', '\x2', '\x2', '\x1B', ' ', '\x3', 
-		'\x2', '\x2', '\x2', '\x1C', '\x1D', '\x5', '\x6', '\x4', '\x2', '\x1D', 
-		'\x1E', '\x5', '\x4', '\x3', '\x2', '\x1E', ' ', '\x3', '\x2', '\x2', 
-		'\x2', '\x1F', '\x12', '\x3', '\x2', '\x2', '\x2', '\x1F', '\x16', '\x3', 
-		'\x2', '\x2', '\x2', '\x1F', '\x1C', '\x3', '\x2', '\x2', '\x2', ' ', 
-		'\x5', '\x3', '\x2', '\x2', '\x2', '!', '(', '\a', '\x16', '\x2', '\x2', 
-		'\"', '(', '\a', '\x17', '\x2', '\x2', '#', '$', '\a', ' ', '\x2', '\x2', 
-		'$', '(', '\a', ' ', '\x2', '\x2', '%', '&', '\a', '\"', '\x2', '\x2', 
-		'&', '(', '\a', '\"', '\x2', '\x2', '\'', '!', '\x3', '\x2', '\x2', '\x2', 
-		'\'', '\"', '\x3', '\x2', '\x2', '\x2', '\'', '#', '\x3', '\x2', '\x2', 
-		'\x2', '\'', '%', '\x3', '\x2', '\x2', '\x2', '(', '\a', '\x3', '\x2', 
-		'\x2', '\x2', ')', '\x34', '\x5', '\n', '\x6', '\x2', '*', '+', '\a', 
-		'\x10', '\x2', '\x2', '+', ',', '\x5', '\xE', '\b', '\x2', ',', '-', '\a', 
-		'\x12', '\x2', '\x2', '-', '\x34', '\x3', '\x2', '\x2', '\x2', '.', '\x30', 
-		'\a', '\x18', '\x2', '\x2', '/', '.', '\x3', '\x2', '\x2', '\x2', '/', 
-		'\x30', '\x3', '\x2', '\x2', '\x2', '\x30', '\x31', '\x3', '\x2', '\x2', 
-		'\x2', '\x31', '\x34', '\x5', '\f', '\a', '\x2', '\x32', '\x34', '\a', 
-		'*', '\x2', '\x2', '\x33', ')', '\x3', '\x2', '\x2', '\x2', '\x33', '*', 
-		'\x3', '\x2', '\x2', '\x2', '\x33', '/', '\x3', '\x2', '\x2', '\x2', '\x33', 
-		'\x32', '\x3', '\x2', '\x2', '\x2', '\x34', '\t', '\x3', '\x2', '\x2', 
-		'\x2', '\x35', '\x36', '\a', '*', '\x2', '\x2', '\x36', '\x37', '\a', 
-		'\x17', '\x2', '\x2', '\x37', '\x38', '\a', '*', '\x2', '\x2', '\x38', 
-		'\v', '\x3', '\x2', '\x2', '\x2', '\x39', ':', '\t', '\x2', '\x2', '\x2', 
-		':', '\r', '\x3', '\x2', '\x2', '\x2', ';', '<', '\a', '-', '\x2', '\x2', 
-		'<', '\xF', '\x3', '\x2', '\x2', '\x2', '\b', '\x14', '\x1A', '\x1F', 
-		'\'', '/', '\x33',
+		'\t', '\x6', '\x4', '\a', '\t', '\a', '\x4', '\b', '\t', '\b', '\x4', 
+		'\t', '\t', '\t', '\x3', '\x2', '\x3', '\x2', '\x3', '\x2', '\x3', '\x2', 
+		'\x3', '\x2', '\x3', '\x2', '\x5', '\x2', '\x19', '\n', '\x2', '\x3', 
+		'\x3', '\x3', '\x3', '\x3', '\x3', '\x5', '\x3', '\x1E', '\n', '\x3', 
+		'\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x5', '\x3', 
+		'$', '\n', '\x3', '\x3', '\x4', '\x3', '\x4', '\x5', '\x4', '(', '\n', 
+		'\x4', '\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\x5', 
+		'\x4', '.', '\n', '\x4', '\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\x5', 
+		'\x4', '\x33', '\n', '\x4', '\x3', '\x5', '\x3', '\x5', '\x3', '\x5', 
+		'\x3', '\x5', '\x3', '\x5', '\x3', '\x5', '\x5', '\x5', ';', '\n', '\x5', 
+		'\x3', '\x6', '\x3', '\x6', '\x3', '\x6', '\x3', '\x6', '\x3', '\x6', 
+		'\x3', '\x6', '\x5', '\x6', '\x43', '\n', '\x6', '\x3', '\x6', '\x3', 
+		'\x6', '\x5', '\x6', 'G', '\n', '\x6', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\b', '\x3', '\b', '\x3', '\t', '\x3', '\t', 
+		'\x3', '\t', '\x2', '\x2', '\n', '\x2', '\x4', '\x6', '\b', '\n', '\f', 
+		'\xE', '\x10', '\x2', '\x3', '\x3', '\x2', '\a', '\r', '\x2', 'V', '\x2', 
+		'\x18', '\x3', '\x2', '\x2', '\x2', '\x4', '#', '\x3', '\x2', '\x2', '\x2', 
+		'\x6', '\x32', '\x3', '\x2', '\x2', '\x2', '\b', ':', '\x3', '\x2', '\x2', 
+		'\x2', '\n', '\x46', '\x3', '\x2', '\x2', '\x2', '\f', 'H', '\x3', '\x2', 
+		'\x2', '\x2', '\xE', 'L', '\x3', '\x2', '\x2', '\x2', '\x10', 'N', '\x3', 
+		'\x2', '\x2', '\x2', '\x12', '\x19', '\x5', '\x6', '\x4', '\x2', '\x13', 
+		'\x14', '\a', ')', '\x2', '\x2', '\x14', '\x15', '\x5', '\x4', '\x3', 
+		'\x2', '\x15', '\x16', '\a', '\x13', '\x2', '\x2', '\x16', '\x17', '\x5', 
+		'\x6', '\x4', '\x2', '\x17', '\x19', '\x3', '\x2', '\x2', '\x2', '\x18', 
+		'\x12', '\x3', '\x2', '\x2', '\x2', '\x18', '\x13', '\x3', '\x2', '\x2', 
+		'\x2', '\x19', '\x3', '\x3', '\x2', '\x2', '\x2', '\x1A', '\x1D', '\x5', 
+		'\xE', '\b', '\x2', '\x1B', '\x1C', '\a', '%', '\x2', '\x2', '\x1C', '\x1E', 
+		'\x5', '\xE', '\b', '\x2', '\x1D', '\x1B', '\x3', '\x2', '\x2', '\x2', 
+		'\x1D', '\x1E', '\x3', '\x2', '\x2', '\x2', '\x1E', '$', '\x3', '\x2', 
+		'\x2', '\x2', '\x1F', ' ', '\a', '\xF', '\x2', '\x2', ' ', '!', '\x5', 
+		'\x4', '\x3', '\x2', '!', '\"', '\a', '\x11', '\x2', '\x2', '\"', '$', 
+		'\x3', '\x2', '\x2', '\x2', '#', '\x1A', '\x3', '\x2', '\x2', '\x2', '#', 
+		'\x1F', '\x3', '\x2', '\x2', '\x2', '$', '\x5', '\x3', '\x2', '\x2', '\x2', 
+		'%', '\'', '\x5', '\n', '\x6', '\x2', '&', '(', '\x5', '\x6', '\x4', '\x2', 
+		'\'', '&', '\x3', '\x2', '\x2', '\x2', '\'', '(', '\x3', '\x2', '\x2', 
+		'\x2', '(', '\x33', '\x3', '\x2', '\x2', '\x2', ')', '*', '\a', '\xF', 
+		'\x2', '\x2', '*', '+', '\x5', '\x6', '\x4', '\x2', '+', '-', '\a', '\x11', 
+		'\x2', '\x2', ',', '.', '\x5', '\x6', '\x4', '\x2', '-', ',', '\x3', '\x2', 
+		'\x2', '\x2', '-', '.', '\x3', '\x2', '\x2', '\x2', '.', '\x33', '\x3', 
+		'\x2', '\x2', '\x2', '/', '\x30', '\x5', '\b', '\x5', '\x2', '\x30', '\x31', 
+		'\x5', '\x6', '\x4', '\x2', '\x31', '\x33', '\x3', '\x2', '\x2', '\x2', 
+		'\x32', '%', '\x3', '\x2', '\x2', '\x2', '\x32', ')', '\x3', '\x2', '\x2', 
+		'\x2', '\x32', '/', '\x3', '\x2', '\x2', '\x2', '\x33', '\a', '\x3', '\x2', 
+		'\x2', '\x2', '\x34', ';', '\a', '\x16', '\x2', '\x2', '\x35', ';', '\a', 
+		'\x17', '\x2', '\x2', '\x36', '\x37', '\a', ' ', '\x2', '\x2', '\x37', 
+		';', '\a', ' ', '\x2', '\x2', '\x38', '\x39', '\a', '\"', '\x2', '\x2', 
+		'\x39', ';', '\a', '\"', '\x2', '\x2', ':', '\x34', '\x3', '\x2', '\x2', 
+		'\x2', ':', '\x35', '\x3', '\x2', '\x2', '\x2', ':', '\x36', '\x3', '\x2', 
+		'\x2', '\x2', ':', '\x38', '\x3', '\x2', '\x2', '\x2', ';', '\t', '\x3', 
+		'\x2', '\x2', '\x2', '<', 'G', '\x5', '\f', '\a', '\x2', '=', '>', '\a', 
+		'\x10', '\x2', '\x2', '>', '?', '\x5', '\x10', '\t', '\x2', '?', '@', 
+		'\a', '\x12', '\x2', '\x2', '@', 'G', '\x3', '\x2', '\x2', '\x2', '\x41', 
+		'\x43', '\a', '\x18', '\x2', '\x2', '\x42', '\x41', '\x3', '\x2', '\x2', 
+		'\x2', '\x42', '\x43', '\x3', '\x2', '\x2', '\x2', '\x43', '\x44', '\x3', 
+		'\x2', '\x2', '\x2', '\x44', 'G', '\x5', '\xE', '\b', '\x2', '\x45', 'G', 
+		'\a', '+', '\x2', '\x2', '\x46', '<', '\x3', '\x2', '\x2', '\x2', '\x46', 
+		'=', '\x3', '\x2', '\x2', '\x2', '\x46', '\x42', '\x3', '\x2', '\x2', 
+		'\x2', '\x46', '\x45', '\x3', '\x2', '\x2', '\x2', 'G', '\v', '\x3', '\x2', 
+		'\x2', '\x2', 'H', 'I', '\a', '+', '\x2', '\x2', 'I', 'J', '\a', '\x17', 
+		'\x2', '\x2', 'J', 'K', '\a', '+', '\x2', '\x2', 'K', '\r', '\x3', '\x2', 
+		'\x2', '\x2', 'L', 'M', '\t', '\x2', '\x2', '\x2', 'M', '\xF', '\x3', 
+		'\x2', '\x2', '\x2', 'N', 'O', '\a', '.', '\x2', '\x2', 'O', '\x11', '\x3', 
+		'\x2', '\x2', '\x2', '\v', '\x18', '\x1D', '#', '\'', '-', '\x32', ':', 
+		'\x42', '\x46',
 	};
 
 	public static readonly ATN _ATN =

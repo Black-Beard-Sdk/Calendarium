@@ -1,31 +1,27 @@
 // calendar : Gregorian
 
-// Date : Carnival 2nd Day, 2-21, 2012,2023
-// Date : Carnival 2nd Day, 2-12, 2013
-// Date : Carnival 2nd Day, 3-4, 2014,2025
-// Date : Carnival 2nd Day, 2-17, 2015,2026
-// Date : Carnival 2nd Day, 2-9, 2016
-// Date : Carnival 2nd Day, 2-28, 2017
-// Date : Carnival 2nd Day, 2-13, 2018,2024
-// Date : Carnival 2nd Day, 3-5, 2019
-// Date : Carnival 2nd Day, 2-25, 2020
-// Date : Carnival 2nd Day, 2-16, 2021
-// Date : Carnival 2nd Day, 3-1, 2022
 {
   "$schema": "/_schema.CountryConfiguration.json",
-  "Country": "Ecuador",
+  "Country": "Monaco",
   "Regions": [],
   "Periods": [
     {
-      "Name": "All Souls' Day",
-      "RuleDate": "11-2",
+      "Name": "All Saints' Day",
+      "RuleDate": "11-1",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Carnival",
-      "RuleDate": "([EASTER]) - 47",
+      "Name": "Ascension",
+      "RuleDate": "([EASTER]) + 39",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Assumption",
+      "RuleDate": "8-15",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -33,48 +29,28 @@
     {
       "Name": "Christmas Day",
       "RuleDate": "12-25",
+      "RuleObserved": "? SUNDAY : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Good Friday",
-      "RuleDate": "([EASTER]) - 2",
+      "Name": "Corpus Christi",
+      "RuleDate": "([EASTER]) + 60",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Holy Thursday",
-      "RuleDate": "([EASTER]) - 3",
+      "Name": "Easter Monday",
+      "RuleDate": "([EASTER]) + 1",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Independence Day",
-      "RuleDate": "8-10",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Independence of Cuenca",
-      "RuleDate": "11-3",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Independence of Guayaquil",
-      "RuleDate": "10-9",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Labor Day",
-      "RuleDate": "5-1",
+      "Name": "Immaculate Conception",
+      "RuleDate": "12-8",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -87,36 +63,51 @@
       "Tags": []
     },
     {
-      "Name": "New Year's Eve",
-      "RuleDate": "12-31",
+      "Name": "Whit Monday",
+      "RuleDate": "([EASTER]) + 50",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Anniversary of the Battle of Pichincha",
-      "RuleDate": "5-24",
+      "Name": "Labor Day",
+      "RuleDate": "5-1",
+      "RuleObserved": "? SUNDAY : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Simón Bolivar Day",
-      "RuleDate": "7-24",
+      "Name": "Sainte-Dévote",
+      "RuleDate": "1-27",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Foundation of Quito Day",
-      "RuleDate": "12-6",
+      "Name": "National Holiday",
+      "RuleDate": "11-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Easter Day",
-      "RuleDate": "[EASTER DAY]",
+      "RuleDate": "[EASTER]",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Whit Sunday",
+      "RuleDate": "([EASTER]) + 49",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -127,8 +118,22 @@
       "Free": true,
       "Translations": [],
       "Tags": []
+    },
+    {
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Liberation of Monaco",
+      "RuleDate": "9-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
     }
   ],
-  "Culture": "es-EC",
+  "Culture": "fr-MC",
   "Calendar": "Gregorian"
 }

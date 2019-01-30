@@ -62,59 +62,28 @@ namespace Bb.Calendarium.UnitTests {
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à [Algeria] 143
-        ///Eid al Adha,1437/12/10,6
-        ///Eid al Adha,1438/12/10,6
-        ///Eid al Adha,1439/12/10,6
-        ///Eid al Adha,1440/12/10,6
-        ///Eid al Adha,1441/12/10,6
-        ///Eid al Adha,1442/12/10,6
-        ///Eid al Adha,1443/12/10,6
-        ///Eid al Adha,1444/12/10,6
-        ///Eid al Adha,1445/12/10,6
-        ///Eid al Adha,1446/12/10,6
-        ///Eid al Adha,1447/12/10,6
-        ///Eid al Adha 2nd Day,1437/12/11,6
-        ///Eid al Adha 2nd Day,1438/12/11,6
-        ///Eid al Adha 2nd Day,1439/12/11,6
-        ///Eid al Adha 2nd Day,1440/12/11,6
-        ///Eid al Adha 2nd Day,1441/12/11,6
-        ///Eid al Adha 2nd Day,1442/12/11,6
+        ///Eid al Adha,1437-12-10,6
+        ///Eid al Adha,1438-12-10,6
+        ///Eid al Adha,1439-12-10,6
+        ///Eid al Adha,1440-12-10,6
+        ///Eid al Adha,1441-12-10,6
+        ///Eid al Adha,1442-12-10,6
+        ///Eid al Adha,1443-12-10,6
+        ///Eid al Adha,1444-12-10,6
+        ///Eid al Adha,1445-12-10,6
+        ///Eid al Adha,1446-12-10,6
+        ///Eid al Adha,1447-12-10,6
+        ///Eid al Adha 2nd Day,1437-12-11,6
+        ///Eid al Adha 2nd Day,1438-12-11,6
+        ///Eid al Adha 2nd Day,1439-12-11,6
+        ///Eid al Adha 2nd Day,1440-12-11,6
+        ///Eid al Adha 2nd Day,1441-12-11,6
+        ///Eid al Adha 2nd Day,1442-12-11,6
         ///Eid al  [le reste de la chaîne a été tronqué]&quot;;.
         /// </summary>
         internal static string OUTLOOK {
             get {
                 return ResourceManager.GetString("OUTLOOK", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à [Algeria] 143
-        ///Eid al Adha, 1437-12-10,6
-        ///Eid al Adha 2nd Day , 1437-12-11,6
-        ///Eid al Fitr, 1437-10-1
-        ///Eid al Fitr 2nd Day, 1437-10-2
-        ///Hijri New Year, 1437-1-1,6
-        ///Independence Day,2026-7-5
-        ///New Year&apos;s Day
-        ///Prophet Mohammed&apos;s Birthday, 1437-3-12,6
-        ///Ashoora, 1437-1-9,6
-        ///Labor Day, 5-1
-        ///Revolution Day,2026-11-1
-        ///Commemoration Day,2026-7-19
-        ///Yennayer,2028-1-12
-        ///
-        ///[Andorra] 289
-        ///All Saints&apos; Day,2026-11-1
-        ///Ascension
-        ///Assumption
-        ///Carnival 1st Day ,2012-2-20
-        ///Carnival 1st Day ,2013-2-11
-        ///Carnival 1st Day ,2014-3-3
-        /// [le reste de la chaîne a été tronqué]&quot;;.
-        /// </summary>
-        internal static string ToDo {
-            get {
-                return ResourceManager.GetString("ToDo", resourceCulture);
             }
         }
     }

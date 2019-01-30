@@ -45,7 +45,7 @@ namespace Bb.Calendarium.UnitTests
                 listErrors.Clear();
 
                 var referential = Helper.Referential[item.Country]
-                    .OrderBy(c => c.Item2).ToList();
+                    .OrderBy(c => c.DayName).ToList();
 
                 if (Check(item.Country, referential, cal, string.Empty, listErrors))
                 {
@@ -71,7 +71,7 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static bool Check(Country country, System.Collections.Generic.List<(string, string)> referential, CalendariumConfiguration cal, string region, List<string> listErrors)
+        private static bool Check(Country country, System.Collections.Generic.List<Referential> referential, CalendariumConfiguration cal, string region, List<string> listErrors)
         {
 
             if (!cal.GetKeys(country).Any())
@@ -79,31 +79,49 @@ namespace Bb.Calendarium.UnitTests
 
             var calendar = cal.GetConfigurationByCountry(country)[0].Calendar.GetCalendar();
 
-            List<KeyValuePair<string, DateTime>> _items = new List<KeyValuePair<string, DateTime>>();
-            foreach (var item in referential)
-                _items.Add(new KeyValuePair<string, DateTime>(item.Item1, GetExpectedDate(item, calendar)));
-            _items = _items.OrderBy(c => c.Value).ToList();
+            List<Referential> _lObserved = referential.Where(c => c.Observed).ToList();
+            List<Referential> _l2 = referential.Where(c => !c.Observed).ToList();
 
-            foreach (var item in _items)
+            foreach (var item in referential)
+                item.Date2 = GetExpectedDate(item, calendar);
+
+            foreach (var item in _lObserved)
             {
-                var year = item.Value.Year;
+                var d = _l2.FirstOrDefault(c => c.DayName.ToLower().Replace("day", "").Trim() == item.DayName.ToLower().Replace("day", "").Trim() && c.Date2.Year == item.Date2.Year);
+                if (d != null)
+                    d.ObservedDate = item;
+                else
+                {
+
+
+                }
+            }
+
+
+            _l2 = _l2.OrderBy(c => c.Date2).ToList();
+
+            foreach (var item in _l2)
+            {
+
+                var year = item.Date2.Year;
                 List<EventDate> dates1 = GetEvents(country, cal, year, CalendarEnum.Default);
-                List<EventDate> dates = GetEvents(dates1, item.Key);
+                List<EventDate> dates = GetEvents(dates1, item.DayName);
 
                 if (dates.Count == 0)
-                    listErrors.Add($"failed on '{item.Key.Mark(Mark.Bold)}' expected : {item.Value.ToString("d")} missing day\r\n");
+                    listErrors.Add($"failed on '{item.DayName.Mark(Mark.Bold)}' expected : {item.Date2.ToString("d")} missing day\r\n");
 
                 else
                 {
-                    var date = dates.FirstOrDefault(c => c.Date == item.Value);
+
+                    var date = dates.FirstOrDefault(c => c.Date == item.Date2);
                     if (date == null)
                     {
 
-                        if (CountryDebugger.CheckStop(country, item.Key, item.Value.Year))
+                        if (CountryDebugger.CheckStop(country, item.DayName, item.Date2.Year))
                             System.Diagnostics.Debugger.Break();
 
                         if (dates.Count == 1)
-                            listErrors.Add($"failed on '{item.Key}' expected : {item.Value.ToString("d")} and computed : {dates[0].Date.ToString("d")}\r\n");
+                            listErrors.Add($"failed on '{item.DayName}' expected : {item.Date2.ToString("d")} and computed : {dates[0].Date.ToString("d")}\r\n");
 
                         else
                         {
@@ -119,10 +137,10 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static DateTime GetExpectedDate((string, string) item, Calendar calendar)
+        private static DateTime GetExpectedDate(Referential item, Calendar calendar)
         {
 
-            var u3 = item.Item2.Split('-');
+            var u3 = item.Date.Split('-');
             var year = int.Parse(u3[0]);
             var month = int.Parse(u3[1]);
             var day = int.Parse(u3[2]);

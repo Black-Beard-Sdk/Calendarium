@@ -15,13 +15,31 @@ namespace Bb.Calendarium.Configuration
             public static Country? Country { get; set; }
             public static string DayName { get; set; }
             public static int? Year { get; set; }
+            public static DateTime? Date { get; set; }
 
         }
+
+        internal static DateTime DebugObserved(Func<DateTime, DateTime> function, DateTime date, Country country, string dayName, string functionBody)
+        {
+
+            string context = $"Rule Observed : {country.ToString()} : {dayName}";
+
+            if (CheckStop(country, dayName, date))
+                System.Diagnostics.Debugger.Break();
+
+            var result = function(date);
+            var datas = "'" + result.ToString("d") + "'";
+            string msg = context + " : " + functionBody.Replace("_date_", date.ToString()) + " -> " + datas;
+            Trace.WriteLine(msg);
+
+            return result;
+        }
+
 
         internal static DateTime[] Debug(Func<int, DateTime[]> function, int year, Country country, string dayName, string functionBody)
         {
 
-            string context = $"{country.ToString()} : {dayName}";
+            string context = $"Rule : {country.ToString()} : {dayName}";
 
             if (CheckStop(country, dayName, year))
                 System.Diagnostics.Debugger.Break();
@@ -32,6 +50,24 @@ namespace Bb.Calendarium.Configuration
             Trace.WriteLine(msg);
 
             return result;
+        }
+
+        public static bool CheckStop(Country country, string dayName, DateTime date)
+        {
+
+            bool t = CountryDebugger.AutoStop.Country.HasValue
+                  || !string.IsNullOrEmpty(CountryDebugger.AutoStop.DayName)
+                  || CountryDebugger.AutoStop.Date.HasValue;
+
+            if (!t) // Nothing specified = dont't stop
+                return false;
+
+            var result = (CountryDebugger.AutoStop.Country.HasValue ? CountryDebugger.AutoStop.Country == country : true)
+                    && (!string.IsNullOrEmpty(CountryDebugger.AutoStop.DayName) ? CountryDebugger.AutoStop.DayName == dayName : true)
+                    && (CountryDebugger.AutoStop.Date.HasValue ? CountryDebugger.AutoStop.Date == date : true);
+
+            return result;
+
         }
 
         public static bool CheckStop(Country country, string dayName, int year)
@@ -46,7 +82,7 @@ namespace Bb.Calendarium.Configuration
 
             var result = (CountryDebugger.AutoStop.Country.HasValue ? CountryDebugger.AutoStop.Country == country : true)
                     && (!string.IsNullOrEmpty(CountryDebugger.AutoStop.DayName) ? CountryDebugger.AutoStop.DayName == dayName : true)
-                    &&  (CountryDebugger.AutoStop.Year.HasValue ? CountryDebugger.AutoStop.Year == year : true);
+                    && (CountryDebugger.AutoStop.Year.HasValue ? CountryDebugger.AutoStop.Year == year : true);
 
             return result;
 
