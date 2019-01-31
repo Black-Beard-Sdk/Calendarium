@@ -88,7 +88,6 @@
 // Date : Tuen Ng Festival, 6-10, 2024
 // Date : Tuen Ng Festival, 5-31, 2025
 // Date : Tuen Ng Festival, 6-19, 2026
-// Date : New Year's Day Observed, 1-2, 2012,2017,2023
 // Date : Chinese New Year 3rd Day, 1-25, 2012
 // Date : Chinese New Year 3rd Day, 2-12, 2013,2024
 // Date : Chinese New Year 3rd Day, 2-2, 2014
@@ -103,10 +102,7 @@
 // Date : Chinese New Year 3rd Day, 1-24, 2023
 // Date : Chinese New Year 3rd Day, 1-31, 2025
 // Date : Chinese New Year 3rd Day, 2-19, 2026
-// Date : Labor Day Observed, 5-2, 2016,2022
-// Date : Hong Kong SAR Establishment Day Observed, 7-2, 2012,2018
 // Date : Second week-day after Christmas Day, 12-27, 2016,2022
-// Date : National Day Observed, 10-2, 2012,2017,2023
 // Date : Chinese New Year 4th Day, 2-13, 2013,2024
 // Date : Chinese New Year 4th Day, 2-3, 2014
 // Date : Chinese New Year 4th Day, 1-31, 2017
@@ -164,6 +160,7 @@
     {
       "Name": "National Day",
       "RuleDate": "10-1",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -192,6 +189,7 @@
     {
       "Name": "Labor Day",
       "RuleDate": "5-1",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []

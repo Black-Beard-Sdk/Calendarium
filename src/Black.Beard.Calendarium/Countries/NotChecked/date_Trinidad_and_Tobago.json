@@ -1,7 +1,6 @@
 // calendar : Gregorian
 // calendar : Gregorian
 
-// Date : New Year's Day Observed, 1-2, 2012,2017,2023
 // Date : Ash Wednesday, 2-22, 2012,2023
 // Date : Ash Wednesday, 2-13, 2013
 // Date : Ash Wednesday, 3-5, 2014,2025
@@ -13,14 +12,7 @@
 // Date : Ash Wednesday, 2-26, 2020
 // Date : Ash Wednesday, 2-17, 2021
 // Date : Ash Wednesday, 3-2, 2022
-// Date : Spritual Baptist Day Observed, 3-31, 2014,2025
-// Date : Indian Arrival Day Observed, 5-31, 2013,2021
-// Date : Labor Day Observed, 6-20, 2014,2016,2022
 // Date : Emancipation Day, 8-2, 2015
-// Date : Emancipation Day Observed, 8-3, 2015
-// Date : Emancipation Day Observed, 8-2, 2021
-// Date : Independence Day Observed, 9-1, 2014,2025
-// Date : Republic Day Observed, 9-25, 2017,2023
 // Date : Diwali, 11-13, 2012
 // Date : Diwali, 11-3, 2013
 // Date : Diwali, 10-23, 2014
@@ -36,11 +28,7 @@
 // Date : Diwali, 10-31, 2024
 // Date : Diwali, 10-20, 2025
 // Date : Diwali, 11-8, 2026
-// Date : Diwali Observed, 11-4, 2013
-// Date : Diwali Observed, 10-31, 2016
-// Date : Diwali Observed, 10-28, 2019
 // Date : Christmas Holiday, 12-27, 2016,2021,2022
-// Date : Eid al Fitr Observed, 10-2, 1438
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Trinidad_and_Tobago",
@@ -105,6 +93,7 @@
     {
       "Name": "Labor Day",
       "RuleDate": "6-19",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -133,6 +122,7 @@
     {
       "Name": "Republic Day",
       "RuleDate": "9-24",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []

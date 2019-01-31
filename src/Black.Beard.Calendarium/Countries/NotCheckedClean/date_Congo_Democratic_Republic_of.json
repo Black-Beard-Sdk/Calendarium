@@ -1,10 +1,8 @@
 // calendar : Gregorian
 
-// Date : President's Day Observed, 6-6, 2016,2022
-// Date : Immaculate Conception Observed, 12-9, 2019,2024
 {
   "$schema": "/_schema.CountryConfiguration.json",
-  "Country": "Equatorial_Guinea",
+  "Country": "Congo_Democratic_Republic_of",
   "Regions": [],
   "Periods": [
     {
@@ -15,29 +13,22 @@
       "Tags": []
     },
     {
-      "Name": "Holy Thursday",
-      "RuleDate": "([EASTER]) - 3",
+      "Name": "Day of the Martyrs",
+      "RuleDate": "1-4",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Good Friday",
-      "RuleDate": "([EASTER]) - 2",
+      "Name": "Heroes' Day",
+      "RuleDate": "1-16",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Holy Saturday",
-      "RuleDate": "([EASTER]) - 1",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Easter Day",
-      "RuleDate": "[EASTER]",
+      "Name": "Heroes' Day",
+      "RuleDate": "1-17",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -50,43 +41,30 @@
       "Tags": []
     },
     {
-      "Name": "President's Day",
-      "RuleDate": "6-5",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Corpus Christi",
-      "RuleDate": "([EASTER]) + 60",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Freedom Day",
-      "RuleDate": "8-3",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Constitution Day",
-      "RuleDate": "8-15",
+      "Name": "Liberation Day",
+      "RuleDate": "5-17",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Independence Day",
-      "RuleDate": "10-12",
+      "RuleDate": "6-30",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Immaculate Conception",
-      "RuleDate": "12-8",
+      "Name": "Parents' Day",
+      "RuleDate": "8-1",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Army Day",
+      "RuleDate": "11-17",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -101,6 +79,14 @@
     {
       "Name": "Christmas",
       "RuleDate": "12-25",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Saint Paul's Day",
+      "RuleDate": "12-30",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -113,6 +99,6 @@
       "Tags": []
     }
   ],
-  "Culture": "es-GQ",
+  "Culture": "fr-CD",
   "Calendar": "Gregorian"
 }

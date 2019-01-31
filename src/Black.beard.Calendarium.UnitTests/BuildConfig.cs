@@ -51,11 +51,9 @@ namespace Bb.Calendarium.UnitTests
             foreach (var countryItem in referential)
             {
 
-                bool clean = true;
-
                 StringBuilder sb = new StringBuilder(2000);
-
                 var infos = CountryHelper.GetInfos(countryItem.Key);
+                bool clean = true;
 
                 if (infos.Item3.Length == 0)
                     continue;
@@ -79,23 +77,27 @@ namespace Bb.Calendarium.UnitTests
 
                 }
 
-                Dictionary<string, Dictionary<string, List<string>>> _doc = new Dictionary<string, Dictionary<string, List<string>>>();
+                Dictionary<string, Dictionary<string, Liststring>> _doc = new Dictionary<string, Dictionary<string, Liststring>>();
                 foreach (var date in countryItem.Value)
                 {
 
-                    if (!_doc.TryGetValue(date.DayName, out Dictionary<string, List<string>> _dic))
-                        _doc.Add(date.DayName, _dic = new Dictionary<string, List<string>>());
+                    if (!_doc.TryGetValue(date.DayName, out Dictionary<string, Liststring> _dic))
+                        _doc.Add(date.DayName, _dic = new Dictionary<string, Liststring>());
 
                     var u3 = date.Date.Split('-');
 
                     string rule = $"{int.Parse(u3[u3.Length - 2])}-{int.Parse(u3[u3.Length - 1])}";
 
-                    if (!_dic.TryGetValue(rule, out List<string> years))
-                        _dic.Add(rule, new List<string>() { int.Parse(u3[0]).ToString() });
-                    else
-                        years.Add(int.Parse(u3[0]).ToString());
+                    if (!_dic.TryGetValue(rule, out Liststring years))
+                        _dic.Add(rule, years = new Liststring());
+
+                    years.Years.Add(int.Parse(u3[0]).ToString());
+
+                    if (date.ObservedDate != null)
+                        years.Observeds.Add($"{date.DayName},{date.Date.Split('-')[2]},{date.ObservedDate.Date.Split('-')[2]}");
 
                 }
+
 
                 foreach (var day in _doc)
                 {
@@ -104,34 +106,42 @@ namespace Bb.Calendarium.UnitTests
 
                     foreach (var rule in day.Value)
                     {
-                        if (rule.Value.Count > 5)
+
+                        PeriodConfiguration p = null;
+
+                        if (rule.Value.Years.Count > 5)
                         {
 
-                            var p = new PeriodConfiguration(day.Key, true, rule.Key)
+                            p = new PeriodConfiguration(day.Key, true, rule.Key)
                             {
                                 CultureInfo = CultureInfo.GetCultureInfo(infos.Item2),
                             };
 
                             config.Periods.Add(p);
 
-                            if (int.Parse(rule.Value[0]) < 2000)
+                            if (int.Parse(rule.Value.Years[0]) < 2000)
                                 p.Calendar = CalendarEnum.Hijri;
+                            else if (int.Parse(rule.Value.Years[0]) > 3000)
+                                p.Calendar = CalendarEnum.Julian;
 
                         }
                         else
                         {
+
                             var _rule = Helper.GetRule(day.Key);
                             if (string.IsNullOrEmpty(_rule))
                             {
                                 clean = false;
-                                sb.AppendLine($"// Date : {day.Key}, {rule.Key}, {string.Join(',', rule.Value)}");
+                                var dates = string.Join(',', rule.Value);
+                                sb.AppendLine($"// Date : {day.Key}, {rule.Key}, {dates}");
                             }
+
                             else if (_rule == "<<NotImplemented>>") { }
                             else
                             {
                                 if (_h.Add(day.Key + " - " + _rule))
                                 {
-                                    var p = new PeriodConfiguration(day.Key, true, _rule)
+                                    p = new PeriodConfiguration(day.Key, true, _rule)
                                     {
                                         CultureInfo = CultureInfo.GetCultureInfo(infos.Item2),
                                     };
@@ -140,6 +150,44 @@ namespace Bb.Calendarium.UnitTests
                                 }
                             }
                         }
+
+                        if (rule.Value.Observeds.Count > 0)
+                        {
+
+                            foreach (var item in rule.Value.Observeds)
+                            {
+
+                                var days = item.Split(',');
+
+                                string name = days[0];
+                                int d1 = int.Parse(days[1]);
+                                int d2 = int.Parse(days[2]);
+
+                                var ds = d2 - d1;
+
+                                if (d2 == 31 && d1 == 1)
+                                    ds = 1;
+
+                                if (ds > 2)
+                                {
+
+                                    clean = false;
+                                    sb.AppendLine($"// Observed date {item}");
+
+                                }
+
+                                var it = config.Periods.First(c => c.Name == name);
+
+                                if (string.IsNullOrEmpty(it.RuleObserved) || ds > 1)
+                                    it.RuleObserved = ds == 1
+                                        ? "? (SUNDAY) : >> MONDAY"
+                                        : "? (SATURDAY | SUNDAY) : >> MONDAY"
+                                        ;
+
+                            }
+
+                        }
+
                     }
 
                 }
@@ -156,6 +204,53 @@ namespace Bb.Calendarium.UnitTests
 
                 }
 
+            }
+
+        }
+
+
+        //private static DateTime GetExpectedDate(Referential item, Calendar calendar)
+        //{
+
+        //    var u3 = item.Date.Split('-');
+        //    var year = int.Parse(u3[0]);
+        //    var month = int.Parse(u3[1]);
+        //    var day = int.Parse(u3[2]);
+
+        //    if (calendar is GregorianCalendar && year < 1900)
+        //        calendar = new HijriCalendar();
+
+        //    DateTime expected;
+        //    try
+        //    {
+        //        expected = new DateTime(year, month, day, calendar);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+
+        //    item.Date2 = expected;
+
+        //    return expected;
+
+        //}
+
+        private class Liststring
+        {
+
+            public Liststring()
+            {
+                Years = new List<string>();
+                Observeds = new List<string>();
+            }
+
+            public List<string> Years { get; }
+            public List<string> Observeds { get; }
+
+            public override string ToString()
+            {
+                return string.Join(',', Years);
             }
 
         }
@@ -191,7 +286,7 @@ namespace Bb.Calendarium.UnitTests
                 foreach (var period in country.Periods)
                 {
 
-                    var day = trads[period.Name] ??  trads[Helper.GetA(period.Name)];
+                    var day = trads[period.Name] ?? trads[Helper.GetA(period.Name)];
                     if (day == null)
                     {
                         foreach (var item in trads)
@@ -204,7 +299,7 @@ namespace Bb.Calendarium.UnitTests
                     }
                 }
 
-                
+
 
             }
 

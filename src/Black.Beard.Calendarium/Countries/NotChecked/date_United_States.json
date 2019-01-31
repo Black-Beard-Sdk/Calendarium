@@ -65,12 +65,6 @@
 // Date : Presidents' Day, 2-15, 2016,2021
 // Date : Presidents' Day, 2-19, 2018,2024
 // Date : Presidents' Day, 2-21, 2022
-// Date : New Year's Day Observed, 1-2, 2012,2017,2023
-// Date : New Year's Day Observed, 12-31, 2021
-// Date : Independence Day Observed, 7-3, 2015,2020,2026
-// Date : Independence Day Observed, 7-5, 2021
-// Date : Veteran's Day Observed, 11-12, 2012,2018
-// Date : Veteran's Day Observed, 11-10, 2017,2023
 // Date : Day After Thanksgiving Day, 11-23, 2012,2018
 // Date : Day After Thanksgiving Day, 11-29, 2013,2019,2024
 // Date : Day After Thanksgiving Day, 11-28, 2014,2025
@@ -78,8 +72,6 @@
 // Date : Day After Thanksgiving Day, 11-25, 2016,2022
 // Date : Day After Thanksgiving Day, 11-24, 2017,2023
 // Date : Day After Thanksgiving Day, 11-26, 2021
-// Date : Christmas Holiday Observed, 12-26, 2016,2022
-// Date : Christmas Holiday Observed, 12-24, 2021
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "United_States",
@@ -88,6 +80,7 @@
     {
       "Name": "Christmas Day",
       "RuleDate": "12-25",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -172,6 +165,7 @@
     {
       "Name": "Veteran's Day",
       "RuleDate": "11-11",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []

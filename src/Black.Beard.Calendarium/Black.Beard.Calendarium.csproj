@@ -30,16 +30,10 @@
     <None Update="Countries\date_Belgium.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Countries\NotCheckedClean\date_Costa_Rica.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Countries\date_Croatia.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_Ecuador.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Countries\NotCheckedClean\date_El_Salvador.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_Estonia.json">
@@ -75,19 +69,7 @@
     <None Update="Countries\date_India.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Countries\NotCheckedClean\date_Iran.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Countries\date_Italy.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Countries\NotCheckedClean\date_Jordan.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Countries\NotCheckedClean\date_Moldova.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Countries\NotCheckedClean\date_Montenegro.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_Morocco.json">
@@ -100,9 +82,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_Peru.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Countries\NotCheckedClean\date_Romania.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_San_Marino.json">
@@ -135,6 +114,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Countries\NotCheckedClean\" />
     <Folder Include="Countries\NotChecked\" />
   </ItemGroup>
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Bb.Calendarium.UnitTests
 {
@@ -1056,6 +1057,8 @@ namespace Bb.Calendarium.UnitTests
         private static Dictionary<Country, List<Referential>> GetReferential()
         {
 
+            List<Referential> _lObserved;
+            List<Referential> _l2;
 
             var txt = Resource1.OUTLOOK.Split('\r');
 
@@ -1070,6 +1073,23 @@ namespace Bb.Calendarium.UnitTests
                 {
                     if (t.StartsWith("["))
                     {
+
+                        if (_list != null)
+                        {
+                            _lObserved = _list.Where(c => c.Observed).ToList();
+                            _l2 = _list.Where(c => !c.Observed).ToList();
+                            foreach (var item2 in _lObserved)
+                            {
+                                var d = _l2.FirstOrDefault(c => c.DayName.ToLower().Replace("day", "").Trim() == item2.DayName.ToLower().Replace("day", "").Trim() && item2.Date.Substring(0, 4) == c.Date.Substring(0, 4));
+                                if (d != null)
+                                    d.ObservedDate = item2;
+                                else
+                                {
+                                }
+                                _list.Remove(item2);
+                            }
+                        }
+
                         var label = t.Substring(1, t.IndexOf(']') - 1);
                         label = label
                             .Replace(" ", "_")
@@ -1095,17 +1115,27 @@ namespace Bb.Calendarium.UnitTests
                         if (day.ToLower().EndsWith(" observed"))
                         {
                             day = day.Substring(0, "observed".Length + 1).Trim();
-                            _list.Add(new Referential() { DayName = day, Date = u[1].Trim(), Observed = true, } );
+                            _list.Add(new Referential() { DayName = day, Date = u[1].Trim(), Observed = true, });
                         }
                         else
-                            _list.Add(new Referential() { DayName = day, Date = u[1].Trim() } );
+                            _list.Add(new Referential() { DayName = day, Date = u[1].Trim() });
                     }
                 }
-                else
-                    _list = null;
 
             }
 
+            _lObserved = _list.Where(c => c.Observed).ToList();
+            _l2 = _list.Where(c => !c.Observed).ToList();
+            foreach (var item2 in _lObserved)
+            {
+                var d = _l2.FirstOrDefault(c => c.DayName.ToLower().Replace("day", "").Trim() == item2.DayName.ToLower().Replace("day", "").Trim() && item2.Date.Substring(0, 4) == c.Date.Substring(0, 4));
+                if (d != null)
+                    d.ObservedDate = item2;
+                else
+                {
+                }
+                _list.Remove(item2);
+            }
             return _dic;
 
         }

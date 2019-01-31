@@ -2,14 +2,6 @@
 // calendar : Korean
 // calendar : Gregorian
 
-// Date : Hijri New Year Observed, 1-2, 1438
-// Date : Prophet Mohammed's Birthday Observed, 3-13, 1438
-// Date : Isra' Mi'raj Observed, 7-29, 1433,1441
-// Date : Start of Ramadan Observed, 9-2, 1440
-// Date : Nuzul al-Quraan Observed, 9-18, 1438
-// Date : Hari Raya Aidil Fitri Observed, 10-3, 1433,1438,1441
-// Date : Hari Raya Aidil Adha Observed, 12-12, 1440
-// Date : New Year Observed, 1-2, 2012,2017,2023
 // Date : Chinese New Year, 1-23, 2012
 // Date : Chinese New Year, 2-10, 2013,2024
 // Date : Chinese New Year, 1-31, 2014
@@ -24,13 +16,6 @@
 // Date : Chinese New Year, 1-22, 2023
 // Date : Chinese New Year, 1-29, 2025
 // Date : Chinese New Year, 2-17, 2026
-// Date : Chinese New Year Observed, 2-11, 2013
-// Date : Chinese New Year Observed, 1-23, 2023
-// Date : National Holiday Observed, 2-24, 2014,2020,2025
-// Date : Armed Forces Day Observed, 6-1, 2015
-// Date : Armed Forces Day Observed, 5-30, 2022
-// Date : H.M. the Sultan's Birthday Observed, 7-16, 2016,2022
-// Date : Christmas Observed, 12-26, 2016,2022
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Brunei",
@@ -110,6 +95,7 @@
     {
       "Name": "National Day",
       "RuleDate": "2-23",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -131,6 +117,7 @@
     {
       "Name": "Christmas Day",
       "RuleDate": "12-25",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []

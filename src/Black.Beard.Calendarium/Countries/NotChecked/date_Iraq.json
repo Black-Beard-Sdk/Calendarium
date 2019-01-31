@@ -149,21 +149,24 @@
       "RuleDate": "1-10",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "Calendar": "Julian"
     },
     {
       "Name": "Pesach",
       "RuleDate": "7-15",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "Calendar": "Julian"
     },
     {
       "Name": "Sukkot",
       "RuleDate": "1-16",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "Calendar": "Julian"
     },
     {
       "Name": "Easter Day",

@@ -29,14 +29,16 @@
       "RuleDate": "7-27",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "Calendar": "Julian"
     },
     {
       "Name": "Yom Yerushalaim",
       "RuleDate": "8-28",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "Calendar": "Julian"
     },
     {
       "Name": "International Holocaust Remembrance Day",
@@ -50,7 +52,8 @@
       "RuleDate": "2-12",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "Calendar": "Julian"
     }
   ],
   "Culture": "ar-IL",

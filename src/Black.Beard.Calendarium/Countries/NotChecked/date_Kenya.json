@@ -1,10 +1,5 @@
 // calendar : Gregorian
 
-// Date : New Year's Day Observed, 1-2, 2012,2017,2023
-// Date : Labour Day Observed, 5-2, 2016,2022
-// Date : Madaraka Day Observed, 6-2, 2014,2025
-// Date : Mashujaa Heroes' Day Observed, 10-21, 2013,2019,2024
-// Date : Jamhuri Day Observed, 12-13, 2021
 // Date : Christmas Holiday, 12-27, 2016,2022
 // Date : Boxing Day Holiday, 12-27, 2021
 {
@@ -50,6 +45,7 @@
     {
       "Name": "Madaraka Day",
       "RuleDate": "6-1",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []

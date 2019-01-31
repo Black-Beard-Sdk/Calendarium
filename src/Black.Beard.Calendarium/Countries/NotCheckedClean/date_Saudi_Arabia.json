@@ -2,8 +2,6 @@
 // calendar : Hijri
 // calendar : Gregorian
 
-// Date : National Day Observed, 9-24, 2016,2022
-// Date : National Day Observed, 9-25, 2021
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Saudi_Arabia",
@@ -60,6 +58,7 @@
     {
       "Name": "National Day",
       "RuleDate": "9-23",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []

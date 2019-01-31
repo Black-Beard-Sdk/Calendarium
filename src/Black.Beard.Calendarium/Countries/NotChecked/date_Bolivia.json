@@ -1,6 +1,5 @@
 // calendar : Gregorian
 
-// Date : Labor Day Observed, 5-2, 2016,2022
 // Date : Christmas Holiday, 12-26, 2016,2022
 // Date : Christmas Holiday, 12-24, 2021
 {
@@ -53,6 +52,7 @@
     {
       "Name": "Labor Day",
       "RuleDate": "5-1",
+      "RuleObserved": "? (SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []

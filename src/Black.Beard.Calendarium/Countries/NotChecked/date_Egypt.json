@@ -24,9 +24,6 @@
 // Date : Sham el-Nessim, 4-20, 2020
 // Date : Sham el-Nessim, 5-3, 2021
 // Date : Sham el-Nessim, 4-25, 2022
-// Date : Eid al Fitr Observed, 10-4, 1433,1436,1439,1441,1444
-// Date : Eid al Fitr Observed, 10-5, 1434,1437,1442
-// Date : Eid al Adha Observed, 12-15, 1439
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Egypt",
@@ -155,14 +152,6 @@
     {
       "Name": "Eid al Adha 4th day",
       "RuleDate": "12-13",
-      "Free": true,
-      "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
-    },
-    {
-      "Name": "Eid al Adha Observed",
-      "RuleDate": "12-14",
       "Free": true,
       "Translations": [],
       "Tags": [],

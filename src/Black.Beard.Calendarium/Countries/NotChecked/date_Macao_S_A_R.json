@@ -62,8 +62,6 @@
 // Date : Chinese New Year 4th Day, 2-19, 2018
 // Date : Chinese New Year 4th Day, 1-28, 2020
 // Date : Chinese New Year 4th Day, 2-15, 2021
-// Date : Labour Day Observed, 5-2, 2016,2022
-// Date : Labour Day Observed, 5-3, 2021
 // Date : Buddha's Birthday, 4-28, 2012
 // Date : Buddha's Birthday, 5-17, 2013
 // Date : Buddha's Birthday, 5-6, 2014
@@ -124,8 +122,6 @@
 // Date : Chong Chao Festival 2nd Day, 9-18, 2024
 // Date : Chong Chao Festival 2nd Day, 10-7, 2025
 // Date : Chong Chao Festival 2nd Day, 9-26, 2026
-// Date : National Day of the People's Republic of China Observed, 10-3, 2016,2022,2023
-// Date : National Day of the People's Republic of China Observed, 10-2, 2017
 // Date : Chong Yeung Festival, 10-23, 2012,2023
 // Date : Chong Yeung Festival, 10-13, 2013
 // Date : Chong Yeung Festival, 10-2, 2014
@@ -140,8 +136,6 @@
 // Date : Chong Yeung Festival, 10-11, 2024
 // Date : Chong Yeung Festival, 10-29, 2025
 // Date : Chong Yeung Festival, 10-18, 2026
-// Date : Christmas Observed, 12-26, 2016,2022
-// Date : Christmas Observed, 12-27, 2021
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Macao_S_A_R",
@@ -255,6 +249,7 @@
     {
       "Name": "Christmas",
       "RuleDate": "12-25",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
