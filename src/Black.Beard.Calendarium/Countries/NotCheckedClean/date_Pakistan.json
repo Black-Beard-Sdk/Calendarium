@@ -3,6 +3,8 @@
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Pakistan",
+  "Culture": "en-PK",
+  "Calendar": "Hijri",
   "Regions": [],
   "Periods": [
     {
@@ -10,74 +12,63 @@
       "RuleDate": "1-10",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Ashoora 2nd Day",
       "RuleDate": "1-11",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Prophet Mohammed's Birthday",
       "RuleDate": "3-12",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Shab-e-Miraj",
       "RuleDate": "7-27",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Start of Ramadan",
       "RuleDate": "9-1",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Eid al Fitr",
       "RuleDate": "10-1",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Eid al Fitr 2nd Day",
       "RuleDate": "10-2",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Eid al Adha",
       "RuleDate": "12-10",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     },
     {
       "Name": "Eid al Adha 2nd Day",
       "RuleDate": "12-11",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
     }
-  ],
-  "Culture": "en-PK",
-  "Calendar": "Gregorian"
+  ]
 }

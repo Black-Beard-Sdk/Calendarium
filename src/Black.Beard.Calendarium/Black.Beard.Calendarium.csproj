@@ -27,6 +27,45 @@
     <None Update="Countries\date_Austria.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Countries\NotCheckedClean\date_Bosnia_and_Herzegovina.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\date_Costa_Rica.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\date_El_Salvador.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Iran.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Jordan.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Kuwait.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Moldova.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Montenegro.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Oman.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Romania.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\date_Saudi_Arabia.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Syria.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\NotCheckedClean\date_Bahrain.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Countries\date_Belgium.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -54,6 +93,9 @@
     <None Update="Countries\date_Malta.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Countries\date_Monaco.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Countries\date_Portugal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -72,16 +114,19 @@
     <None Update="Countries\date_Italy.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Countries\date_Morocco.json">
+    <None Update="Countries\NotCheckedClean\date_Morocco.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_Nicaragua.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Countries\date_Pakistan.json">
+    <None Update="Countries\NotCheckedClean\date_Pakistan.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_Peru.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Countries\date_Russia.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\date_San_Marino.json">
@@ -93,13 +138,13 @@
     <None Update="Countries\date_Slovenia.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Countries\date_Tunisia.json">
+    <None Update="Countries\NotCheckedClean\date_Tunisia.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Countries\date_United_Arab_Emirates.json">
+    <None Update="Countries\NotCheckedClean\date_United_Arab_Emirates.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Countries\date_Yemen.json">
+    <None Update="Countries\NotCheckedClean\date_Yemen.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Countries\Readme.md">
@@ -111,11 +156,6 @@
     <None Update="Countries\_schema.DefaultCountryConfiguration.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Countries\NotCheckedClean\" />
-    <Folder Include="Countries\NotChecked\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties Countries_4_3schema_1CountryConfiguration_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>

@@ -1,34 +1,17 @@
 // calendar : Gregorian
 
+// Orphan observed date President : 2016-6-6
+// Orphan observed date President : 2022-6-6
+// Orphan observed date Immaculat : 2019-12-9
+// Orphan observed date Immaculat : 2024-12-9
 {
   "$schema": "/_schema.CountryConfiguration.json",
-  "Country": "Costa_Rica",
+  "Country": "Equatorial_Guinea",
   "Regions": [],
   "Periods": [
     {
-      "Name": "Anexión de Guanacaste",
-      "RuleDate": "7-25",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Christmas Day",
-      "RuleDate": "12-25",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Our Lady of the Angels",
-      "RuleDate": "8-2",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Good Friday",
-      "RuleDate": "([EASTER]) - 2",
+      "Name": "New Year's Day",
+      "RuleDate": "1-1",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -41,36 +24,15 @@
       "Tags": []
     },
     {
-      "Name": "Independence Day",
-      "RuleDate": "9-15",
+      "Name": "Good Friday",
+      "RuleDate": "([EASTER]) - 2",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Juan Santamaría",
-      "RuleDate": "4-11",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Labor Day",
-      "RuleDate": "5-1",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "New Year's Day",
-      "RuleDate": "1-1",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Mother's Day",
-      "RuleDate": "8-15",
+      "Name": "Holy Saturday",
+      "RuleDate": "([EASTER]) - 1",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -83,8 +45,50 @@
       "Tags": []
     },
     {
-      "Name": "All Souls' Day",
-      "RuleDate": "11-2",
+      "Name": "Labour Day",
+      "RuleDate": "5-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "President's Day",
+      "RuleDate": "6-5",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Corpus Christi",
+      "RuleDate": "([EASTER]) + 60",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Freedom Day",
+      "RuleDate": "8-3",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Constitution Day",
+      "RuleDate": "8-15",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Independence Day",
+      "RuleDate": "10-12",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Immaculate Conception",
+      "RuleDate": "12-8",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -97,20 +101,20 @@
       "Tags": []
     },
     {
-      "Name": "New Year's Eve",
-      "RuleDate": "12-31",
+      "Name": "Christmas",
+      "RuleDate": "12-25",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
-      "Name": "Day of the Cultures",
-      "RuleDate": "10-12",
+      "Name": "New Year's Eve",
+      "RuleDate": "12-31",
       "Free": true,
       "Translations": [],
       "Tags": []
     }
   ],
-  "Culture": "es-CR",
+  "Culture": "es-GQ",
   "Calendar": "Gregorian"
 }

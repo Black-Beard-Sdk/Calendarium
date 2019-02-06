@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Linq;
 
 namespace Bb.Calendarium.Configuration
 {
@@ -76,7 +75,7 @@ namespace Bb.Calendarium.Configuration
         public CalendarEnum Calendar { get; set; }
 
         [JsonIgnore]
-        public Calendar CalendarInstance => Calendar == CalendarEnum.Default ? CultureInfo.Calendar : CultureInfo.OptionalCalendars.First(c => c.GetType().Name == Calendar.ToString() + "Calendar");
+        public Calendar CalendarInstance => Calendar == CalendarEnum.Default ? CultureInfo.Calendar : Calendar.GetCalendar(CultureInfo);
 
         public override string ToString()
         {
@@ -98,12 +97,17 @@ namespace Bb.Calendarium.Configuration
                 RuleDurationFunction = RuleDurationFunction,
                 CultureInfo = CultureInfo,
                 Calendar = Calendar,
+
+                YearStart = YearStart,
+                YearEnd = YearEnd,
+
             };
 
             period.Tags.AddRange(Tags);
             period.Translations.AddRange(Translations);
 
             return period;
+
         }
 
     }

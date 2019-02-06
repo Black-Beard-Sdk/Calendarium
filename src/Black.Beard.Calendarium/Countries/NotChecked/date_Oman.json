@@ -1,20 +1,21 @@
 // calendar : Gregorian
-// calendar : UmAlQura
 // calendar : Hijri
+// calendar : UmAlQura
 
+// Orphan observed date Renaissan : 2015-7-25
+// Orphan observed date Sultan's : 2015-11-21
+// Orphan observed date Hijri New : 1436-1-2
+// Orphan observed date Hijri New : 1439-1-3
+// Orphan observed date Prophet M : 1436-3-13
+// Orphan observed date Prophet M : 1439-3-14
+// Orphan observed date Eid Al Is : 1436-7-28
+// Orphan observed date Eid al Fi : 1436-10-6
+// Orphan observed date Eid al Ad : 1438-12-14
 {
   "$schema": "/_schema.CountryConfiguration.json",
-  "Country": "Bahrain",
+  "Country": "Oman",
   "Regions": [],
   "Periods": [
-    {
-      "Name": "Ashoora",
-      "RuleDate": "1-10",
-      "Free": true,
-      "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
-    },
     {
       "Name": "Eid al Adha",
       "RuleDate": "12-10",
@@ -64,16 +65,8 @@
       "Calendar": "Hijri"
     },
     {
-      "Name": "Hijri New Year",
-      "RuleDate": "1-1",
-      "Free": true,
-      "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
-    },
-    {
       "Name": "National Day",
-      "RuleDate": "12-16",
+      "RuleDate": "11-18",
       "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
@@ -87,54 +80,68 @@
       "Tags": []
     },
     {
-      "Name": "Prophet Mohammed's Birthday Sunni",
+      "Name": "Renaissance Day",
+      "RuleDate": "7-23",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Sultan's Birthday",
+      "RuleDate": "11-19",
+      "Free": true,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Hijri New Year",
+      "RuleDate": "1-1",
+      "Free": true,
+      "Translations": [],
+      "Tags": [],
+      "Calendar": "Hijri"
+    },
+    {
+      "Name": "Prophet Mohammed's Birthday",
       "RuleDate": "3-12",
-      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": [],
       "Calendar": "Hijri"
     },
     {
-      "Name": "Ashoora Eve",
-      "RuleDate": "1-9",
+      "Name": "Eid Al Isra' Wal Mi'raj",
+      "RuleDate": "7-27",
       "Free": true,
       "Translations": [],
       "Tags": [],
       "Calendar": "Hijri"
     },
     {
-      "Name": "Prophet Mohammed's Birthday Shia",
-      "RuleDate": "3-17",
+      "Name": "Eid al Adha 4th Day",
+      "RuleDate": "12-13",
       "Free": true,
       "Translations": [],
       "Tags": [],
       "Calendar": "Hijri"
     },
     {
-      "Name": "Labour Day",
-      "RuleDate": "5-1",
+      "Name": "Eid al Fitr 4th day",
+      "RuleDate": "10-4",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "Calendar": "Hijri"
     },
     {
-      "Name": "Accession Day",
-      "RuleDate": "12-17",
-      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
-      "Free": true,
-      "Translations": [],
-      "Tags": []
-    },
-    {
-      "Name": "Arafat Day",
-      "RuleDate": "12-9",
+      "Name": "Eid al Fitr 5th day",
+      "RuleDate": "10-5",
       "Free": true,
       "Translations": [],
       "Tags": [],
       "Calendar": "Hijri"
     }
   ],
-  "Culture": "ar-BH",
+  "Culture": "ar-OM",
   "Calendar": "Gregorian"
 }

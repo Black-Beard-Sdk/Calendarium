@@ -2,6 +2,7 @@ using Bb.Calendarium.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -9,6 +10,10 @@ using System.Text;
 
 namespace Bb.Calendarium.UnitTests
 {
+
+
+    // https://www.citipedia.info/fr/holidays/costa-rica
+
     [TestClass]
     public class UnitTest1
     {
@@ -19,12 +24,13 @@ namespace Bb.Calendarium.UnitTests
 
             var dir = new System.IO.DirectoryInfo(Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "Black.Beard.Calendarium", "Countries"));
             var loader = new ConfigurationLoader(dir).Load();
-            
+
             var result = new System.IO.FileInfo(Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "..", "result.md"));
 
-            //CountryDebugger.AutoStop.Country = Country.Ecuador ;
-            //CountryDebugger.AutoStop.DayName = ;
-            //CountryDebugger.AutoStop.Year = ;
+            //CountryDebugger.AutoStop.Rule = RuleEnum.Observed;
+            //CountryDebugger.AutoStop.Country = Country.Saudi_Arabia;
+            //CountryDebugger.AutoStop.DayName = "National Day";
+            //CountryDebugger.AutoStop.Year = 2013;
 
             var cal = CalendariumConfiguration.GetCalendarium
             (
@@ -38,6 +44,7 @@ namespace Bb.Calendarium.UnitTests
 
             foreach (var item in loader.OfType<CountryConfiguration>())
             {
+
 
                 sb.Mark(Mark.H2, item.Country.ToString());
                 sb.AppendLine();
@@ -74,31 +81,44 @@ namespace Bb.Calendarium.UnitTests
         private static bool Check(Country country, System.Collections.Generic.List<Referential> referential, CalendariumConfiguration cal, string region, List<string> listErrors)
         {
 
+            if (country != Country.Algeria)
+                return true;
+
             if (!cal.GetKeys(country).Any())
                 return false;
 
+            Trace.WriteLine($"Starting {country.ToString()}");
+
             var calendar = cal.GetConfigurationByCountry(country)[0].Calendar.GetCalendar();
 
-            List<Referential> _lObserved = referential.Where(c => c.Observed).ToList();
-            List<Referential> _l2 = referential.Where(c => !c.Observed).ToList();
-
             foreach (var item in referential)
-                item.Date2 = GetExpectedDate(item, calendar);
-
-            foreach (var item in _lObserved)
             {
-                var d = _l2.FirstOrDefault(c => c.DayName.ToLower().Replace("day", "").Trim() == item.DayName.ToLower().Replace("day", "").Trim() && c.Date2.Year == item.Date2.Year);
-                if (d != null)
-                    d.ObservedDate = item;
-                else
+                item.Date2 = GetExpectedDate(item, calendar);
+                if (item.ObservedDate != null)
+                    item.ObservedDate.Date2 = GetExpectedDate(item.ObservedDate, calendar);
+            }
+
+            foreach (var item in referential.Where(c => c.Reconstitued && c.Date2 == c.ObservedDate.Date2).ToList())
+            {
+                var it = referential.Where(c => c.DayName == item.DayName && !c.Reconstitued).ToList();
+                if (it.Count == 0)
                 {
 
+                }
+                else
+                {
+                    var it2 = it.Where(c => c.DayName == item.DayName && !c.Reconstitued).Select(c => ($"{c.Date2.Month}-{c.Date2.Day}")).Distinct().ToList();
+                    if (it2.Count == 1)
+                        item.Date2 = new DateTime(item.Date2.Year, it[0].Date2.Month, it[0].Date2.Day); //not specify calendar is wrong only if the calendar is not gregorian. 
 
+                    else
+                    {
+
+                    }
                 }
             }
 
-
-            _l2 = _l2.OrderBy(c => c.Date2).ToList();
+            var _l2 = referential.OrderBy(c => c.Date2).ToList();
 
             foreach (var item in _l2)
             {
@@ -108,7 +128,7 @@ namespace Bb.Calendarium.UnitTests
                 List<EventDate> dates = GetEvents(dates1, item.DayName);
 
                 if (dates.Count == 0)
-                    listErrors.Add($"failed on '{item.DayName.Mark(Mark.Bold)}' expected : {item.Date2.ToString("d")} missing day\r\n");
+                    listErrors.Add($"failed on '{item.DayName.Mark(Mark.Bold)}' expected : {item.Date2.ToString("D")} missing day\r\n");
 
                 else
                 {
@@ -121,12 +141,26 @@ namespace Bb.Calendarium.UnitTests
                             System.Diagnostics.Debugger.Break();
 
                         if (dates.Count == 1)
-                            listErrors.Add($"failed on '{item.DayName}' expected : {item.Date2.ToString("d")} and computed : {dates[0].Date.ToString("d")}\r\n");
+                            listErrors.Add($"failed on '{item.DayName}' expected : {item.Date2.ToString("D")} and computed : {dates[0].Date.ToString("D")}\r\n");
 
                         else
                         {
 
                         }
+
+                    }
+                    else
+                    {
+                        var date1 = dates[0];
+
+                        if (item.ObservedDate != null)
+                        {
+                            if (date1.Observed.Date != item.ObservedDate.Date2.Date)
+                                listErrors.Add($"failed match observed date on '{item.DayName}' expected : {item.ObservedDate.Date2.ToString("D")} and computed :  {date1.Observed.ToString("D")}\r\n");
+
+                        }
+                        else if (date1.Observed != null && date1.Observed.Date.Date != date1.Date.Date)
+                            listErrors.Add($"missing observed date in expected referential on '{item.DayName}' computed : {date1.Observed.ToString("D")}\r\n");
 
                     }
                 }
@@ -144,7 +178,14 @@ namespace Bb.Calendarium.UnitTests
             var year = int.Parse(u3[0]);
             var month = int.Parse(u3[1]);
             var day = int.Parse(u3[2]);
-            
+
+
+            if (!(calendar is GregorianCalendar))
+            {
+                if (year > 2010 && year < 2050)
+                    calendar = new GregorianCalendar();
+            }
+
             DateTime expected;
             try
             {

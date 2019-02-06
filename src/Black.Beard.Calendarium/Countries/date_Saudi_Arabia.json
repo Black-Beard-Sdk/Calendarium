@@ -5,6 +5,8 @@
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Saudi_Arabia",
+  "Culture": "ar-SA",
+  "Calendar": "UmAlQura",
   "Regions": [],
   "Periods": [
     {
@@ -12,54 +14,66 @@
       "RuleDate": "12-10",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid al Adha 2nd Day",
       "RuleDate": "12-11",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid al Adha 3rd Day",
       "RuleDate": "12-12",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid al Fitr",
       "RuleDate": "10-1",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid al Fitr 2nd Day",
       "RuleDate": "10-2",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid al Fitr 3rd Day",
       "RuleDate": "10-3",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     },
     {
       "Name": "National Day",
       "RuleDate": "9-23",
-      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
+      "YearEnd": 2013,
+      "RuleObserved": "? (THURSDAY | FRIDAY) : >> SATURDAY",
       "Free": true,
+      "Calendar": "Gregorian",
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "National Day",
+      "RuleDate": "9-23",
+      "YearStart": 2014,
+      "RuleObserved": "? (FRIDAY | SATURDAY) : >> SUNDAY",
+      "Free": true,
+      "Calendar": "Gregorian",
       "Translations": [],
       "Tags": []
     },
@@ -68,18 +82,16 @@
       "RuleDate": "12-13",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid al Adha 5th Day",
       "RuleDate": "12-14",
       "Free": true,
       "Translations": [],
-      "Tags": [],
-      "Calendar": "Hijri"
+      "Tags": []
+      //"Calendar": "Hijri"
     }
-  ],
-  "Culture": "ar-SA",
-  "Calendar": "UmAlQura"
+  ]
 }

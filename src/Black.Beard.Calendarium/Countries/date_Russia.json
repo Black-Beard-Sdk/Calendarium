@@ -4,6 +4,8 @@
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Russia",
+  "Culture": "ru",
+  "Calendar": "Gregorian",
   "Regions": [],
   "Periods": [
     {
@@ -16,6 +18,7 @@
     {
       "Name": "International Women's Day",
       "RuleDate": "3-8",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -72,6 +75,7 @@
     {
       "Name": "Spring and Labor Day",
       "RuleDate": "5-1",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -79,6 +83,7 @@
     {
       "Name": "Victory Day",
       "RuleDate": "5-9",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -86,6 +91,7 @@
     {
       "Name": "Russia Day",
       "RuleDate": "6-12",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -93,6 +99,7 @@
     {
       "Name": "Motherland Defender's Day",
       "RuleDate": "2-23",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -100,13 +107,14 @@
     {
       "Name": "Day of the National Unity",
       "RuleDate": "11-4",
+      "RuleObserved": "? (SATURDAY | SUNDAY) : >> MONDAY",
       "Free": true,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Easter Day",
-      "RuleDate": "[EASTER]",
+      "RuleDate": "[ORTHODOX_EASTER]",
       "Free": true,
       "Translations": [],
       "Tags": []
@@ -118,7 +126,5 @@
       "Translations": [],
       "Tags": []
     }
-  ],
-  "Culture": "ru",
-  "Calendar": "Gregorian"
+  ]
 }

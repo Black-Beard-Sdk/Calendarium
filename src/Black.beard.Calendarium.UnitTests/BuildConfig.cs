@@ -81,6 +81,13 @@ namespace Bb.Calendarium.UnitTests
                 foreach (var date in countryItem.Value)
                 {
 
+                    if (date.Reconstitued)
+                    {
+                        clean = false;
+                        sb.AppendLine($"// Orphan observed date {date.DayName} : {date.ObservedDate.Date}");
+                        continue;
+                    }
+
                     if (!_doc.TryGetValue(date.DayName, out Dictionary<string, Liststring> _dic))
                         _doc.Add(date.DayName, _dic = new Dictionary<string, Liststring>());
 

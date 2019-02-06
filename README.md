@@ -41,12 +41,10 @@ the result date is converter in current thread culture calendar
 + Slovakia
 + Slovenia
 + Holy_See_Vatican_City
-+ Algeria
-+ Tunisia
 + Armenia
-+ Morocco
-+ Pakistan
-+ United_Arab_Emirates
-+ Yemen
 + Monaco
++ Russia
++ El_Salvador
++ Costa_Rica
++ Saudi_Arabia
 ---

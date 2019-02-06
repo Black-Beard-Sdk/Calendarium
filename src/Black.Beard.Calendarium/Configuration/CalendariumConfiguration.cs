@@ -265,10 +265,10 @@ namespace Bb.Calendarium.Configuration
                 foreach (var periodConfiguration in periodConfigurations)
                 {
 
-                    if (periodConfiguration.YearStart.HasValue && periodConfiguration.YearStart.Value <= year)
+                    if (periodConfiguration.YearStart.HasValue && year <= periodConfiguration.YearStart.Value)
                         continue;
 
-                    if (periodConfiguration.YearEnd.HasValue && periodConfiguration.YearEnd.Value >= year)
+                    if (periodConfiguration.YearEnd.HasValue && year >= periodConfiguration.YearEnd.Value)
                         continue;
 
                     var cal = periodConfiguration.CalendarInstance;
@@ -277,7 +277,7 @@ namespace Bb.Calendarium.Configuration
                     bool toTranslate = false;
                     if (cal.GetType() != calReference.GetType())    // calendar from caller != from calendar's rule
                     {
-                        var d1 = new DateTime(year, 2, 1, calReference);
+                        var d1 = new DateTime(year, 2, 3, calReference);
                         year2 = periodConfiguration.CalendarInstance.GetYear(d1);
                         toTranslate = true;
                     }

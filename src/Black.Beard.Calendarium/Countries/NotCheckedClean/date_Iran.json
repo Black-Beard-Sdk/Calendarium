@@ -5,6 +5,8 @@
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Iran",
+  "Culture": "fa-IR",
+  "Calendar": "Persian",
   "Regions": [],
   "Periods": [
     {
@@ -13,7 +15,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid-e-Fitr",
@@ -21,7 +23,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid-e-Fitr 2nd Day",
@@ -29,7 +31,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Prophet Mohammed's Birthday",
@@ -37,7 +39,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Iranian New Year",
@@ -45,7 +47,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Iranian New Year 2nd Day",
@@ -53,7 +55,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Iranian New Year 3rd Day",
@@ -61,7 +63,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Birthday of Imam Ali",
@@ -69,7 +71,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Birthday of Imam Mahdi",
@@ -77,7 +79,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Martyrdom of Imam Ali",
@@ -85,7 +87,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Martyrdom of Imam Sadeq",
@@ -93,7 +95,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Demise of Prophet Mohammed",
@@ -101,7 +103,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Arbaeen",
@@ -109,7 +111,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Nature Day",
@@ -117,7 +119,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Martyrdom of Fatima Zahra",
@@ -125,7 +127,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid-e-Ghorban",
@@ -133,7 +135,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Eid-e-Ghadir",
@@ -141,7 +143,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Tasua",
@@ -149,7 +151,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Martyrdom of Imam Reza",
@@ -157,7 +159,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Mission of Prophet Mohammed",
@@ -165,7 +167,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     },
     {
       "Name": "Iranian New Year 4th Day",
@@ -173,9 +175,7 @@
       "Free": true,
       "Translations": [],
       "Tags": [],
-      "Calendar": "Hijri"
+      //"Calendar": "Hijri"
     }
-  ],
-  "Culture": "fa-IR",
-  "Calendar": "Persian"
+  ]
 }

@@ -5,12 +5,22 @@ using System.Linq;
 namespace Bb.Calendarium.Configuration
 {
 
+
+    public enum RuleEnum
+    {
+        Rule = 1,
+        Observed = 2,
+        Duration = 4
+    }
+
     public static class CountryDebugger
     {
 
 
         public static class AutoStop
         {
+
+            public static RuleEnum Rule { get; set; }
 
             public static Country? Country { get; set; }
             public static string DayName { get; set; }
@@ -24,7 +34,7 @@ namespace Bb.Calendarium.Configuration
 
             string context = $"Rule Observed : {country.ToString()} : {dayName}";
 
-            if (CheckStop(country, dayName, date))
+            if (((AutoStop.Rule & RuleEnum.Observed) == RuleEnum.Observed) && CheckStop(country, dayName, date))
                 System.Diagnostics.Debugger.Break();
 
             var result = function(date);
@@ -41,7 +51,7 @@ namespace Bb.Calendarium.Configuration
 
             string context = $"Rule : {country.ToString()} : {dayName}";
 
-            if (CheckStop(country, dayName, year))
+            if (((AutoStop.Rule & RuleEnum.Rule) == RuleEnum.Rule) && CheckStop(country, dayName, year))
                 System.Diagnostics.Debugger.Break();
 
             var result = function(year);

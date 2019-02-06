@@ -1,5 +1,19 @@
 // calendar : Gregorian
 
+// Orphan observed date New Year' : 2012-1-2
+// Orphan observed date New Year' : 2017-1-2
+// Orphan observed date New Year' : 2022-1-3
+// Orphan observed date New Year' : 2023-1-2
+// Orphan observed date Liberatio : 2016-5-2
+// Orphan observed date Liberatio : 2017-5-2
+// Orphan observed date Liberatio : 2022-5-2
+// Orphan observed date Liberatio : 2023-5-2
+// Orphan observed date Internati : 2016-5-3
+// Orphan observed date Internati : 2021-5-3
+// Orphan observed date Internati : 2022-5-3
+// Orphan observed date National : 2012-9-3
+// Orphan observed date Tết Obser : 2017-2-1
+// Orphan observed date Tết Obser : 2020-1-29
 // Date : Tết Eve Vietnamese New Year, 1-22, 2012
 // Date : Tết Eve Vietnamese New Year, 2-9, 2013,2024
 // Date : Tết Eve Vietnamese New Year, 1-30, 2014

@@ -1080,12 +1080,28 @@ namespace Bb.Calendarium.UnitTests
                             _l2 = _list.Where(c => !c.Observed).ToList();
                             foreach (var item2 in _lObserved)
                             {
-                                var d = _l2.FirstOrDefault(c => c.DayName.ToLower().Replace("day", "").Trim() == item2.DayName.ToLower().Replace("day", "").Trim() && item2.Date.Substring(0, 4) == c.Date.Substring(0, 4));
+                                var ds = _l2.Where(c => c.DayName.ToLower().Replace("day", "").Trim() == item2.DayName.ToLower().Replace("day", "").Trim()).ToList();
+                                ds = ds.Where(c => item2.Date.Substring(0, 4) == c.Date.Substring(0, 4)).ToList();
+                                if (ds.Count > 1)
+                                {
+
+                                }
+                                var d = ds.FirstOrDefault();
                                 if (d != null)
                                     d.ObservedDate = item2;
+
                                 else
                                 {
+                                    var r = new Referential()
+                                    {
+                                        Date = item2.Date,
+                                        DayName = item2.DayName,
+                                        ObservedDate = item2,
+                                        Reconstitued = true,
+                                    };
+                                    _list.Add(r);
                                 }
+
                                 _list.Remove(item2);
                             }
                         }
@@ -1106,6 +1122,11 @@ namespace Bb.Calendarium.UnitTests
                         if (Enum.TryParse<Country>(label, out Country value))
                             _dic.Add(value, _list);
 
+                        //if (value == Country.Bahrain)
+                        //{
+
+                        //}
+
                     }
                     else
                     {
@@ -1114,7 +1135,7 @@ namespace Bb.Calendarium.UnitTests
                         var day = u[0].Trim();
                         if (day.ToLower().EndsWith(" observed"))
                         {
-                            day = day.Substring(0, "observed".Length + 1).Trim();
+                            day = day.Substring(0, day.Length - "observed".Length).Trim();
                             _list.Add(new Referential() { DayName = day, Date = u[1].Trim(), Observed = true, });
                         }
                         else
@@ -1133,6 +1154,14 @@ namespace Bb.Calendarium.UnitTests
                     d.ObservedDate = item2;
                 else
                 {
+                    var r = new Referential()
+                    {
+                        Date = item2.Date,
+                        DayName = item2.DayName,
+                        ObservedDate = item2,
+                        Reconstitued = true,
+                    };
+                    _list.Add(r);
                 }
                 _list.Remove(item2);
             }
@@ -1150,6 +1179,7 @@ namespace Bb.Calendarium.UnitTests
         public bool Observed { get; internal set; }
         public DateTime Date2 { get; internal set; }
         public Referential ObservedDate { get; internal set; }
+        public bool Reconstitued { get; internal set; }
 
         public override string ToString()
         {

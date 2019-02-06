@@ -1,0 +1,9 @@
+language: csharp
+solution: src/Calendarium.sln
+mono: none
+dotnet: 2.1.502
+install:
+ - nuget restore src/Calendarium.sln
+ - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+ script:
+ - msbuild /p:Configuration=Release src/Calendarium.sln

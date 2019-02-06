@@ -75,11 +75,11 @@ namespace Bb.Calendarium.Configuration
 
         }
 
-        private List<PeriodConfiguration> ParsePeriods(List<PeriodConfiguration> periods, CultureInfo culture, CalendarEnum calendar, Country country, string key)
+        private List<PeriodConfiguration> ParsePeriods(List<PeriodConfiguration> periods, CultureInfo culture, CalendarEnum calendarCountry, Country country, string key)
         {
 
             List<PeriodConfiguration> list;
-            var _calendar = calendar.GetCalendar(culture);
+            Calendar _cal = calendarCountry.GetCalendar(culture);
 
             if (string.IsNullOrEmpty(key))
                 list = GetList(country.ToString());
@@ -88,6 +88,12 @@ namespace Bb.Calendarium.Configuration
 
             foreach (var periodReference in periods)
             {
+
+                periodReference.CultureInfo = culture;
+                if (periodReference.Calendar == CalendarEnum.Default)
+                    periodReference.Calendar = calendarCountry;
+
+                var _calendar = periodReference.Calendar.GetCalendar(periodReference.CultureInfo);
 
                 if (periodReference.RuleDate != null && periodReference.RuleFunction == null)
                     periodReference.RuleFunction = _parser.ParseRuleString(periodReference.RuleDate.ToUpper(), periodReference.Name, country, _calendar);
@@ -103,12 +109,6 @@ namespace Bb.Calendarium.Configuration
                     periodReference.RuleObservedFunction = _parser.ParseRuleObservedString(periodReference.RuleObserved.ToUpper(), periodReference.Name, country, _calendar);
 
                 var newPeriod = periodReference.Clone();
-
-                newPeriod.CultureInfo = culture;
-
-                if (newPeriod.Calendar != CalendarEnum.Default)
-                    newPeriod.Calendar = calendar;
-
                 list.Add(newPeriod);
 
             }
