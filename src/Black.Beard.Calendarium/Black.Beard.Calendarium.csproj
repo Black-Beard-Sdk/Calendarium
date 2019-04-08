@@ -6,12 +6,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Black.Beard.Calendarium.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
     <OutputPath></OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>Black.Beard.Calendarium.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
     <OutputPath>.\bin\Release\netcoreapp2.1\</OutputPath>
   </PropertyGroup>
 
