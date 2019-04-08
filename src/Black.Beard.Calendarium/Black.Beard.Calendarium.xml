@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Black.Beard.Calendarium</name>
+    </assembly>
+    <members>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.GetConfigurationByCountry(Bb.Calendarium.Configuration.Country)">
+            <summary>
+            Return the list keys registered
+            </summary>
+            <param name="country">can restrict key form specified country</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.GetKeys(Bb.Calendarium.Configuration.Country)">
+            <summary>
+            Return the list keys registered
+            </summary>
+            <param name="country">can restrict key form specified country</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.GetNextDates(System.DateTime,Bb.Calendarium.Configuration.Country,System.Int32,System.String[])">
+            <summary>
+            return the list of identified date for next countDays specified
+            </summary>
+            <param name="date"></param>
+            <param name="country">specify country</param>
+            <param name="region"></param>
+            <param name="countDays"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.GetDate(System.DateTime,Bb.Calendarium.Configuration.Country,System.String)">
+            <summary>
+            Return infos on the specified date
+            </summary>
+            <param name="date"></param>
+            <param name="country"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.GetDate(System.DateTime,Bb.Calendarium.Configuration.Country)">
+            <summary>
+            Return infos on the specified date without manage region
+            </summary>
+            <param name="date"></param>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.GetDates(System.Int32,Bb.Calendarium.Configuration.Country,System.String)">
+            <summary>
+            return all dates info specified year date and region
+            </summary>
+            <param name="date"></param>
+            <param name="country"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.GetDates(System.Int32,Bb.Calendarium.Configuration.Country,Bb.Calendarium.Configuration.CalendarEnum)">
+            <summary>
+            return all dates info specified year date
+            All region of the country are merged
+            </summary>
+            <param name="date"></param>
+            <param name="country"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.CalendariumConfiguration.Build(System.Collections.Generic.Dictionary{System.DateTime,Bb.Calendarium.IdentifiedDate},System.String,System.Int32,Bb.Calendarium.Configuration.Country,System.String)">
+            <summary>
+            Build
+            </summary>
+            <param name="dates"></param>
+            <param name="key"></param>
+            <param name="date"></param>
+            <param name="country"></param>
+            <param name="region"></param>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.ConfigurationLoader.Load(System.String[])">
+            <summary>
+            Load specified country by name
+            </summary>
+            <param name="countryNames"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bb.Calendarium.Configuration.Country">
+            <summary>
+            Country's list available in the reference database
+            </summary>
+            <remarks>
+            this the table CONFIG.COUNTRY in the database
+            </remarks>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Country.Undefined">
+            <summary> Undefined </summary>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.DefaultCountryConfiguration.Serialize(System.Text.StringBuilder)">
+            <summary>
+            Serializes <see cref="T:Bb.Calendarium.Configuration.CountryConfiguration"/>.
+            </summary>
+            <param name="sb">The sb.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.DefaultCountryConfiguration.Load(System.Text.StringBuilder,System.Boolean)">
+            <summary>
+            Deserializes the payload in <see cref="T:Bb.Calendarium.Configuration.CountryConfiguration"/>.
+            </summary>
+            <param name="sb">The sb.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bb.Calendarium.Configuration.Language">
+            <summary>
+            Language's list available in the reference database
+            </summary>
+            <remarks>
+            this the table CONFIG.LANGUAGE in the database
+            </remarks>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Undefined">
+            <summary>
+            Undefined language
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.French">
+            <summary>
+            French
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.German">
+            <summary>
+            German
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.English">
+            <summary>
+            English
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Dutch">
+            <summary>
+            Dutch
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Italian">
+            <summary>
+            Italian
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Estonian">
+            <summary>
+            Estonian
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Latvian">
+            <summary>
+            Latvian
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Lithuanian">
+            <summary>
+            Lithuanian
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Spanish">
+            <summary>
+            Spanish
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Romania">
+            <summary>
+            Romania
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Slovak">
+            <summary>
+            Slovakia
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Slovenian">
+            <summary>
+            Slovenian
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Croatian">
+            <summary>
+            Croatian
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Czech">
+            <summary>
+            Czech
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Polish">
+            <summary>
+            Polish
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Hungarian">
+            <summary>
+            Hungarian
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Portuguese">
+            <summary>
+            Portuguese
+            </summary>
+        </member>
+        <member name="F:Bb.Calendarium.Configuration.Language.Russian">
+            <summary>
+            Russian
+            </summary>
+        </member>
+        <member name="P:Bb.Calendarium.Configuration.PeriodConfiguration.YearStart">
+            <summary>
+            specify a year where the rule start
+            </summary>
+        </member>
+        <member name="P:Bb.Calendarium.Configuration.PeriodConfiguration.YearEnd">
+            <summary>
+            specify a year where the rule end
+            </summary>
+        </member>
+        <member name="M:Bb.Calendarium.Configuration.SchemaHelper.GenerateSchemaForClass(System.Type)">
+            <summary>
+            Generates JSON schema for a given C# class using Newtonsoft.Json.Schema library.
+            </summary>
+            <param name="myType">class type</param>
+            <returns>a string containing JSON schema for a given class type</returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitScript(Bb.Calendaruim.Parser.CalendariumParser.ScriptContext)">
+            <summary>
+              expression
+            | INTEROGATION expression_bool COLON expression
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitExpression_bool(Bb.Calendaruim.Parser.CalendariumParser.Expression_boolContext)">
+            <summary>
+               dayweek (OR dayweek)?
+            |  LEFT_PAREN expression_bool RIGHT_PAREN
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitExpression(Bb.Calendaruim.Parser.CalendariumParser.ExpressionContext)">
+            <summary>
+              rule expression?
+            | LEFT_PAREN expression RIGHT_PAREN expression?
+            | NOT expression expression?
+            | operation expression
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitRule(Bb.Calendaruim.Parser.CalendariumParser.RuleContext)">
+            <summary>
+              mask
+            | LEFT_BRACKET identifier RIGHT_BRACKET
+            | dayweek
+            | NUMBER
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitMask(Bb.Calendaruim.Parser.CalendariumParser.MaskContext)">
+            <summary>
+             month=NUMBER SLASH day=NUMBER
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitDateItem(System.String)">
+            <summary>
+            TIME | NUMBER
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitIdentifier(Bb.Calendaruim.Parser.CalendariumParser.IdentifierContext)">
+            <summary>
+            REGULAR_ID
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.ParserBaseVisitor.VisitDayweek(Bb.Calendaruim.Parser.CalendariumParser.DayweekContext)">
+            <summary>
+             MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY | SUNDAY
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Helpers.EasterHelper.OrthodoxEasterDate(System.Int32)">
+            <summary>
+            Algorithm for calculating the date of Easter Sunday
+            (Meeus/Jones/Butcher Gregorian algorithm)
+            https://en.wikipedia.org/wiki/Computus#Meeus.2FJones.2FButcher_Gregorian_algorithm
+            A valid julian year
+            Easter Sunday
+            </summary>
+            <param name="year">The year.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bb.Calendarium.Helpers.EasterHelper.EasterDate(System.Int32)">
+            <summary>
+            Algorithm for calculating the date of Easter Sunday
+            (Meeus/Jones/Butcher Gregorian algorithm)
+            http://en.wikipedia.org/wiki/Computus#Meeus.2FJones.2FButcher_Gregorian_algorithm
+            A valid Gregorian year
+            Easter Sunday
+            </summary>
+            <param name="year">The year.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1">
+            <summary>
+            This class provides an empty implementation of <see cref="T:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1"/>,
+            which can be extended to create a visitor which only needs to handle a subset
+            of the available methods.
+            </summary>
+            <typeparam name="Result">The return type of the visit operation.</typeparam>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitScript(Bb.Calendaruim.Parser.CalendariumParser.ScriptContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.script"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitExpression_bool(Bb.Calendaruim.Parser.CalendariumParser.Expression_boolContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.expression_bool"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitExpression(Bb.Calendaruim.Parser.CalendariumParser.ExpressionContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.expression"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitOperation(Bb.Calendaruim.Parser.CalendariumParser.OperationContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.operation"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitRule(Bb.Calendaruim.Parser.CalendariumParser.RuleContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.rule"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitMask(Bb.Calendaruim.Parser.CalendariumParser.MaskContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.mask"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitDayweek(Bb.Calendaruim.Parser.CalendariumParser.DayweekContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.dayweek"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.CalendariumParserBaseVisitor`1.VisitIdentifier(Bb.Calendaruim.Parser.CalendariumParser.IdentifierContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.identifier"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="T:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1">
+            <summary>
+            This interface defines a complete generic visitor for a parse tree produced
+            by <see cref="T:Bb.Calendaruim.Parser.CalendariumParser"/>.
+            </summary>
+            <typeparam name="Result">The return type of the visit operation.</typeparam>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitScript(Bb.Calendaruim.Parser.CalendariumParser.ScriptContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.script"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitExpression_bool(Bb.Calendaruim.Parser.CalendariumParser.Expression_boolContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.expression_bool"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitExpression(Bb.Calendaruim.Parser.CalendariumParser.ExpressionContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.expression"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitOperation(Bb.Calendaruim.Parser.CalendariumParser.OperationContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.operation"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitRule(Bb.Calendaruim.Parser.CalendariumParser.RuleContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.rule"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitMask(Bb.Calendaruim.Parser.CalendariumParser.MaskContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.mask"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitDayweek(Bb.Calendaruim.Parser.CalendariumParser.DayweekContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.dayweek"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:Bb.Calendaruim.Parser.ICalendariumParserVisitor`1.VisitIdentifier(Bb.Calendaruim.Parser.CalendariumParser.IdentifierContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:Bb.Calendaruim.Parser.CalendariumParser.identifier"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+    </members>
+</doc>

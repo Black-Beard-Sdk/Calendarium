@@ -5,6 +5,16 @@
     <RootNamespace>Bb.Calendarium</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Black.Beard.Calendarium.xml</DocumentationFile>
+    <OutputPath>.\bin\Debug\netcoreapp2.1\Countries\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Black.Beard.Calendarium.xml</DocumentationFile>
+    <OutputPath>.\bin\Release\netcoreapp2.1\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Configuration\Countries\**" />
     <Compile Remove="_Grammar\**" />

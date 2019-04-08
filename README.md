@@ -4,7 +4,7 @@ manage referential of computed date
 ## Use
 ```CSharp
 // Load all configuration files in a specific folder
-var dir = new System.IO.DirectoryInfo("Black.Beard.Calendarium");
+var dir = new System.IO.DirectoryInfo(Path.Combine(Environment.CurrentDirectory, "Configuration/Countries"));
 var loader = new ConfigurationLoader(dir).Load();
 
 // Initialize

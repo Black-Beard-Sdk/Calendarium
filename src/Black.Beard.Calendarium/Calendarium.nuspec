@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Black.Beard.Calendarium</id>
+    <version>1.0.0</version>
+    <title>Black.Beard.Calendarium</title>
+    <authors>Black.Beard</authors>
+    <owners>Black.Beard</owners>
+    <licenseUrl>https://github.com/Black-Beard-Sdk/Calendarium/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Black-Beard-Sdk/Calendarium</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>manage referential of computed date</description>
+    <releaseNotes>.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>bankholiday</tags>
+  </metadata>
+
+  <files>
+    <file src="Black.Beard.Calendarium.dll" target="" />
+    <file src="Black.Beard.Calendarium.pdb" target="" />
+    <file src="Black.Beard.Calendarium.xml" target="" />
+  </files>
+  
+</package>

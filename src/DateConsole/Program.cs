@@ -6,6 +6,7 @@ namespace DateConsole
 {
     internal class Program
     {
+
         private static void Main(string[] args)
         {
 
@@ -17,8 +18,6 @@ namespace DateConsole
             DateTime dateSource = new DateTime(dt[0], dt[1], dt[2], calendarSource.GetCalendar());
 
             Console.WriteLine(dateSource.ToString("D"));
-
-
 
         }
     }
