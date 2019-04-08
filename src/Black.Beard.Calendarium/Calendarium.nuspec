@@ -6,7 +6,6 @@
     <title>Black.Beard.Calendarium</title>
     <authors>Black.Beard</authors>
     <owners>Black.Beard</owners>
-    <licenseUrl>https://github.com/Black-Beard-Sdk/Calendarium/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Black-Beard-Sdk/Calendarium</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,9 +16,9 @@
   </metadata>
 
   <files>
-    <file src="Black.Beard.Calendarium.dll" target="" />
-    <file src="Black.Beard.Calendarium.pdb" target="" />
-    <file src="Black.Beard.Calendarium.xml" target="" />
+    <file src="Black.Beard.Calendarium.dll" target="lib/netcore/Black.Beard.Calendarium.dll" />
+    <file src="Black.Beard.Calendarium.pdb" target="lib/netcore/Black.Beard.Calendarium.pdb" />
+    <file src="Black.Beard.Calendarium.xml" target="lib/netcore/Black.Beard.Calendarium.xml" />
   </files>
   
 </package>
