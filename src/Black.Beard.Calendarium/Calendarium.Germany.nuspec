@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Black.Beard.Calendarium.France</id>
+    <id>Black.Beard.Calendarium.Germany</id>
     <version>$version$</version>
-    <title>Black Beard Calendarium Configuration france</title>
+    <title>Black Beard Calendarium Configuration Germany</title>
     <authors>Black.Beard</authors>
     <owners>Black.Beard</owners>
     <projectUrl>https://github.com/Black-Beard-Sdk/Calendarium</projectUrl>
@@ -21,7 +21,7 @@
   </metadata>
   
   <files>
-    <file src=".\Countries\date_France.json" target="Configuration/Countries" />    
+    <file src=".\Countries\date_Germany.json" target="Configuration/Countries" />    
   </files>
   
 </package>
