@@ -13,11 +13,12 @@
     <releaseNotes>.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>bank holiday france</tags>
-  </metadata>
 
-  <dependencies>
-    <dependency id="Black.Beard.Calendarium" version="1.0.0" />
-  </dependencies>
+    <dependencies>
+      <dependency id="Black.Beard.Calendarium" version="1.0.0" />
+    </dependencies>
+    
+  </metadata>
   
   <files>
     <file src=".\Countries\date_France.json" target="Configuration/Countries" />    
