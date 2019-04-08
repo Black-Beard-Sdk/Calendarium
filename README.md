@@ -1,4 +1,4 @@
-# Calendarium
+# Calendarium [![Build status](https://ci.appveyor.com/api/projects/status/r58r4d3rl4o60ohj?svg=true)](https://ci.appveyor.com/project/gaelgael5/calendarium-0v0lc)
 manage referential of computed date
 
 ## Use
