@@ -18,7 +18,7 @@
   <files>
     <file src="Black.Beard.Calendarium.dll" target="lib/netcore/Black.Beard.Calendarium.dll" />
     <file src="Black.Beard.Calendarium.pdb" target="lib/netcore/Black.Beard.Calendarium.pdb" />
-    <file src="Black.Beard.Calendarium.xml" target="lib/netcore/Black.Beard.Calendarium.xml" />
+    <!--<file src="Black.Beard.Calendarium.xml" target="lib/netcore/Black.Beard.Calendarium.xml" />-->
   </files>
   
 </package>
