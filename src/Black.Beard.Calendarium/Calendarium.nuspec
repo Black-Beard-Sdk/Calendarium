@@ -13,6 +13,15 @@
     <releaseNotes>.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>bankholiday</tags>
+
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Antlr4.Runtime.Standard" version="4.7.2" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.1" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json.Schema" version="3.0.10" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    
   </metadata>
 
   <files>
