@@ -44,10 +44,10 @@ namespace Bb.Calendarium.Configuration
         }
 
 
-        public static StringBuilder SerializeSchema()
-        {
-            return SchemaHelper.GenerateSchemaForClass(typeof(CountryConfiguration));
-        }
+        //public static StringBuilder SerializeSchema()
+        //{
+        //    return SchemaHelper.GenerateSchemaForClass(typeof(CountryConfiguration));
+        //}
 
     }
 

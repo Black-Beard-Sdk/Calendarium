@@ -135,10 +135,10 @@ namespace Bb.Calendarium.Configuration
             return Name.ToString();
         }
 
-        public static StringBuilder SerializeSchema()
-        {
-            return SchemaHelper.GenerateSchemaForClass(typeof(DefaultCountryConfiguration));
-        }
+        //public static StringBuilder SerializeSchema()
+        //{
+        //    return SchemaHelper.GenerateSchemaForClass(typeof(DefaultCountryConfiguration));
+        //}
 
         private readonly JsonSerializerSettings _settings;
 

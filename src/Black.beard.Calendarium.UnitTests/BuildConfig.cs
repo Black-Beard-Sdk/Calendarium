@@ -14,23 +14,23 @@ namespace Bb.Calendarium.UnitTests
     public class BuildConfig
     {
 
-        [TestMethod]
-        public void GenerateShemas()
-        {
+        //[TestMethod]
+        //public void GenerateShemas()
+        //{
 
-            var dir = Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "Black.Beard.Calendarium", "Countries");
+        //    var dir = Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "Black.Beard.Calendarium", "Countries");
 
-            var filename = Path.Combine(dir, "_schema.CountryConfiguration.json");
-            if (File.Exists(filename))
-                File.Delete(filename);
-            File.AppendAllText(filename, CountryConfiguration.SerializeSchema().ToString());
+        //    var filename = Path.Combine(dir, "_schema.CountryConfiguration.json");
+        //    if (File.Exists(filename))
+        //        File.Delete(filename);
+        //    File.AppendAllText(filename, CountryConfiguration.SerializeSchema().ToString());
 
-            filename = Path.Combine(dir, "_schema.DefaultCountryConfiguration.json");
-            if (File.Exists(filename))
-                File.Delete(filename);
-            File.AppendAllText(filename, DefaultCountryConfiguration.SerializeSchema().ToString());
+        //    filename = Path.Combine(dir, "_schema.DefaultCountryConfiguration.json");
+        //    if (File.Exists(filename))
+        //        File.Delete(filename);
+        //    File.AppendAllText(filename, DefaultCountryConfiguration.SerializeSchema().ToString());
 
-        }
+        //}
 
         [TestMethod]
         public void GenerateConfig()

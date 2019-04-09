@@ -23,7 +23,7 @@
   </metadata>
   
   <files>
-    <file src=".\Countries\date_Algeria.json" target="Configuration/Countries" />    
+    <file src=".\Countries\date_Algeria.json" target="content\Configuration\Countries\Countries\date_Algeria.json" />
   </files>
   
 </package>
