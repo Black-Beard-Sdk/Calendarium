@@ -3,7 +3,7 @@
 //using System;
 //using System.Text;
 
-//namespace Bb.Calendarium.Configuration
+//namespace Bb.Calendarium
 //{
 
 //    internal static class SchemaHelper

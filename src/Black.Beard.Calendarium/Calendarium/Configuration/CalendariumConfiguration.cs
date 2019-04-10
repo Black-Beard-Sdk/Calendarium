@@ -1,5 +1,4 @@
-﻿using Bb.Calendarium.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -320,8 +319,6 @@ namespace Bb.Calendarium.Configuration
                             CalendarUsedToBuild = cal,
 
                         };
-
-
 
                         var observed = periodConfiguration.RuleObservedFunction != null
                             ? periodConfiguration.RuleObservedFunction(e.Date.OriginalDate)

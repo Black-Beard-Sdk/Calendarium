@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text;
 
-namespace Bb.Calendarium.Helpers
+namespace Bb.Calendarium
 {
 
     internal static class EasterHelper

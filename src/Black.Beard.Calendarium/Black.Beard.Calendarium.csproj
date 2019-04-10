@@ -1,11 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>Bb.Calendarium</RootNamespace>
-    <Version>1.0.1</Version>
-    <FileVersion>1.0.1.1</FileVersion>
-    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Bb</RootNamespace>    
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -15,15 +12,15 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile></DocumentationFile>
-    <OutputPath>.\bin\Release\netcoreapp2.1\</OutputPath>
+    <OutputPath>.\bin\Release\netstandard2.0\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Configuration\Countries\**" />
+    <Compile Remove="Calendarium\Configuration\Countries\**" />
     <Compile Remove="_Grammar\**" />
-    <EmbeddedResource Remove="Configuration\Countries\**" />
+    <EmbeddedResource Remove="Calendarium\Configuration\Countries\**" />
     <EmbeddedResource Remove="_Grammar\**" />
-    <None Remove="Configuration\Countries\**" />
+    <None Remove="Calendarium\Configuration\Countries\**" />
     <None Remove="_Grammar\**" />
   </ItemGroup>
 
@@ -33,7 +30,7 @@
 
   <ItemGroup>
     <PackageReference Include="Antlr4.Runtime.Standard" Version="4.7.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
   </ItemGroup>
 
   <ItemGroup>

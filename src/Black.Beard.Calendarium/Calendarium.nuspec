@@ -14,18 +14,18 @@
     <copyright>Copyright 2019</copyright>
     <tags>bankholiday</tags>
 
-    <dependencies>      
-      <group targetFramework=".NETCoreApp2.1">
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
         <dependency id="Antlr4.Runtime.Standard" version="4.7.2" exclude="Build,Analyzers" />
-        <dependency id="Newtonsoft.Json" version="11.0.2" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="11.0.1" exclude="Build,Analyzers" />
       </group>
     </dependencies>
     
   </metadata>
 
   <files>
-    <file src="Black.Beard.Calendarium.dll" target="lib/netcoreapp2.1/Black.Beard.Calendarium.dll" />
-    <file src="Black.Beard.Calendarium.pdb" target="lib/netcoreapp2.1/Black.Beard.Calendarium.pdb" />
+    <file src="Black.Beard.Calendarium.dll" target="lib/netstandard2.0/Black.Beard.Calendarium.dll" />
+    <file src="Black.Beard.Calendarium.pdb" target="lib/netstandard2.0/Black.Beard.Calendarium.pdb" />
     <!--<file src="Black.Beard.Calendarium.xml" target="lib/netcore/Black.Beard.Calendarium.xml" />-->
   
     <file src="./Countries/_schema.CountryConfiguration.json" target="content\Configuration\Countries\_schema.CountryConfiguration.json" />

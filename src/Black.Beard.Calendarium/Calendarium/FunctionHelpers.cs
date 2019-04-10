@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Bb.Calendarium.Helpers
+namespace Bb.Calendarium
 {
 
     internal static class FunctionHelpers

@@ -1,4 +1,6 @@
-﻿namespace Bb.Calendarium.Configuration
+﻿using Bb.Calendarium.Configuration;
+
+namespace Bb.Calendarium
 {
 
     public static class CountryHelper
