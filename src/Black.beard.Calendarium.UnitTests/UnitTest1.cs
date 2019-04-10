@@ -23,13 +23,13 @@ namespace Bb.Calendarium.UnitTests
         {
 
             var dir = new System.IO.DirectoryInfo(Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "Black.Beard.Calendarium", "Countries"));
-            var loader = new ConfigurationLoader(dir).Load();
+            var loader = new ConfigurationLoader(dir).Load(); //.Where(c => c.Country == "Algeria").ToArray();
 
             var result = new System.IO.FileInfo(Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "..", "result.md"));
 
             //CountryDebugger.AutoStop.Rule = RuleEnum.Observed;
-            //CountryDebugger.AutoStop.Country = Country.Saudi_Arabia;
-            //CountryDebugger.AutoStop.DayName = "National Day";
+            //CountryDebugger.AutoStop.Country = "Algeria";
+            //CountryDebugger.AutoStop.DayName = "Hijri New Year";
             //CountryDebugger.AutoStop.Year = 2013;
 
             var cal = CalendariumConfiguration.GetCalendarium
@@ -45,8 +45,7 @@ namespace Bb.Calendarium.UnitTests
             foreach (var item in loader.OfType<CountryConfiguration>())
             {
 
-
-                sb.Mark(Mark.H2, item.Country.ToString());
+                sb.Mark(Mark.H2, item.Country);
                 sb.AppendLine();
 
                 listErrors.Clear();
@@ -78,10 +77,10 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static bool Check(Country country, System.Collections.Generic.List<Referential> referential, CalendariumConfiguration cal, string region, List<string> listErrors)
+        private static bool Check(string country, System.Collections.Generic.List<Referential> referential, CalendariumConfiguration cal, string region, List<string> listErrors)
         {
 
-            if (country != Country.Algeria)
+            if (country != "Algeria")
                 return true;
 
             if (!cal.GetKeys(country).Any())
@@ -124,7 +123,7 @@ namespace Bb.Calendarium.UnitTests
             {
 
                 var year = item.Date2.Year;
-                List<EventDate> dates1 = GetEvents(country, cal, year, CalendarEnum.Default);
+                List<EventDate> dates1 = GetEvents(country, cal, year, CalendarEnum.Default); // flat list
                 List<EventDate> dates = GetEvents(dates1, item.DayName);
 
                 if (dates.Count == 0)
@@ -155,11 +154,11 @@ namespace Bb.Calendarium.UnitTests
 
                         if (item.ObservedDate != null)
                         {
-                            if (date1.Observed.Date != item.ObservedDate.Date2.Date)
+                            if (date1.Observed.OriginalDate.Date != item.ObservedDate.Date2.Date)
                                 listErrors.Add($"failed match observed date on '{item.DayName}' expected : {item.ObservedDate.Date2.ToString("D")} and computed :  {date1.Observed.ToString("D")}\r\n");
 
                         }
-                        else if (date1.Observed != null && date1.Observed.Date.Date != date1.Date.Date)
+                        else if (date1.Observed != null && date1.Observed.OriginalDate.Date.Date != date1.Date.OriginalDate.Date)
                             listErrors.Add($"missing observed date in expected referential on '{item.DayName}' computed : {date1.Observed.ToString("D")}\r\n");
 
                     }
@@ -200,14 +199,16 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static List<EventDate> GetEvents(Country country, CalendariumConfiguration cal, int year, CalendarEnum calendar = CalendarEnum.Default)
+        private static List<EventDate> GetEvents(string country, CalendariumConfiguration calculated, int year, CalendarEnum calendar = CalendarEnum.Default)
         {
-            var dates = cal.GetDates(year, country, calendar);
+
+            var dates = calculated.GetDates(year, country, calendar);
             List<EventDate> _events = new List<EventDate>();
             foreach (var _date in dates)
                 foreach (var _event in _date.Value.Events)
                     _events.Add(_event);
-            return _events.OrderBy(c => c.Date).ThenByDescending(c => c.Name).ToList();
+            return _events.OrderBy(c => c.Date.OriginalDate).ThenByDescending(c => c.Name).ToList();
+
         }
 
         private static List<EventDate> GetEvents(List<EventDate> items, string dayName)

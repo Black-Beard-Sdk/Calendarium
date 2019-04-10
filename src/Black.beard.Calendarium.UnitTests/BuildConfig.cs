@@ -416,13 +416,13 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private Dictionary<Country, Dictionary<string, religious>> GetDaysWithTags()
+        private Dictionary<string, Dictionary<string, religious>> GetDaysWithTags()
         {
 
             var dirCvs = Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", "..", "csvs");
             var csv = Path.Combine(dirCvs, "gevc5010_religious_events_calendar.csv");
             var lines = File.ReadAllLines(csv, Encoding.UTF8);
-            Dictionary<Country, Dictionary<string, religious>> _items = new Dictionary<Country, Dictionary<string, religious>>();
+            Dictionary<string, Dictionary<string, religious>> _items = new Dictionary<string, Dictionary<string, religious>>();
             foreach (var item in lines.Skip(1))
             {
 
@@ -558,50 +558,50 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static Country GetCountryFromLanguage(string language)
+        private static string GetCountryFromLanguage(string language)
         {
             switch (language)
             {
                 case "english":
-                    return Country.United_Kingdom;
+                    return "United_Kingdom";
                 case "swedish":
-                    return Country.Sweden;
+                    return "Sweden";
                 case "german":
-                    return Country.Germany;
+                    return "Germany";
                 case "dutch":
-                    return Country.Netherlands;
+                    return "Netherlands";
                 case "danish":
-                    return Country.Denmark;
+                    return "Denmark";
                 case "norwegian":
-                    return Country.Norway;
+                    return "Norway";
                 case "french":
-                    return Country.France;
+                    return "France";
                 case "lithuanian":
-                    return Country.Lithuania;
+                    return "Lithuania";
                 case "latvian":
-                    return Country.Latvia;
+                    return "Latvia";
                 case "spanish":
-                    return Country.Spain;
+                    return "Spain";
                 case "portuguese":
-                    return Country.Portugal;
+                    return "Portugal";
                 case "slovenian":
-                    return Country.Slovenia;
+                    return "Slovenia";
                 case "croatian":
-                    return Country.Croatia;
+                    return "Croatia";
                 case "polish":
-                    return Country.Poland;
+                    return "Poland";
                 case "estonian":
-                    return Country.Estonia;
+                    return "Estonia";
                 case "finnish":
-                    return Country.Finland;
+                    return "Finland";
                 case "slovak":
-                    return Country.Slovakia;
+                    return "Slovakia";
                 case "czech":
-                    return Country.Czechia;
+                    return "Czechia";
                 case "hungarian":
-                    return Country.Hungary;
+                    return "Hungary";
                 default:
-                    return Country.Undefined;
+                    return "Undefined";
             }
 
         }
@@ -616,7 +616,7 @@ namespace Bb.Calendarium.UnitTests
                 Translations = new Dictionary<Language, NameConfiguration>();
             }
 
-            public Country Country { get; internal set; }
+            public string Country { get; internal set; }
             public string DayName { get; internal set; }
             public Language Language { get; internal set; }
             public HashSet<string> Tags { get; }

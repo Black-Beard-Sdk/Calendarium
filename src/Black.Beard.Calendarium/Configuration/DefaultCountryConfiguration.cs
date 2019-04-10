@@ -106,12 +106,12 @@ namespace Bb.Calendarium.Configuration
 
         public virtual string GetFilname(DirectoryInfo dir)
         {
-            return Path.Combine(dir.FullName, $"date_{Name}.Default.json");
+            return Path.Combine(dir.FullName, $"date_{Country}.Default.json");
         }
 
         [Description("Name of the country")]
         //[JsonRequired]
-        public virtual string Name { get; set; }
+        public virtual string Country { get; set; }
 
         public List<PeriodConfiguration> Periods { get; set; }
 
@@ -132,7 +132,7 @@ namespace Bb.Calendarium.Configuration
 
         public override string ToString()
         {
-            return Name.ToString();
+            return Country.ToString();
         }
 
         //public static StringBuilder SerializeSchema()

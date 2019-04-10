@@ -17,7 +17,7 @@ namespace Bb.Calendarium.Configuration
         internal Dictionary<string, List<PeriodConfiguration>> Parse(CalendariumConfiguration countries)
         {
 
-            _defaults = countries.Defaults.ToDictionary(c => c.Name);
+            _defaults = countries.Defaults.ToDictionary(c => c.Country);
 
             foreach (var country in countries)
                 Parse(country);
@@ -75,7 +75,7 @@ namespace Bb.Calendarium.Configuration
 
         }
 
-        private List<PeriodConfiguration> ParsePeriods(List<PeriodConfiguration> periods, CultureInfo culture, CalendarEnum calendarCountry, Country country, string key)
+        private List<PeriodConfiguration> ParsePeriods(List<PeriodConfiguration> periods, CultureInfo culture, CalendarEnum calendarCountry, string country, string key)
         {
 
             List<PeriodConfiguration> list;

@@ -23,7 +23,7 @@
   </metadata>
   
   <files>
-    <file src=".\Countries\date_Andorra.json" target="content\Configuration\Countries\Countries\date_Andorra.json" />
+    <file src=".\Countries\date_Andorra.json" target="content\Configuration\Countries\date_Andorra.json" />
   </files>
   
 </package>

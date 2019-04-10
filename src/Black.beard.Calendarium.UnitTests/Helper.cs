@@ -1,5 +1,4 @@
-﻿using Bb.Calendarium.Configuration;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -10,8 +9,8 @@ namespace Bb.Calendarium.UnitTests
     public static class Helper
     {
 
-        public static readonly Dictionary<Country, List<Referential>> Referential;
-        public static readonly Dictionary<Country, List<(string, string)>> Todo;
+        public static readonly Dictionary<string, List<Referential>> Referential;
+        public static readonly Dictionary<string, List<(string, string)>> Todo;
         private static readonly HashSet<string> _h;
 
         static Helper()
@@ -1054,7 +1053,7 @@ namespace Bb.Calendarium.UnitTests
 
         }
 
-        private static Dictionary<Country, List<Referential>> GetReferential()
+        private static Dictionary<string, List<Referential>> GetReferential()
         {
 
             List<Referential> _lObserved;
@@ -1062,7 +1061,7 @@ namespace Bb.Calendarium.UnitTests
 
             var txt = Resource1.OUTLOOK.Split('\r');
 
-            Dictionary<Country, List<Referential>> _dic = new Dictionary<Country, List<Referential>>();
+            Dictionary<string, List<Referential>> _dic = new Dictionary<string, List<Referential>>();
             List<Referential> _list = null;
 
             foreach (var item in txt)
@@ -1119,13 +1118,8 @@ namespace Bb.Calendarium.UnitTests
 
                         _list = new List<Referential>();
 
-                        if (Enum.TryParse<Country>(label, out Country value))
-                            _dic.Add(value, _list);
+                        _dic.Add(label, _list);
 
-                        //if (value == Country.Bahrain)
-                        //{
-
-                        //}
 
                     }
                     else

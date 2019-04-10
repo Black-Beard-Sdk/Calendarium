@@ -21,7 +21,7 @@ namespace Bb.Calendarium
             this._delegateLogDebugObserved = Bb.Calendarium.Configuration.CountryDebugger.DebugObserved;
         }
 
-        public Func<int, DateTime[]> ParseRuleString(string source, string dayName, Country country, Calendar calendar)
+        public Func<int, DateTime[]> ParseRuleString(string source, string dayName, string country, Calendar calendar)
         {
 
             ICharStream stream = CharStreams.fromstring(source);
@@ -56,7 +56,7 @@ namespace Bb.Calendarium
 
         }
 
-        public Func<DateTime, DateTime> ParseRuleObservedString(string source, string dayName, Country country, Calendar calendar)
+        public Func<DateTime, DateTime> ParseRuleObservedString(string source, string dayName, string country, Calendar calendar)
         {
 
             ICharStream stream = CharStreams.fromstring(source);
@@ -96,8 +96,8 @@ namespace Bb.Calendarium
         public TextWriter OutputError { get; private set; }
 
 
-        private Func<Func<int, DateTime[]>, int, Country, string, string, DateTime[]> _delegateLogDebug;
-        private Func<Func<DateTime, DateTime>, DateTime, Country, string, string, DateTime> _delegateLogDebugObserved;
+        private Func<Func<int, DateTime[]>, int, string, string, string, DateTime[]> _delegateLogDebug;
+        private Func<Func<DateTime, DateTime>, DateTime, string, string, string, DateTime> _delegateLogDebugObserved;
 
     }
 

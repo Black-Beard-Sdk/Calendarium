@@ -23,7 +23,7 @@
   </metadata>
   
   <files>
-    <file src=".\Countries\date_Holy_See_Vatican_City.json" target="content\Configuration\Countries\Countries\date_Holy_See_Vatican_City.json" />
+    <file src=".\Countries\date_Holy_See_Vatican_City.json" target="content\Configuration\Countries\date_Holy_See_Vatican_City.json" />
   </files>
   
 </package>

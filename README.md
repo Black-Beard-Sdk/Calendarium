@@ -15,7 +15,7 @@ var cal = CalendariumConfiguration.GetCalendarium
 
 // Get all dates for country france
 int year = DateTime.Now.Year;
-var dates = cal.GetDates(year, Country.France);
+var dates = cal.GetDates(year, "France");
 
 ```
 the result date is converter in current thread culture calendar
@@ -47,4 +47,5 @@ the result date is converter in current thread culture calendar
 + El_Salvador
 + Costa_Rica
 + Saudi_Arabia
++ Algeria
 ---

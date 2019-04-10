@@ -46,12 +46,12 @@ namespace Bb.Calendarium.Configuration
 
         }
 
-         /// <summary>
+        /// <summary>
         /// Return the list keys registered
         /// </summary>
         /// <param name="country">can restrict key form specified country</param>
         /// <returns></returns>
-        public CountryConfiguration[] GetConfigurationByCountry(Country country )
+        public CountryConfiguration[] GetConfigurationByCountry(string country)
         {
             return this.Where(c => c.Country == country).ToArray();
         }
@@ -61,18 +61,18 @@ namespace Bb.Calendarium.Configuration
         /// </summary>
         /// <param name="country">can restrict key form specified country</param>
         /// <returns></returns>
-        public (Country, string)[] GetKeys(Country country = Country.Undefined)
+        public (string, string)[] GetKeys(string country = "Undefined")
         {
 
-            List<(Country, string)> _items = new List<(Country, string)>();
+            List<(string, string)> _items = new List<(string, string)>();
 
             foreach (var item in _dicRules)
             {
+
                 var k = item.Key.Split('-');
+                string _country = k[0];
 
-                var _country = Enum.Parse<Country>(k[0]);
-
-                if (country == Country.Undefined || country == _country)
+                if (country == "Undefined" || country == _country)
                 {
                     if (k.Length == 1)
                         _items.Add((_country, string.Empty));
@@ -94,7 +94,7 @@ namespace Bb.Calendarium.Configuration
         /// <param name="region"></param>
         /// <param name="countDays"></param>
         /// <returns></returns>
-        public Dictionary<DateTime, IdentifiedDate> GetNextDates(DateTime date, Country country, int countDays = 365, params string[] regions)
+        public Dictionary<DateTime, IdentifiedDate> GetNextDates(DateTime date, string country, int countDays = 365, params string[] regions)
         {
 
             var _regions = new List<string>(regions);
@@ -139,7 +139,7 @@ namespace Bb.Calendarium.Configuration
         /// <param name="country"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public IdentifiedDate GetDate(DateTime date, Country country, string region)
+        public IdentifiedDate GetDate(DateTime date, string country, string region)
         {
             var dates = GetDates(date.Year, country, region);
             dates.TryGetValue(date, out IdentifiedDate _date);
@@ -152,7 +152,7 @@ namespace Bb.Calendarium.Configuration
         /// <param name="date"></param>
         /// <param name="country"></param>
         /// <returns></returns>
-        public IdentifiedDate GetDate(DateTime date, Country country)
+        public IdentifiedDate GetDate(DateTime date, string country)
         {
             var keys = GetKeys(country);
             foreach (var item in keys)
@@ -173,7 +173,7 @@ namespace Bb.Calendarium.Configuration
         /// <param name="country"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, Country country, string region)
+        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, string country, string region)
         {
 
             string key = country.ToString();
@@ -201,7 +201,7 @@ namespace Bb.Calendarium.Configuration
         }
 
         /// <summary>
-        /// return all dates info specified year date
+        /// return all dates info for specified year date
         /// All region of the country are merged
         /// </summary>
         /// <param name="date"></param>
@@ -209,7 +209,16 @@ namespace Bb.Calendarium.Configuration
         /// <param name="region"></param>
         /// <returns></returns>
 
-        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, Country country, CalendarEnum calendar = CalendarEnum.Default)
+        /// <summary>
+        /// return all dates info for specified year date
+        /// All region of the country are merged
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="country"></param>
+        /// <param name="region"></param>
+        /// <returns></returns>
+
+        public IDictionary<DateTime, IdentifiedDate> GetDates(int year, string country, CalendarEnum calendar = CalendarEnum.Default)
         {
 
             var keys = GetKeys(country);
@@ -256,7 +265,7 @@ namespace Bb.Calendarium.Configuration
         /// <param name="date"></param>
         /// <param name="country"></param>
         /// <param name="region"></param>
-        private void Build(Dictionary<DateTime, IdentifiedDate> dates, string key, int year, Country country, string region)
+        private void Build(Dictionary<DateTime, IdentifiedDate> dates, string key, int year, string country, string region)
         {
 
             var calReference = CultureInfo.CurrentCulture.Calendar;
@@ -287,8 +296,8 @@ namespace Bb.Calendarium.Configuration
                     foreach (var _date in _dates)
                     {
 
-                        var d = toTranslate 
-                            ? _date.Translate(calReference) 
+                        var d = toTranslate
+                            ? _date.Translate(calReference)
                             : _date;
 
                         if (!dates.TryGetValue(d, out IdentifiedDate idate))
@@ -297,24 +306,32 @@ namespace Bb.Calendarium.Configuration
                                 Date = d,
                             }));
 
+                        var c = periodConfiguration.Calendar.GetCalendar();
+
                         var e = new EventDate()
                         {
+
                             Name = periodConfiguration.Name,
                             Free = periodConfiguration.Free,
-                            Date = _date,
+                            Date = new Date( _date, c, calReference),
                             Culture = periodConfiguration.CultureInfo.IetfLanguageTag,
                             Country = country,
                             Region = region ?? string.Empty,
-                            Calendar = cal,
+                            CalendarUsedToBuild = cal,
+
                         };
 
-                        e.Observed = periodConfiguration.RuleObservedFunction != null
-                            ? periodConfiguration.RuleObservedFunction(e.Date)
-                            : e.Date;
 
-                        e.DateEnd = periodConfiguration.RuleDurationFunction != null
-                            ? periodConfiguration.RuleDurationFunction(e.Date)
-                            : e.Date;
+
+                        var observed = periodConfiguration.RuleObservedFunction != null
+                            ? periodConfiguration.RuleObservedFunction(e.Date.OriginalDate)
+                            : e.Date.OriginalDate;
+                        e.Observed = new Date(observed, c, calReference);
+
+                        var dateEnd = periodConfiguration.RuleDurationFunction != null
+                            ? periodConfiguration.RuleDurationFunction(e.Date.OriginalDate)
+                            : e.Date.OriginalDate;
+                        e.DateEnd = new Date(dateEnd, c, calReference);
 
                         e.Translations.AddRange(periodConfiguration.Translations);
 

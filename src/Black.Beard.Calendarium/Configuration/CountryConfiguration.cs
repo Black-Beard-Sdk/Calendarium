@@ -19,16 +19,10 @@ namespace Bb.Calendarium.Configuration
 
         public override string GetFilname(DirectoryInfo dir)
         {
-            return Path.Combine(dir.FullName, $"date_{Name}.json");
+            return Path.Combine(dir.FullName, $"date_{Country}.json");
         }
 
-        [JsonIgnore]
-        public override string Name { get => Country.ToString(); set => Country = Enum.Parse<Country>(value); }
-
-        [JsonRequired]
-        [JsonConverter(typeof(StringEnumConverter))]
-        [Description("Specify a country")]
-        public Country Country { get; set; }
+        public override string Country { get; set; }
 
         public List<RegionConfiguration> Regions { get; set; }
 
@@ -40,7 +34,7 @@ namespace Bb.Calendarium.Configuration
 
         public override string ToString()
         {
-            return Country.ToString();
+            return Country;
         }
 
 

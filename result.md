@@ -231,4 +231,136 @@ failed on 'Eid al Adha' expected : vendredi 10 décembre 1447 and computed : sam
 
 failed on 'Eid al Adha 2nd Day' expected : samedi 11 décembre 1447 and computed : dimanche 7 mars 1447
 
+failed on 'New Year's Day' expected : vendredi 1 janvier 2016 and computed : vendredi 1 janvier 2016
+
+failed on 'Labour Day' expected : dimanche 1 mai 2016 and computed : dimanche 1 mai 2016
+
+failed on 'Independence Day' expected : mardi 5 juillet 2016 and computed : mardi 5 juillet 2016
+
+failed on 'Commemoration Day' expected : mardi 19 juillet 2016 and computed : mardi 19 juillet 2016
+
+failed on 'Revolution Day' expected : mardi 1 novembre 2016 and computed : mardi 1 novembre 2016
+
+failed on 'New Year's Day' expected : dimanche 1 janvier 2017 and computed : dimanche 1 janvier 2017
+
+failed on 'Labour Day' expected : lundi 1 mai 2017 and computed : lundi 1 mai 2017
+
+failed on 'Independence Day' expected : mercredi 5 juillet 2017 and computed : mercredi 5 juillet 2017
+
+failed on 'Commemoration Day' expected : mercredi 19 juillet 2017 and computed : mercredi 19 juillet 2017
+
+failed on 'Revolution Day' expected : mercredi 1 novembre 2017 and computed : mercredi 1 novembre 2017
+
+failed on 'New Year's Day' expected : lundi 1 janvier 2018 and computed : lundi 1 janvier 2018
+
+failed on 'Yennayer' expected : vendredi 12 janvier 2018 and computed : vendredi 12 janvier 2018
+
+failed on 'Labour Day' expected : mardi 1 mai 2018 and computed : mardi 1 mai 2018
+
+failed on 'Independence Day' expected : jeudi 5 juillet 2018 and computed : jeudi 5 juillet 2018
+
+failed on 'Commemoration Day' expected : jeudi 19 juillet 2018 and computed : jeudi 19 juillet 2018
+
+failed on 'Revolution Day' expected : jeudi 1 novembre 2018 and computed : jeudi 1 novembre 2018
+
+failed on 'New Year's Day' expected : mardi 1 janvier 2019 and computed : mardi 1 janvier 2019
+
+failed on 'Yennayer' expected : samedi 12 janvier 2019 and computed : samedi 12 janvier 2019
+
+failed on 'Labour Day' expected : mercredi 1 mai 2019 and computed : mercredi 1 mai 2019
+
+failed on 'Independence Day' expected : vendredi 5 juillet 2019 and computed : vendredi 5 juillet 2019
+
+failed on 'Commemoration Day' expected : vendredi 19 juillet 2019 and computed : vendredi 19 juillet 2019
+
+failed on 'Revolution Day' expected : vendredi 1 novembre 2019 and computed : vendredi 1 novembre 2019
+
+failed on 'New Year's Day' expected : mercredi 1 janvier 2020 and computed : mercredi 1 janvier 2020
+
+failed on 'Yennayer' expected : dimanche 12 janvier 2020 and computed : dimanche 12 janvier 2020
+
+failed on 'Labour Day' expected : vendredi 1 mai 2020 and computed : vendredi 1 mai 2020
+
+failed on 'Independence Day' expected : dimanche 5 juillet 2020 and computed : dimanche 5 juillet 2020
+
+failed on 'Commemoration Day' expected : dimanche 19 juillet 2020 and computed : dimanche 19 juillet 2020
+
+failed on 'Revolution Day' expected : dimanche 1 novembre 2020 and computed : dimanche 1 novembre 2020
+
+failed on 'New Year's Day' expected : vendredi 1 janvier 2021 and computed : vendredi 1 janvier 2021
+
+failed on 'Yennayer' expected : mardi 12 janvier 2021 and computed : mardi 12 janvier 2021
+
+failed on 'Labour Day' expected : samedi 1 mai 2021 and computed : samedi 1 mai 2021
+
+failed on 'Independence Day' expected : lundi 5 juillet 2021 and computed : lundi 5 juillet 2021
+
+failed on 'Commemoration Day' expected : lundi 19 juillet 2021 and computed : lundi 19 juillet 2021
+
+failed on 'Revolution Day' expected : lundi 1 novembre 2021 and computed : lundi 1 novembre 2021
+
+failed on 'New Year's Day' expected : samedi 1 janvier 2022 and computed : samedi 1 janvier 2022
+
+failed on 'Yennayer' expected : mercredi 12 janvier 2022 and computed : mercredi 12 janvier 2022
+
+failed on 'Labour Day' expected : dimanche 1 mai 2022 and computed : dimanche 1 mai 2022
+
+failed on 'Independence Day' expected : mardi 5 juillet 2022 and computed : mardi 5 juillet 2022
+
+failed on 'Commemoration Day' expected : mardi 19 juillet 2022 and computed : mardi 19 juillet 2022
+
+failed on 'Revolution Day' expected : mardi 1 novembre 2022 and computed : mardi 1 novembre 2022
+
+failed on 'New Year's Day' expected : dimanche 1 janvier 2023 and computed : dimanche 1 janvier 2023
+
+failed on 'Yennayer' expected : jeudi 12 janvier 2023 and computed : jeudi 12 janvier 2023
+
+failed on 'Labour Day' expected : lundi 1 mai 2023 and computed : lundi 1 mai 2023
+
+failed on 'Independence Day' expected : mercredi 5 juillet 2023 and computed : mercredi 5 juillet 2023
+
+failed on 'Commemoration Day' expected : mercredi 19 juillet 2023 and computed : mercredi 19 juillet 2023
+
+failed on 'Revolution Day' expected : mercredi 1 novembre 2023 and computed : mercredi 1 novembre 2023
+
+failed on 'New Year's Day' expected : lundi 1 janvier 2024 and computed : lundi 1 janvier 2024
+
+failed on 'Yennayer' expected : vendredi 12 janvier 2024 and computed : vendredi 12 janvier 2024
+
+failed on 'Labour Day' expected : mercredi 1 mai 2024 and computed : mercredi 1 mai 2024
+
+failed on 'Independence Day' expected : vendredi 5 juillet 2024 and computed : vendredi 5 juillet 2024
+
+failed on 'Commemoration Day' expected : vendredi 19 juillet 2024 and computed : vendredi 19 juillet 2024
+
+failed on 'Revolution Day' expected : vendredi 1 novembre 2024 and computed : vendredi 1 novembre 2024
+
+failed on 'New Year's Day' expected : mercredi 1 janvier 2025 and computed : mercredi 1 janvier 2025
+
+failed on 'Yennayer' expected : dimanche 12 janvier 2025 and computed : dimanche 12 janvier 2025
+
+failed on 'Labour Day' expected : jeudi 1 mai 2025 and computed : jeudi 1 mai 2025
+
+failed on 'Independence Day' expected : samedi 5 juillet 2025 and computed : samedi 5 juillet 2025
+
+failed on 'Commemoration Day' expected : samedi 19 juillet 2025 and computed : samedi 19 juillet 2025
+
+failed on 'Revolution Day' expected : samedi 1 novembre 2025 and computed : samedi 1 novembre 2025
+
+failed on 'New Year's Day' expected : jeudi 1 janvier 2026 and computed : jeudi 1 janvier 2026
+
+failed on 'Yennayer' expected : lundi 12 janvier 2026 and computed : lundi 12 janvier 2026
+
+failed on 'Labour Day' expected : vendredi 1 mai 2026 and computed : vendredi 1 mai 2026
+
+failed on 'Independence Day' expected : dimanche 5 juillet 2026 and computed : dimanche 5 juillet 2026
+
+failed on 'Commemoration Day' expected : dimanche 19 juillet 2026 and computed : dimanche 19 juillet 2026
+
+failed on 'Revolution Day' expected : dimanche 1 novembre 2026 and computed : dimanche 1 novembre 2026
+
+failed on 'Yennayer' expected : mardi 12 janvier 2027 and computed : mardi 12 janvier 2027
+
+failed on 'Yennayer' expected : mercredi 12 janvier 2028 and computed : mercredi 12 janvier 2028
+
 ---

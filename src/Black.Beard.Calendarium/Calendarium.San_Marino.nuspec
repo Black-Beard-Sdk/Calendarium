@@ -23,7 +23,7 @@
   </metadata>
   
   <files>
-    <file src=".\Countries\date_San_Marino.json" target="content\Configuration\Countries\Countries\date_San_Marino.json" />
+    <file src=".\Countries\date_San_Marino.json" target="content\Configuration\Countries\date_San_Marino.json" />
   </files>
   
 </package>

@@ -31,7 +31,7 @@ namespace Calendarium
 
             var countries = CalendariumConfiguration.GetCalendarium(_list.ToArray());
 
-            var items = countries.GetNextDates(DateTime.Now, Country.France);
+            var items = countries.GetNextDates(DateTime.Now, "France");
 
         }
 
