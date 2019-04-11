@@ -1,4 +1,4 @@
-// Generated from d:\Src\Calendarium\src\Black.Beard.Calendarium\Grammar/CalendariumLexer.g4 by ANTLR 4.7.1
+// Generated from d:\Src\Calendarium\src\Black.Beard.Calendarium\Calendarium\Grammar/CalendariumLexer.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

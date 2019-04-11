@@ -73,7 +73,7 @@ namespace Bb.Calendarium.Configuration
         /// </summary>
         /// <param name="sb">The sb.</param>
         /// <returns></returns>
-        private static DefaultCountryConfiguration Load(StringBuilder sb, bool defaultConfiguration)
+        public static DefaultCountryConfiguration Load(StringBuilder sb, bool defaultConfiguration)
         {
 
             var instance = defaultConfiguration
@@ -110,7 +110,7 @@ namespace Bb.Calendarium.Configuration
         }
 
         [Description("Name of the country")]
-        //[JsonRequired]
+        [JsonRequired]
         public virtual string Country { get; set; }
 
         public List<PeriodConfiguration> Periods { get; set; }
@@ -119,7 +119,7 @@ namespace Bb.Calendarium.Configuration
         [JsonRequired]
         public string Culture { get; set; }
 
-        [Description("Specify calendar dontains in the culture")]
+        [Description("Specify calendar contains in the culture")]
         [JsonConverter(typeof(StringEnumConverter))]
         public CalendarEnum Calendar { get; set; }
 
@@ -130,6 +130,12 @@ namespace Bb.Calendarium.Configuration
             return CultureInfo.GetCultureInfo(Culture);
         }
 
+        /// <summary>
+        /// Converts to string.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
         public override string ToString()
         {
             return Country.ToString();
