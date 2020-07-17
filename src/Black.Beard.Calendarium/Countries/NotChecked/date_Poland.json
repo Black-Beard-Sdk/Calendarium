@@ -1,43 +1,23 @@
 // calendar : Gregorian
-
-// Date : Fat Thursday, 2-16, 2012,2023
-// Date : Fat Thursday, 2-7, 2013
-// Date : Fat Thursday, 2-27, 2014,2025
-// Date : Fat Thursday, 2-12, 2015,2026
-// Date : Fat Thursday, 2-4, 2016
-// Date : Fat Thursday, 2-23, 2017
-// Date : Fat Thursday, 2-8, 2018,2024
-// Date : Fat Thursday, 2-28, 2019
-// Date : Fat Thursday, 2-20, 2020
-// Date : Fat Thursday, 2-11, 2021
-// Date : Fat Thursday, 2-24, 2022
-// Date : Shrove Tuesday, 2-21, 2012,2023
-// Date : Shrove Tuesday, 2-12, 2013
-// Date : Shrove Tuesday, 3-4, 2014,2025
-// Date : Shrove Tuesday, 2-17, 2015,2026
-// Date : Shrove Tuesday, 2-9, 2016
-// Date : Shrove Tuesday, 2-28, 2017
-// Date : Shrove Tuesday, 2-13, 2018,2024
-// Date : Shrove Tuesday, 3-5, 2019
-// Date : Shrove Tuesday, 2-25, 2020
-// Date : Shrove Tuesday, 2-16, 2021
-// Date : Shrove Tuesday, 3-1, 2022
-// Date : Ash Wednesday, 2-22, 2012,2023
-// Date : Ash Wednesday, 2-13, 2013
-// Date : Ash Wednesday, 3-5, 2014,2025
-// Date : Ash Wednesday, 2-18, 2015,2026
-// Date : Ash Wednesday, 2-10, 2016
-// Date : Ash Wednesday, 3-1, 2017
-// Date : Ash Wednesday, 2-14, 2018,2024
-// Date : Ash Wednesday, 3-6, 2019
-// Date : Ash Wednesday, 2-26, 2020
-// Date : Ash Wednesday, 2-17, 2021
-// Date : Ash Wednesday, 3-2, 2022
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Poland",
   "Regions": [],
   "Periods": [
+    {
+      "Name": "Fat Thursday",
+      "RuleDate": "([EASTER]) - 51",
+      "Free": false,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Shrove Tuesday",
+      "RuleDate": "([EASTER]) - 46",
+      "Free": false,
+      "Translations": [],
+      "Tags": []
+    },
     {
       "Name": "Constitution Day",
       "RuleDate": "5-3",
@@ -64,7 +44,8 @@
       "RuleDate": "12-26",
       "Free": true,
       "Translations": [],
-      "Tags": []
+      "Tags": [],
+      "YearFrom" : 2013
     },
     {
       "Name": "Christmas Day",
@@ -132,21 +113,34 @@
     {
       "Name": "Pentecost",
       "RuleDate": "([EASTER]) + 49",
-      "Free": true,
+      "Free": false,
+      "Translations": [],
+      "Tags": []
+    },
+    {
+      "Name": "Ash Wednesday",
+      "RuleDate": "([EASTER]) - 39",
+      "Free": false,
+      "Translations": [],
+      "Tags": []
+    },{
+      "Name": "Ascension Day",
+      "RuleDate": "([EASTER]) + 39",
+      "Free": false,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Christmas Eve",
       "RuleDate": "12-24",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "New Year's Eve",
       "RuleDate": "12-31",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     },
@@ -160,35 +154,35 @@
     {
       "Name": "Grandmother's Day",
       "RuleDate": "1-21",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Grandfather's Day",
       "RuleDate": "1-22",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Mother's Day",
       "RuleDate": "5-26",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Children's Day",
       "RuleDate": "6-1",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     },
     {
       "Name": "Father's Day",
       "RuleDate": "6-23",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     }
