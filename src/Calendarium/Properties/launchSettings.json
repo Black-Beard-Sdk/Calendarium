@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Calendarium": {
+      "commandName": "Project",
+      "commandLineArgs": "compute output.csv 1 france"
+    }
+  }
+}

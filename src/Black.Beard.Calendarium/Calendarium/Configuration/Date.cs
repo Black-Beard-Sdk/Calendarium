@@ -120,6 +120,25 @@ namespace Bb.Calendarium.Configuration
         }
 
         /// <summary>
+        ///     Converts the value of the current System.DateTime object to its equivalent string
+        ///     representation using the specified format and the formatting conventions of the
+        ///     current culture.
+        /// </summary>
+        /// /// <returns>
+        /// A <see cref="System.String" /> representation of value of the current System.DateTime object as specified by format and provider.
+        /// </returns>
+        /// <exception cref="System.FormatException">
+        /// The length of format is 1, and it is not one of the format specifier characters defined for System.Globalization.DateTimeFormatInfo. -or- format does not contain a valid custom format pattern.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// The date and time is outside the range of dates supported by the calendar used by provider.
+        /// </exception>
+        public override string ToString()
+        {
+            return OriginalDate.ToString("d");
+        }
+
+        /// <summary>
         /// Returns a new System.DateTime that adds the specified number of days to the value
         ///     of this instance.
         /// </summary>
