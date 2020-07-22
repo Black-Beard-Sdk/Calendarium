@@ -8,7 +8,7 @@
     <PackageId>CalendariumConsole</PackageId>
     <Authors>Black.Beard</Authors>
     <PackageProjectUrl>https://github.com/Black-Beard-Sdk/Calendarium/packages</PackageProjectUrl>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,12 +25,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Black.Beard.Calendarium\Black.Beard.Calendarium.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="CalendariumConsole.nuspec">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
