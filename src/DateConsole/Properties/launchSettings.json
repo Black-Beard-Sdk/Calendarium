@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "DateConsole": {
-      "commandName": "Project",
-      "commandLineArgs": "\"Gregorian\" \"2016-09-24\""
-    }
-  }
-}
