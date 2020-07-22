@@ -132,7 +132,7 @@ namespace Bb.Commands
             {
                 foreach (var item in Namecountries)
                 {
-                    var it = Helper.Parameters.Countries.FirstOrDefault(c => c.Name.ToLower() == item);
+                    var it = Helper.Parameters.Countries.FirstOrDefault(c1 => c1.Name.ToLower() == item);
                     if (it == null)
                         Output.ErrorWriteLine($"{item} missing in the available countries configurations");
                     else
@@ -141,7 +141,7 @@ namespace Bb.Commands
             }
             else
             {
-                foreach (var item in Helper.Parameters.Countries.Where(c => c.Included))
+                foreach (var item in Helper.Parameters.Countries.Where(c1 => c1.Included))
                     c.Add(item);
             }
 

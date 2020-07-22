@@ -28,8 +28,6 @@ namespace Bb.Commands
                 config1.Description = "manage country's configuration";
                 config1.HelpOption(HelpFlag);
 
-                var validator = new GroupArgument(config1, false);
-
                 var cmd2 = config1.Command("list", config2 =>
                 {
 
@@ -49,7 +47,7 @@ namespace Bb.Commands
                             DownloadCountryList();
                             Output.WriteLine("list successfull downloaded");
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             Output.WriteLine("Fail to resolve remote list of configuration. Working with local list");
                             throw;
