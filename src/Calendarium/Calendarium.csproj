@@ -5,6 +5,10 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>Bb</RootNamespace>
     <StartupObject>Bb.Program</StartupObject>
+    <PackageId>CalendariumConsole</PackageId>
+    <Authors>Black.Beard</Authors>
+    <PackageProjectUrl>https://github.com/Black-Beard-Sdk/Calendarium/packages</PackageProjectUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +25,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Black.Beard.Calendarium\Black.Beard.Calendarium.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="CalendariumConsole.nuspec">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
