@@ -7,7 +7,6 @@
     <authors>Black.Beard</authors>
     <owners>Black.Beard</owners>
     <projectUrl>https://github.com/Black-Beard-Sdk/Calendarium</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>manage referential of computed date</description>
     <releaseNotes>.</releaseNotes>

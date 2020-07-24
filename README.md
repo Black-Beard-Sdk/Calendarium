@@ -190,7 +190,7 @@ Pentecost;23/05/2021 00:00:00;;23/05/2021;France;fr-FR;true;Gregorian
 
 ## Use by code
 
-all sdk is available in a single livrary in a package nuget.
+all sdk is available in a single library in a package nuget.
 
 ```powershell
 PM> Install-Package Black.Beard.Calendarium -Version 1.0.83
@@ -258,9 +258,11 @@ you can create or tune a configuration. You can use intelisense for help you.
 
 **Calendar** specify the calendar by default for the configuration file. the calendar can be tuned in the period
 
+**Regions** is an array of object with a key and an array of period. for the france configuration, the key is two first number of the zipcode. regions can tune a specific rule for a part of country. Region contains a property **From** for copy a region source by this key.
+
 **Periods** is an array of rule. 
 
-​	**Name** is in english.
+​	**Name** is writed in english (by convention).
 
 ​	**Free** is true/false if the day is worked or not.
 
@@ -284,7 +286,7 @@ you can create or tune a configuration. You can use intelisense for help you.
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Poland",
-  "Regions": [],
+  "Regions": [ {"Key":"", "Periods":[ ] } ],
   "Periods": [
     {
       "Name": "Fat Thursday",
@@ -334,7 +336,7 @@ you can create or tune a configuration. You can use intelisense for help you.
 
 **Calendar** is an enumeration
 
-- Default
+- Default. use the calendar of the current culture.
 - Gregorian
 - Hebrew
 - UmAlQura
