@@ -190,6 +190,14 @@ Pentecost;23/05/2021 00:00:00;;23/05/2021;France;fr-FR;true;Gregorian
 
 ## Use by code
 
+all sdk is available in a single livrary in a package nuget.
+
+```powershell
+PM> Install-Package Black.Beard.Calendarium -Version 1.0.83
+```
+
+
+
 ```CSharp
 // Load all configuration files in a specific folder
 var dir = new System.IO.DirectoryInfo(Path.Combine(Environment.CurrentDirectory, "Configuration/Countries"));
