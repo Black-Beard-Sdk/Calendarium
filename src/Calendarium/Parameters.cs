@@ -12,13 +12,7 @@ namespace Bb
             Countries = new List<CountryParameter>();
         }
 
-        public string Token { get; set; }
-
-        public string ServerUrl { get; set; }
-
-        public string WorkingGroup { get; set; }
-
-        public DateTime TokenExpiration { get; set; }
+        // public string ServerUrl { get; set; }
     
         public List<CountryParameter> Countries { get; set; }
     
@@ -30,9 +24,11 @@ namespace Bb
         public string Name { get; set; }
 
         public Version OnlineVersion { get; set; }
+
         public Version LocalVersion { get; set; }
 
         public bool Included { get; set; }
+
     }
 
 

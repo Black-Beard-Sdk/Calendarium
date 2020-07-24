@@ -4,19 +4,14 @@ using Microsoft.Extensions.CommandLineUtils;
 using System;
 using System.Security.Authentication;
 
-//14320
 namespace Bb
 {
 
-
-    /*
-     
+    /*   
         config list
         config add france
         config refresh
-
         compute output.csv 1 france
-
      */
 
     public partial class Program
