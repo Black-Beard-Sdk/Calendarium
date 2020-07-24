@@ -29,8 +29,8 @@ namespace Bb.Helpers
             else
                 Parameters = new Parameter();
 
-            if (!ValidatorExtension.CheckToken())
-                Helper.Parameters.Token = null;
+            //if (!ValidatorExtension.CheckToken())
+            //    Helper.Parameters.Token = null;
 
         }
 

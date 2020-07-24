@@ -83,9 +83,9 @@ namespace Bb.Validations
 
             int result = 0;
 
-            if (_mustBeAuthenticated)
-                if (!ValidatorExtension.CheckToken())
-                    result = ValidatorExtension.Error("you must to be authenticated");
+            //if (_mustBeAuthenticated)
+            //    if (!ValidatorExtension.CheckToken())
+            //        result = ValidatorExtension.Error("you must to be authenticated");
 
             foreach (var item in _dicArgument)
             {

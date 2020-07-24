@@ -128,15 +128,15 @@ namespace Bb.Validations
             return 1;
         }
 
-        internal static bool CheckToken()
-        {
+        //internal static bool CheckToken()
+        //{
 
-            if (string.IsNullOrEmpty(Helper.Parameters.Token))
-                return false;
+        //    if (string.IsNullOrEmpty(Helper.Parameters.Token))
+        //        return false;
 
-            return DateTime.Now < Helper.Parameters.TokenExpiration;
+        //    return DateTime.Now < Helper.Parameters.TokenExpiration;
 
-        }
+        //}
 
     }
 
