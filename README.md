@@ -247,3 +247,263 @@ the result date is converter in current thread culture calendar
 + Saudi_Arabia
 + Algeria
 ---
+
+# Configuration
+
+you can create or tune a configuration. You can use intelisense for help you.
+
+[json xsd ]: https://github.com/Black-Beard-Sdk/Calendarium/blob/master/src/Black.Beard.Calendarium/Countries/_schema.CountryConfiguration.json
+
+**Country** will by used by key for match with the country. 
+
+**Calendar** specify the calendar by default for the configuration file. the calendar can be tuned in the period
+
+**Periods** is an array of rule. 
+
+​	**Name** is in english.
+
+​	**Free** is true/false if the day is worked or not.
+
+​	**Tags** is an array of string tag.
+
+​	**Culture** code is a key  
+
+[doc microsoft]: https://docs.microsoft.com/fr-fr/dotnet/api/system.globalization.cultureinfo?view=netcore-3.1
+
+​	**RuleDate** contains the rule for building the date
+
+​	**RuleObserved** contains the rule for building the observed date. for any countries the observed date is the free day different of the holiday calculated.
+
+​	**RuleRuration** contains the rule for building the duration festivity. sometime the festivity can during any day like carnaval.
+
+​	**YearFrom** specifiy the first year when the festivity iwas created.
+
+
+
+```json
+{
+  "$schema": "/_schema.CountryConfiguration.json",
+  "Country": "Poland",
+  "Regions": [],
+  "Periods": [
+    {
+      "Name": "Fat Thursday",
+      "RuleDate": "([EASTER]) - 51",
+      "RuleObserved": null,
+      "RuleDuration": null,
+      "Free": false,
+      "Translations": [ {"Language":"French", "Name":"Mardi gras" } ],
+      "Tags": [],
+      "YearFrom": 2014
+    }
+  ],
+  "Culture": "pl",
+  "Calendar": "Gregorian"
+}
+```
+
+
+
+**Language** is an enumeration
+
+- Undefined
+- French
+- German
+- English
+- Dutch
+- Italian
+- Estonian
+- Latvian
+- Lithuanian
+- Spanish
+- Romania
+- Slovak
+- Slovenian
+- Croatian
+- Czech
+- Polish
+- Hungarian
+- Portuguese
+- Russian
+- Finnish
+- Norwgian
+- Danish
+- Swedish
+
+
+
+**Calendar** is an enumeration
+
+- Default
+- Gregorian
+- Hebrew
+- UmAlQura
+- Hijri
+- Japanese
+- JapaneseLunisolar
+- Julian
+- Korean
+- KoreanLunisolar
+- Persian
+- Taiwan
+- TaiwanLunisolar
+- ThaiBuddhist
+
+# Rules
+
+### lexer
+
+```antlr
+lexer grammar CalendariumLexer;
+
+YEAR :      'YEAR';
+MONTH :     'MONTH';
+DAY :       'DAY';
+DAYWEEK :   'DAYWEEK';
+
+MONDAY :    'MONDAY';
+TUESDAY	 :  'TUESDAY';
+WEDNESDAY : 'WEDNESDAY';
+THURSDAY :  'THURSDAY';
+FRIDAY :    'FRIDAY';
+SATURDAY :  'SATURDAY';
+SUNDAY :    'SUNDAY';
+
+
+// and a superfluous subtoken typecasting of the "QUOTE"
+CHAR_STRING:  '\'' (~('\'' | '\r' | '\n') | '\'\'')+ '\'';
+
+// SQL_SPECIAL_CHAR was split into single rules
+LEFT_PAREN :            '(';
+LEFT_BRACKET :          '[';
+RIGHT_PAREN :           ')';
+RIGHT_BRACKET :         ']';
+COLON :                 ':';
+SEMICOLON :             ';';
+COMMA :                 ',';
+PLUS :                  '+';
+MINUS :                 '-';
+TIME :                  '*';
+DOT :                   '.';
+DIVID :                 '\\';
+NOT :                   '!';
+EQUAL :                 '=';
+MODULO :                '%';
+POWER :                 '^';
+NOT_EQUAL :             '!=';
+GREATER :               '>';
+GREATER_OR_EQUAL :      '>=';
+LESS :                  '<';
+LESS_OR_EQUAL :         '<=';
+XOR :                   '||';
+OR :                    '|';
+AND :                   '&';
+ANDALSO :               '&&';
+SLASH :                 '\\';
+INTEROGATION :          '?';
+
+SPACES: [ \t\r\n]+ -> skip;
+    
+// Rule #504 <SIMPLE_LETTER> - simple_latin _letter was generalised into SIMPLE_LETTER
+//  Unicode is yet to be implemented - see NSF0
+fragment
+SIMPLE_LETTER
+    : [A-Za-z]
+    ;
+
+NUMBER
+    : [0-9]+
+    ;
+
+// Rule #097 <COMMENT>
+SINGLE_LINE_COMMENT: '--' ~('\r' | '\n')* EOF               -> channel(HIDDEN);
+MULTI_LINE_COMMENT:  '/*' .*? '*/'                          -> channel(HIDDEN);
+    
+fragment
+SPACE: [ \t];
+
+REGULAR_ID: SIMPLE_LETTER (SIMPLE_LETTER | '$' | '_' | '#' | [0-9])*;
+
+```
+
+### Parser
+
+```antlr
+parser grammar CalendariumParser;
+
+options { 
+    // memoize=True;
+    tokenVocab=CalendariumLexer; 
+    }
+
+script :
+      expression
+    | INTEROGATION expression_bool COLON expression
+    ;
+
+expression_bool
+    :  dayweek (OR dayweek)?
+    |  LEFT_PAREN expression_bool RIGHT_PAREN
+    ;
+
+expression :
+      rule expression?
+    | LEFT_PAREN expression RIGHT_PAREN expression?
+    // | NOT expression expression?
+    | operation expression
+    ;
+
+operation : 
+      PLUS | MINUS 
+    // | TIME | DIVID
+    // | MODULO
+    // | EQUAL | NOT_EQUAL
+    // | GREATER | GREATER_OR_EQUAL | LESS | LESS_OR_EQUAL
+    // | AND | ANDALSO | OR | XOR
+    // | (PLUS PLUS)
+    | (GREATER GREATER)
+    | (LESS LESS)
+    ;
+
+rule : 
+      mask
+    | LEFT_BRACKET identifier RIGHT_BRACKET
+    | TIME? dayweek
+    | NUMBER
+    ;
+
+mask : 
+    month=NUMBER MINUS day=NUMBER
+    ;
+
+dayweek : MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY | SUNDAY;
+
+identifier : REGULAR_ID;
+```
+
+Keys for internal computings
+
+- EASTER
+- ORTHODOX_EASTER
+
+### Samplers rule date
+
+```json
+# mask : build christmas all 25 december
+"RuleDate" : "12-25"
+
+# mask : build Eid all 12 of 10 th month in hijri calendar. the date is converted in current local calendar
+"RuleDate" : "12-10"
+"Calendar" : "Hijri"
+
+# mask : build easter
+"RuleDate" : "[EASTER]"
+
+# mask : build Ascension 40 days after Easter
+"RuleDate" : "([EASTER]) + 39"
+
+# mask : build Day of Prayer and Repentance (germany holiday). first westerday before 23 november.
+"RuleDate" : "((11-23) - 1) << Wednesday"
+
+```
+

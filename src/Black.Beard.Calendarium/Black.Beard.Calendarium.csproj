@@ -34,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Calendarium.Poland.nuspec">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Calendarium.Saudi_Arabia.nuspec">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

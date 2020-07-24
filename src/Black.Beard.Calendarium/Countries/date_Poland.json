@@ -106,7 +106,7 @@
     {
       "Name": "Epiphany",
       "RuleDate": "1-6",
-      "Free": true,
+      "Free": false,
       "Translations": [],
       "Tags": []
     },

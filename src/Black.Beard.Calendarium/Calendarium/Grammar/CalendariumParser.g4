@@ -1,5 +1,5 @@
 /**
- * workflow engine Parser
+ * calendarium engine Parser
  *
  * Copyright (c) 2009-2011 Black Beard - Gael beard <gaelgael5@gmail.com>
  *

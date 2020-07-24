@@ -69,7 +69,7 @@
     },
     {
       "Name": "Easter Day",
-      "RuleDate": "[EASTER DAY]",
+      "RuleDate": "[EASTER]",
       "Free": true,
       "Translations": [],
       "Tags": []

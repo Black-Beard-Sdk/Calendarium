@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Black.Beard.Calendarium.Slovakia</id>
+    <id>Black.Beard.Calendarium.Poland</id>
     <version>$version$</version>
-    <title>Black Beard Calendarium Configuration Slovakia</title>
+    <title>Black Beard Calendarium Configuration Poland</title>
     <authors>Black.Beard</authors>
     <owners>Black.Beard</owners>
     <projectUrl>https://github.com/Black-Beard-Sdk/Calendarium</projectUrl>
@@ -19,11 +19,11 @@
         <dependency id="Black.Beard.Calendarium" version="1.0.0" />
       </group>
     </dependencies>
-
+    
   </metadata>
   
   <files>
-    <file src=".\Countries\date_Slovakia.json" target="content\Configuration\Countries\date_Slovakia.json" />
+    <file src=".\Countries\date_Poland.json" target="content\Configuration\Countries\date_Poland.json" />
   </files>
   
 </package>

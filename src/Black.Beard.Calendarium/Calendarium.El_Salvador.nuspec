@@ -12,7 +12,7 @@
     <description>manage referential of computed date</description>
     <releaseNotes>.</releaseNotes>
     <copyright>Copyright 2019</copyright>
-    <tags>bank holiday france</tags>
+    <tags>bank holiday</tags>
 
     <dependencies>
       <group targetFramework="netstandard2.0">

@@ -1,7 +1,3 @@
-// calendar : Gregorian
-// calendar : Hijri
-// calendar : UmAlQura
-
 {
   "$schema": "/_schema.CountryConfiguration.json",
   "Country": "Algeria",

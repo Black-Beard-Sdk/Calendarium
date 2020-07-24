@@ -1,5 +1,5 @@
 /**
- * Oracle(c) PL/SQL 11g Parser
+ * calendarium Parser
  *
  * Copyright (c) 2009-2011 Black Beard - Gael beard <gaelgael5@gmail.com>
  *

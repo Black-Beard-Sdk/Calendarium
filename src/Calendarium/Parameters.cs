@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-//14320
 namespace Bb
 {
     public class Parameter
