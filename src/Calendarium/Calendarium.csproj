@@ -8,7 +8,7 @@
     <PackageId>CalendariumConsole</PackageId>
     <Authors>Black.Beard</Authors>
     <PackageProjectUrl>https://github.com/Black-Beard-Sdk/Calendarium/packages</PackageProjectUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
